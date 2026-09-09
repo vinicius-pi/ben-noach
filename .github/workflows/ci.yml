@@ -60,10 +60,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: OSV Scanner
-        uses: google/osv-scanner-action@v2.2.3
-        with:
-          scan-args: |-
-            --lockfile=pnpm-lock.yaml
+        run: pnpm scan:osv
       - name: Gitleaks
         uses: gitleaks/gitleaks-action@v2
         env:
