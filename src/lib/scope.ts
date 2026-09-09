@@ -28,14 +28,3 @@ export const ADDRESS_LABELS = {
   prophetic_nations: { en: "Prophetic future / the nations", pt: "Futuro profético / as nações" },
   hashem_alone: { en: "God alone", pt: "Somente Deus" },
 } as const;
-
-export function isBeginnerDefault(tag: ScopeTag): boolean {
-  return (
-    tag === "UNIVERSAL_CREATION" ||
-    tag === "NOAHIDE_CORE" ||
-    tag === "EMUNAH" ||
-    tag === "TESHUVAH_PRAYER" ||
-    tag === "JUSTICE_ETHICS" ||
-    tag === "NATIONS_PROPHECY"
-  );
-}
