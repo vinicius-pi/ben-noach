@@ -51,17 +51,6 @@ export function verseId(bookId: string, chapter: number, verse: number): string 
   return `${bookId}-${chapter}-${verse}`;
 }
 
-export function sefariaTanakhUrl(bookSlug: string, chapter: number, verse: number): string {
-  const he = encodeURIComponent("Tanach_with_Ta'amei_Hamikra");
-  const en = encodeURIComponent("The_Holy_Scriptures:_A_New_Translation_(JPS_1917)");
-  return `https://www.sefaria.org/${bookSlug}.${chapter}.${verse}?vhe=${he}&ven=${en}&lang=bi`;
-}
-
-export function sefariaRashiUrl(chapter: number, verse: number, segment?: number): string {
-  const base = `https://www.sefaria.org/Rashi_on_Genesis.${chapter}.${verse}`;
-  return segment ? `${base}.${segment}?lang=bi` : `${base}?lang=bi`;
-}
-
 export function isAllowedExternalHost(url: string, allowed: readonly string[]): boolean {
   try {
     const parsed = new URL(url);
