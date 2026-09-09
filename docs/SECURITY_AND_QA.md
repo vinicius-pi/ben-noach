@@ -2,33 +2,35 @@
 
 ## Security posture
 
-The first public release is primarily a read-only content application. Preserve that small attack surface.
+The first public release is primarily a **static, read-only content application**. Preserve that small attack surface.
 
 The highest-value assets are:
 
 - integrity of displayed sacred/classical text;
-- integrity of attribution and provenance;
-- integrity of Noahide review status;
-- availability of the public reader;
-- privacy of any future reviewer/user accounts;
+- integrity of version identity, attribution and provenance;
+- integrity of editorial/review state;
+- availability of the reader even when external providers fail;
+- privacy of local reading state and any future reviewer/user accounts;
 - build/deployment credentials.
 
-The first architecture should therefore prefer static/pre-rendered content and server-side source retrieval over unnecessary mutable backend features.
+A secure build that displays the wrong sacred text, wrong version attribution or false review status is a failed build. Content integrity and application security are equal release gates.
 
 ## Framework baseline
 
-Use the current patched **Next.js Active LTS** at implementation time. At this research checkpoint (September 2026), Next.js 16.x is Active LTS and the August 2026 security release requires 16.3.3 or later within that line.
+Use the **current patched stable Astro 7.x release** and compatible maintained Node LTS at implementation time.
 
-References:
-https://nextjs.org/support-policy
-https://nextjs.org/blog
+Do not pin framework versions from a research checkpoint without checking current release/security documentation immediately before scaffolding.
 
-React should likewise use the patched stable version compatible with the selected Next.js release. React 19.2 is the current documented major/minor line at this checkpoint.
+The v1 deployment model is static output. React is used only for interactive islands that materially require it.
 
-Reference:
-https://react.dev/versions
+Security consequences of this architecture:
 
-Reason for explicit patch discipline: React Server Components and Next.js had critical/high-severity security releases in 2025–2026. Dependency freshness is a security control, not routine cosmetics.
+- most reading routes ship as static HTML;
+- no application server is required for core use;
+- no database/authentication surface exists in v1;
+- no runtime AI endpoint exists;
+- released passages render from a local approved corpus rather than arbitrary upstream responses;
+- CSP/headers can be designed for a narrow static origin set.
 
 ## Architecture principles
 
@@ -40,117 +42,173 @@ For the first release:
 - no public file upload;
 - no arbitrary URL fetcher;
 - no open LLM/chat endpoint;
-- no unnecessary database;
+- no hosted database requirement;
 - no payment subsystem;
-- no admin panel exposed on the public surface.
+- no public admin mutation surface;
+- no user account requirement.
 
-Review/editor workflow can begin as repository-backed structured data and later receive authenticated tooling.
+Reading progress/bookmarks are local-first.
 
-### Source boundary
+Review/editor workflow begins as repository-backed structured data and development/review tooling.
 
-Treat Sefaria and all external providers as untrusted network boundaries even when they are authoritative content sources.
+### Local release corpus
+
+A released passage is rendered from locally validated corpus data defined by `docs/CORPUS_V1.md`.
+
+This prevents:
+
+- runtime provider outages from breaking the reader;
+- upstream version changes silently changing released text;
+- an API returning a different translation without a project release event;
+- unknown-rights responses entering the public bundle by accident.
+
+Every release source should have deterministic provenance metadata and a checksum.
+
+### External-provider boundary
+
+Treat Sefaria and every other provider as an untrusted network boundary even when they are authoritative research/content sources.
 
 Use:
 
 - typed provider adapters;
-- runtime schema validation (e.g. Zod or equivalent);
-- timeouts and bounded retries;
+- runtime schema validation;
+- timeouts and bounded retries in research/build tooling;
 - explicit allowed hosts;
 - canonical-ref validation;
-- cache keys derived from normalized refs/version IDs;
-- safe fallback states when upstream data is unavailable.
+- exact version identifiers;
+- deterministic normalization;
+- safe fallback states;
+- update comparison rather than silent replacement.
 
-The public application should never become an unrestricted proxy to Sefaria or another external host.
+The public application must never become an unrestricted proxy to Sefaria or another host.
 
 ### Rendering safety
 
-External source text can contain markup. Use an allowlisted parser/render model rather than raw arbitrary HTML insertion.
+External source data may contain markup. Transform it at the provider/ingestion boundary into an explicit safe representation.
 
-If source HTML must be supported:
+If source HTML is supported:
 
-1. transform it at the provider/content boundary;
-2. retain only an explicit minimal semantic subset needed for the text;
-3. remove scripts, event handlers, styles, forms, embeds, and executable URLs;
-4. store/render the normalized representation rather than repeatedly trusting upstream HTML.
+1. parse/normalize at ingestion;
+2. retain only the minimal semantic subset needed for text;
+3. remove scripts, handlers, styles, forms, embeds and executable URLs;
+4. validate links against allowed protocols/hosts where applicable;
+5. store/render normalized data instead of repeatedly trusting upstream HTML.
 
-Prefer structured React rendering over `dangerouslySetInnerHTML`.
+Prefer structured component rendering over arbitrary HTML insertion.
 
-## Browser security headers
+## Browser security policy
 
-Implement and test a restrictive header policy appropriate to the final architecture.
+Implement/test a restrictive policy appropriate to static Astro deployment.
 
 At minimum evaluate:
 
 - `Content-Security-Policy`;
-- `Strict-Transport-Security` in production;
+- `Strict-Transport-Security` in production HTTPS deployments;
 - `X-Content-Type-Options: nosniff`;
 - `Referrer-Policy`;
-- `Permissions-Policy` denying unused browser capabilities;
-- CSP `frame-ancestors` policy;
-- COOP/CORP/COEP only where their compatibility trade-offs are understood.
+- `Permissions-Policy` denying unused capabilities;
+- `frame-ancestors` policy;
+- cross-origin policies only where their compatibility trade-offs are understood.
 
-Next.js documentation:
-https://nextjs.org/docs/app/guides/content-security-policy
-https://nextjs.org/docs/app/api-reference/config/next-config-js/headers
+Use Astro's current CSP/security facilities where appropriate, but test the generated static output and deployment host behavior rather than assuming a framework setting is sufficient.
 
-CSP should be designed around the actual rendering/deployment model rather than copied from a generic template. Keep `script-src`, `connect-src`, `font-src`, `img-src`, and `frame-src` narrow. Embedding external media should be an explicit feature with an explicit CSP change.
+Keep these CSP sources narrow:
 
-## Secrets and configuration
+- `script-src`;
+- `connect-src`;
+- `font-src`;
+- `img-src`;
+- `frame-src`.
 
-- Keep `.env*` files out of Git except documented example files with dummy values.
-- Public client variables must never contain secrets.
-- Use deployment/GitHub secrets for provider credentials if any are introduced later.
-- Prefer source APIs that require no credential for the first release.
-- Ensure debug/review features cannot be activated by a public query parameter alone once they expose privileged data/actions.
+Self-host production fonts.
+
+The base reader should not require third-party scripts.
+
+Embedding external media should be an explicit feature with an explicit policy change.
+
+## Secrets/configuration
+
+- Keep `.env*` files out of Git except documented examples containing no credentials.
+- Public client variables never contain secrets.
+- Prefer providers requiring no credentials for v1.
+- GitHub/deployment secrets are used only if a later workflow genuinely requires them.
+- Debug/review query parameters may reveal non-sensitive local review state but never grant privileged mutation rights.
+- Scan repository history/current diff for secrets before release.
 
 ## Dependency and supply-chain policy
 
-Prefer a small dependency graph.
+Follow `docs/OPEN_SOURCE_STACK.md`.
 
-Use native browser/React/Next capabilities before adding packages.
+Required baseline:
 
-For complex accessibility primitives, a well-maintained headless library such as Radix is acceptable. Avoid installing large visual UI kits solely for convenience.
+- pnpm lockfile committed;
+- Corepack/package-manager version pinned;
+- deterministic `pnpm install --frozen-lockfile`;
+- small dependency graph;
+- no arbitrary/unreviewed install scripts;
+- OSV-Scanner or equivalent open vulnerability scan;
+- software-license allowlist check;
+- gitleaks CLI secret scan;
+- Dependabot for npm/GitHub Actions while on GitHub;
+- CodeQL as an additional GitHub-native layer for the public repository where available;
+- pinned/reviewed CI action versions;
+- explicit review of large transitive dependency additions.
 
-Required controls:
+Do not make security depend exclusively on a commercial SaaS or paid GitHub feature. The meaningful baseline must run locally or in ordinary CI.
 
-- lockfile committed;
-- deterministic CI install (`pnpm install --frozen-lockfile` or equivalent);
-- Dependabot configuration for npm and GitHub Actions;
-- dependency audit in CI;
-- CodeQL for JavaScript/TypeScript once the app exists;
-- pinned major versions of GitHub Actions;
-- review transitive dependency explosions before acceptance.
+Before release, an independent Codex Security scan may be run as a supplementary review if connected; it does not replace the local/open gates.
 
-Before release, use the connected Codex Security workflow (if enabled) for an independent scan in addition to ordinary dependency/static analysis.
+## Dependency-license drift
+
+A package's version, ownership or license may change.
+
+Controls:
+
+- lock exact resolved versions;
+- record direct dependency licenses;
+- scan the resolved dependency graph in CI;
+- fail on licenses outside the repository allowlist unless an explicit reviewed exception exists;
+- treat a newly introduced GPL/AGPL/source-available/proprietary runtime dependency as an architecture decision, not a normal patch.
+
+## Source/content-license drift
+
+Text-provider metadata can also change.
+
+Controls:
+
+- release manifests freeze exact version identity and rights metadata;
+- update tooling compares provider metadata to the local manifest;
+- rights changes do not silently modify a historical release;
+- bundling requires explicit `bundleAllowed` state;
+- offline cache requires explicit `offlineAllowed` state.
 
 ## Authentication strategy
 
-The initial public reader should not require accounts.
+The initial public reader has no account system.
 
-If reviewer accounts are introduced:
+If reviewer/user accounts are introduced later:
 
-- use a mature authentication provider/library rather than custom passwords;
-- server-side authorization is mandatory for every mutation;
-- reviewer role must be distinct from ordinary user role;
-- record reviewer identity and timestamp on approvals;
-- protect state-changing requests from CSRF according to the chosen auth/session mechanism;
-- rate-limit authentication and mutation endpoints;
-- produce an audit trail for content approval changes.
+- use a mature open authentication library/provider strategy rather than custom passwords;
+- authorize every mutation server-side;
+- reviewer role is separate from ordinary reader role;
+- record reviewer identity, revision/hash and timestamp;
+- protect state-changing requests according to the chosen session model;
+- rate-limit authentication/mutation endpoints;
+- maintain an audit trail for approval changes.
+
+This future system is not needed to prove v1.
 
 ## Privacy
 
 Default to minimal collection.
 
-Initial analytics, if added, should answer product questions without building a sensitive religious-profile dataset.
+v1 requires no third-party analytics.
 
-Prefer aggregate/anonymous metrics such as:
+If telemetry is later introduced, answer aggregate product/performance questions without building a sensitive religious-profile dataset.
 
-- reader performance;
-- route usage;
-- whether users open Understand/Sources;
-- completion through guided reading paths.
+Do not collect a declared religion/former religion merely to personalize the reader.
 
-Avoid collecting declared religion, former religion, detailed belief state, or personally identifying study history unless a future feature genuinely requires it and has an explicit privacy design.
+Local progress/bookmarks should remain local unless a future explicit sync feature warrants accounts and a new privacy review.
 
 ## Accessibility as release engineering
 
@@ -161,28 +219,28 @@ Required baseline:
 - semantic headings/landmarks;
 - complete keyboard access;
 - visible focus;
-- correct dialog/sheet focus management;
+- correct Drawer/Dialog focus management;
 - screen-reader labels for verse actions;
 - RTL/LTR semantics;
 - sufficient contrast;
 - reduced-motion support;
 - 200% zoom without loss of content/function;
 - touch targets appropriate to mobile;
-- readable line measure and adjustable type.
+- readable measure and adjustable type;
+- no content meaning encoded only by color.
 
 ### Automated accessibility
 
-Use Playwright + `@axe-core/playwright` on core application states.
+Use Playwright + axe on core states.
 
-Official reference:
-https://playwright.dev/docs/accessibility-testing
+Pair automated checks with:
 
-Automated checks catch only part of WCAG. Pair them with manual keyboard, zoom, screen-reader spot checks and real-device testing.
+- manual keyboard pass;
+- zoom pass;
+- screen-reader spot checks;
+- real-device/mobile testing.
 
-If Storybook is used, enable its official a11y tooling and configure core stories to fail on violations.
-
-Reference:
-https://storybook.js.org/docs/writing-tests/accessibility-testing
+Automated accessibility scores are not a substitute for interaction review.
 
 ## Visual regression and anti-slop QA
 
@@ -193,42 +251,38 @@ Required screenshot matrix:
 - home;
 - library;
 - reader idle;
-- verse hover/focus;
+- selected verse/focus;
 - Understand rail/sheet;
 - Sources view;
 - Hebrew only;
 - translation only;
 - bilingual;
-- large text;
-- reduced viewport/mobile;
-- loading/error states.
+- enlarged text;
+- mobile/tablet/desktop;
+- loading/error/empty states.
 
-At minimum use Playwright's deterministic screenshot comparisons. Storybook/Chromatic may be added for component-level cross-browser visual review if useful.
+Use Playwright deterministic screenshots as the default local/open solution.
 
-Keep screenshot baselines human-reviewed; an agent should not automatically approve broad visual diffs.
+Human-review baseline changes. An autonomous agent should never broadly approve its own unexplained visual diffs.
 
 ## Performance budgets
 
-A reading application should load like a document, not a dashboard.
+A reading application should load like a document.
 
-Use Lighthouse CI on pull requests and maintain explicit budgets.
+Use Lighthouse CI and explicit budgets.
 
-Reference:
-https://github.com/GoogleChrome/lighthouse-ci
+Initial targets for representative static routes:
 
-Initial targets for refinement during implementation:
-
-- Lighthouse Performance ≥ 95 on representative static reader route in controlled CI;
-- Accessibility ≥ 98, with separate axe gate;
+- Performance ≥ 95 in controlled CI;
+- Accessibility ≥ 98 plus separate axe gate;
 - Best Practices ≥ 95;
-- SEO ≥ 95 for public reading routes;
-- LCP target ≤ 2.5s under mobile-like test conditions;
+- SEO ≥ 95 for public routes;
+- LCP ≤ 2.5s under mobile-like conditions;
 - CLS ≤ 0.05;
-- core reader JavaScript kept deliberately small;
-- font files subset/preloaded only when justified;
-- no large hero imagery in initial viewport.
+- intentionally small hydrated JavaScript;
+- no large hero imagery in the initial viewport.
 
-Treat numbers as regression gates after stable baselines are established, not as permission to game Lighthouse.
+Tune final thresholds after stable baselines exist, but do not game Lighthouse by degrading the product.
 
 ## Test layers
 
@@ -238,12 +292,28 @@ Test:
 
 - canonical-ref normalization;
 - source-manifest validation;
+- source checksum validation;
 - review-state transitions;
 - license rules;
-- scope taxonomy;
+- applicability/scope taxonomy;
 - deep-link generation;
 - translation/version selection;
-- provider response normalization.
+- provider normalization;
+- locale/book aliases.
+
+### Content/domain
+
+Test:
+
+- every bundled source has manifest metadata;
+- every bundled source has approved rights state;
+- required attribution exists;
+- every evidence ref resolves;
+- no reviewed block lacks valid reviewer/revision metadata;
+- no duplicate canonical/content IDs;
+- Hebrew fixtures retain deterministic hashes;
+- commentary segments retain target identity;
+- unknown-rights Portuguese versions do not enter production bundles.
 
 ### Component
 
@@ -252,10 +322,12 @@ Test:
 - verse rendering;
 - RTL/LTR mixtures;
 - study rail;
-- mobile sheet;
+- mobile Drawer;
 - source attribution;
-- status/provenance UI;
-- text appearance controls;
+- applicability/context UI;
+- provenance UI;
+- appearance controls;
+- local continue-reading behavior;
 - keyboard interactions.
 
 ### E2E
@@ -265,90 +337,117 @@ Playwright flows:
 1. open Genesis 1;
 2. select Genesis 1:1;
 3. open Understand;
-4. move through Rashi / explanation;
-5. open Sources;
-6. open provenance;
-7. follow/validate Sefaria deep link target format;
-8. switch language/display mode;
-9. use entire flow by keyboard;
-10. repeat critical flow in mobile viewport.
+4. inspect Rashi/elucidation;
+5. inspect applicability/context where present;
+6. open Sources;
+7. inspect provenance;
+8. validate Sefaria deep-link target format;
+9. switch display/locale state;
+10. navigate the core journey by keyboard;
+11. repeat critical flow on mobile;
+12. disable/block external provider requests and repeat the released local-corpus journey;
+13. resume reading state after reload.
 
-### Source integrity
+### Portability
 
-CI must verify:
+Test:
 
-- every bundled source has manifest metadata;
-- every evidence ref used by editorial copy resolves to a known source object;
-- no `rabbinically-reviewed` block lacks reviewer metadata;
-- no unsupported license state is bundled for production;
-- no duplicate canonical IDs;
-- Hebrew base text fixtures have deterministic hashes.
+- clean install;
+- `pnpm build`;
+- serve generated `dist/` with a generic static server;
+- navigate core routes without a platform-specific runtime;
+- exercise the app with Sefaria/provider network blocked.
 
 ## CI structure
 
-Recommended GitHub Actions jobs:
+Recommended jobs:
 
-1. `quality`
-   - frozen install
-   - format check
-   - lint
-   - typecheck
-   - unit/component tests
+### `quality`
 
-2. `content-integrity`
-   - manifest validation
-   - citation/evidence validation
-   - review-state validation
-   - license validation
+- frozen install;
+- format check;
+- lint;
+- typecheck;
+- unit/component tests.
 
-3. `build`
-   - production build
-   - bundle report/budget where available
+### `content-integrity`
 
-4. `e2e`
-   - Playwright desktop/mobile
-   - axe scans
-   - screenshot comparisons
+- content schemas;
+- manifest/provenance validation;
+- checksums;
+- evidence refs;
+- review-state validation;
+- content rights/attribution validation.
 
-5. `lighthouse`
-   - representative public routes
+### `supply-chain`
 
-6. `security`
-   - package audit
-   - CodeQL or equivalent static analysis
+- OSV vulnerability scan;
+- dependency license allowlist;
+- gitleaks CLI.
+
+### `build`
+
+- production static build;
+- bundle/client-JS budget;
+- generic static-server smoke test.
+
+### `e2e`
+
+- Playwright desktop/mobile;
+- provider-offline flow;
+- axe scans;
+- screenshot comparisons.
+
+### `lighthouse`
+
+- representative public routes.
+
+### `security-extra`
+
+- CodeQL/GitHub-native analysis where available.
 
 ## GitHub hygiene
 
-Add:
+Repository baseline should include:
 
 - `.editorconfig`;
 - `.gitignore`;
-- `.env.example` only if variables exist;
-- `.github/dependabot.yml`;
+- `.env.example` only if needed;
+- Dependabot;
 - PR template;
-- CODEOWNERS while the project has one canonical owner;
-- `SECURITY.md` reporting policy;
-- `CONTRIBUTING.md` once external contribution is realistic.
+- CODEOWNERS;
+- `SECURITY.md`;
+- `CONTRIBUTING.md`;
+- `GOVERNANCE.md`;
+- software/content license separation.
 
-Keep generated test artifacts out of git unless they are intentional visual baselines. Upload transient reports/videos as CI artifacts.
+Keep transient test output out of Git. Intentional screenshot baselines are the exception; videos/reports belong in CI artifacts.
 
 ## Pre-release adversarial checks
 
-Before public launch, run an independent pass specifically attempting to find:
+Before public launch, independently attempt to find:
 
-- XSS through commentary/provider markup;
+- XSS through provider/source markup;
 - malicious ref/path input;
-- open redirects through source/deep links;
+- unsafe/open redirects in deep links;
 - unsafe external image/embed behavior;
-- leaked environment variables;
-- public access to reviewer mutations;
+- leaked environment variables/secrets;
+- public access to reviewer mutation logic;
 - dependency CVEs;
-- oversized client bundles;
-- accessibility traps in mobile sheet/dialog;
-- hydration errors caused by RTL/locale differences;
-- stale content cache presenting wrong version attribution;
-- production fixtures accidentally marked as rabbinically reviewed;
-- missing license/attribution;
-- source text changed by normalization/rendering.
+- unexpected dependency licenses;
+- oversized/hydration-heavy client bundles;
+- accessibility traps in the mobile Drawer;
+- RTL/locale rendering failures;
+- source/version attribution mismatch;
+- stale corpus data associated with wrong metadata;
+- production fixtures accidentally marked reviewed;
+- missing attribution/license;
+- normalization changing sacred text;
+- service-worker caching a text whose license disallows offline distribution;
+- external-provider outage breaking a released passage.
 
-A secure build that displays the wrong sacred text is still a failed build. Content integrity and application security are equal release gates.
+## Release rule
+
+No single green indicator is sufficient.
+
+A release is ready only when **application security, source integrity, rights integrity, accessibility, visual quality, portability and provider independence** all pass together.
