@@ -10,7 +10,6 @@ import glossary from "../data/glossary.json";
 import guidedPaths from "../data/guided-paths.json";
 import reviewRecords from "../data/review-records.json";
 import providers from "../data/providers.json";
-import licenses from "../data/licenses.json";
 import sourceManifest from "../data/source-manifest.json";
 import type {
   Book,
@@ -33,7 +32,7 @@ export const BOOKS = books as Book[];
 export const PASSAGES = passages as Passage[];
 export const VERSES = verses as Verse[];
 export const TEXT_VERSIONS = textVersions as TextVersion[];
-export const COMMENTARY_WORKS = commentaryWorks as CommentaryWork[];
+const COMMENTARY_WORKS = commentaryWorks as CommentaryWork[];
 export const COMMENTARY_SEGMENTS = commentarySegments as CommentarySegment[];
 export const ELUCIDATIONS = elucidations as Elucidation[];
 export const SOURCE_LINKS = sourceLinks as SourceLink[];
@@ -45,35 +44,20 @@ export const PROVIDERS = providers as {
   allowedHosts: string[];
   runtimeRequired: boolean;
 }[];
-export const LICENSES = licenses as { id: string; spdx?: string | null }[];
 export const SOURCE_MANIFEST = sourceManifest as SourceManifestEntry[];
 
-export function getBook(id: string): Book | undefined {
+function getBook(id: string): Book | undefined {
   return BOOKS.find((book) => book.id === id);
 }
 
-export function getPassage(bookId: string, chapter: number): Passage | undefined {
+function getPassage(bookId: string, chapter: number): Passage | undefined {
   return PASSAGES.find((passage) => passage.bookId === bookId && passage.chapter === chapter);
 }
 
-export function versesForPassage(passage: Passage): Verse[] {
+function versesForPassage(passage: Passage): Verse[] {
   return passage.verseIds
     .map((id) => VERSES.find((verse) => verse.id === id))
     .filter((verse): verse is Verse => Boolean(verse));
-}
-
-export function segmentsForVerse(verseId: string, workId?: string): CommentarySegment[] {
-  return COMMENTARY_SEGMENTS.filter(
-    (segment) => segment.targetVerseId === verseId && (!workId || segment.workId === workId),
-  ).sort((a, b) => a.segment - b.segment);
-}
-
-export function elucidationsForVerse(verseId: string): Elucidation[] {
-  return ELUCIDATIONS.filter((item) => item.verseId === verseId);
-}
-
-export function linksFrom(id: string): SourceLink[] {
-  return SOURCE_LINKS.filter((link) => link.from === id || link.to === id);
 }
 
 export function buildReaderPayload(
