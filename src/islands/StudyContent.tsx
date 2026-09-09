@@ -14,8 +14,20 @@ import type {
 } from "../lib/types";
 import { SourceSpans } from "./SourceSpans";
 
+const APPLICABILITY_SCOPE_TAGS = new Set([
+  "NOAHIDE_CORE",
+  "NATIONS_PROPHECY",
+  "ISRAEL_COVENANT_CONTEXT",
+  "JEWISH_PRACTICE_SPECIFIC",
+  "REVIEW_REQUIRED",
+]);
+
 function versionOf(payload: ReaderPayload, id: string) {
   return payload.versions.find((item) => item.id === id);
+}
+
+function shouldShowApplicability(verse: Verse): boolean {
+  return verse.scopeTags.some((tag) => APPLICABILITY_SCOPE_TAGS.has(tag));
 }
 
 function Section({
@@ -116,7 +128,9 @@ function UnderstandBlock({
   payload: ReaderPayload;
 }) {
   const verseEluc = bySlot("understanding-the-verse");
-  const noahide = bySlot("for-bnei-noach");
+  const applicability = bySlot("for-bnei-noach");
+  const showApplicability = shouldShowApplicability(verse);
+
   return (
     <>
       {verseEluc && (
@@ -143,23 +157,27 @@ function UnderstandBlock({
         ))
       )}
 
-      <Section title={t(locale, "whoAddressed")}>
-        <p>
-          <strong>{ADDRESS_LABELS[verse.address][locale]}.</strong> {loc(verse.addressNote, locale)}
-        </p>
-        <p className="meta-line">
-          {verse.scopeTags.map((tag) => SCOPE_LABELS[tag][locale]).join(" · ")}
-        </p>
-      </Section>
+      {showApplicability && (
+        <Section title={t(locale, "whoAddressed")}>
+          <p>
+            <strong>{ADDRESS_LABELS[verse.address][locale]}.</strong> {loc(verse.addressNote, locale)}
+          </p>
+          <p className="meta-line">
+            {verse.scopeTags.map((tag) => SCOPE_LABELS[tag][locale]).join(" · ")}
+          </p>
+        </Section>
+      )}
 
       {eluc.length > 0 && (
         <Terms locale={locale} entries={glossaryForMaterial(payload.glossary, eluc)} />
       )}
 
-      {noahide && (
+      {applicability && showApplicability && (
         <Section title={t(locale, "forBneiNoach")} layer="guidance">
-          <p className="latin">{loc(noahide.text, locale)}</p>
-          {noahide.reviewNote && <p className="meta-line">{noahide.reviewNote}</p>}
+          <p className="latin">{loc(applicability.text, locale)}</p>
+          {applicability.type === "RABBINIC_GUIDANCE" && applicability.reviewNote && (
+            <p className="meta-line">{applicability.reviewNote}</p>
+          )}
         </Section>
       )}
     </>
