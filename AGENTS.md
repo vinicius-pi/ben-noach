@@ -4,157 +4,353 @@ This repository is building a real production-quality public web product, not a 
 
 ## Mission
 
-Build a beautiful, source-first, multilingual Tanakh reader for people approaching Jewish textual study from the outside, especially Bnei Noach, non-religious readers, and people coming from Christian backgrounds who want to encounter the Hebrew Bible through classical Jewish sources.
+Build a beautiful, source-first, multilingual Tanakh reader designed first for **Bnei Noach and non-Jews seeking to become righteous gentiles**, while remaining immediately usable by non-religious readers and people coming from Christian backgrounds who want to encounter Tanakh through its Jewish textual tradition.
 
 The product progression is:
 
 **READ → UNDERSTAND → SOURCES**
 
-The reader should feel like a beautifully typeset book before it feels like an application.
+The reader should feel like a beautifully typeset contemporary book before it feels like an application.
+
+The durable product advantage is not owning more texts than Sefaria. It is giving the target reader the **right first path through those texts**: Tanakh → Rashi → why Rashi comments → classical source chain → clear applicability/context → deeper primary sources.
+
+## Document precedence
+
+Before implementation, read the repository specification in this order:
+
+1. `AGENTS.md`
+2. `docs/PRODUCT_NORTH_STAR.md`
+3. `docs/OPEN_SOURCE_STACK.md`
+4. `docs/CORPUS_V1.md`
+5. `docs/TOVIA_SINGER_ALIGNMENT.md`
+6. `docs/TOVIA_SINGER_TORAH_LEARNING_ADDENDUM.md`
+7. `docs/DESIGN_RESEARCH.md`
+8. `docs/CONTENT_GOVERNANCE.md`
+9. `docs/SECURITY_AND_QA.md`
+10. `docs/IMPLEMENTATION_RISKS_AND_DECISIONS.md`
+11. `docs/GROK_BUILD_MASTERPROMPT.md`
+12. `LICENSES.md`, `SECURITY.md`, and contribution/governance documents.
+
+Later explicit architecture decisions in the higher-precedence documents supersede older framework-specific research notes.
+
+If a material conflict remains after applying this order, surface it in the PR rather than silently inventing a third policy.
 
 ## Governing product principles
 
 1. **Tanakh first.** The canonical passage is always the visual and conceptual center.
-2. **Clarity before density.** Beginner-facing explanations introduce just enough context to understand the passage and Rashi; deeper material is progressively disclosed.
-3. **Sources remain sources.** Historical/canonical text is quoted faithfully and carries reference, version, provenance, and license metadata.
-4. **Editorial elucidation is explicit.** Modern explanatory prose is a separate layer and supports claim-level evidence references.
-5. **Rabbinic guidance is explicit.** Noahide-specific normative/scope guidance has its own review state and never masquerades as a historical source.
-6. **Dignity of the Noahide path.** The product treats righteous gentile life as a valid path in its own right rather than a conversion funnel.
-7. **Jewish context by demonstration.** For readers coming from Christianity or Islam, prioritize Hebrew, literary context, Jewish commentary, and the source chain. Optional comparative/polemical material may exist later, but the primary product lets the text and tradition speak.
+2. **Bnei Noach are a primary/end audience.** Design for serious lifelong use, not a temporary bridge to another product or identity.
+3. **Clarity before density.** Beginner-facing explanations introduce the exact context needed to understand the passage and classical commentary; deeper material is progressively disclosed.
+4. **Sources remain sources.** Historical/canonical text is quoted faithfully and carries reference, version, provenance and license metadata.
+5. **Editorial elucidation is a real product layer.** Modern explanation may be clear, elegant and substantial, but remains distinguishable from the historical source and supports claim-level evidence references.
+6. **Applicability is first-class.** The interface helps the target reader distinguish universal/Noahide material, Israel-covenant context and Jewish-practice-specific material without altering the underlying sources.
+7. **Jewish context by demonstration.** Hebrew, literary context, Rashi, Chazal and the source chain lead. Comparative readings may exist later as a subordinate layer.
 8. **Progressive disclosure.** Preserve the depth of Mikraot Gedolot without inheriting its visual density.
 9. **Book first, software second.** Reading mode minimizes chrome and interaction noise.
-10. **Auditability without ugliness.** Provenance and review metadata must be accessible without turning the beginner experience into a scholarly database interface.
-
-## Required reading before implementation
-
-Read every file in `docs/` before writing application code. In particular:
-
-- `docs/TOVIA_SINGER_ALIGNMENT.md`
-- `docs/DESIGN_RESEARCH.md`
-- `docs/CONTENT_GOVERNANCE.md`
-- `docs/SECURITY_AND_QA.md`
-- `docs/GROK_BUILD_MASTERPROMPT.md`
-
-If a later repo document conflicts with this file, stop and surface the conflict in the PR rather than silently choosing.
+10. **Auditability without ugliness.** Provenance and review metadata are inspectable without turning the beginner experience into a database UI.
+11. **Open and transferable.** The public product must build and run without a paid SaaS, proprietary runtime, proprietary font, hosted database, AI inference service or single hosting vendor.
+12. **Local corpus reliability.** A released passage must remain readable when Sefaria or every other external API is unavailable.
 
 ## Initial scope
 
-Build the full reusable application shell and production architecture, then populate **Genesis 1:1–5** as the high-fidelity content demonstrator.
+Build the complete reusable application shell and production architecture, then populate **Genesis 1:1–5** as the high-fidelity content demonstrator.
 
-Architecture must be ready to expand to Genesis 1–11, then the full Tanakh, without rewriting the core data model.
+Architecture must expand to Genesis 1–11 and ultimately Tanakh by adding validated content, not by rewriting page components.
 
-## Design standard
+The first demonstrator must prove this journey:
 
-The visual identity is restrained, editorial, white/off-white and deep blue. Beauty should come from typography, whitespace, proportion, alignment, and motion discipline.
-
-Use accessible headless primitives where useful, but style them as a bespoke editorial system. A default component-library appearance is not an acceptable final design.
-
-The interface should never feel like a generic SaaS dashboard, AI landing page, crypto product, or templated religious website.
+`Tanakh → select verse → Rashi → understand why Rashi commented → inspect classical/source chain → understand applicability/context → Sources → Sefaria`
 
 ## Technical baseline
 
-Use a current stable Next.js App Router + TypeScript stack unless repository research establishes a stronger reason otherwise.
+### Framework
 
-Expected foundations:
+Use the **current patched stable Astro 7.x release** at execution time, with static output as the v1 default.
 
-- strict TypeScript
-- React Server Components where they materially help
-- minimal client-side JavaScript in reading surfaces
-- semantic HTML
-- correct RTL/LTR behavior
-- accessible primitives for dialogs/sheets/popovers where appropriate
-- local or properly licensed web fonts
-- source-aware content schemas
-- static/pre-rendered reading pages when practical
-- PWA-ready architecture
-- Sefaria API/MCP adapters kept behind a typed boundary
-- no scraping of third-party sites whose terms prohibit it
+Why:
+
+- content-driven/static-first architecture;
+- minimal shipped JavaScript;
+- portable `dist/` output;
+- built-in content collections/schema support;
+- first-class i18n architecture;
+- strong fit for a document-like reader;
+- no required proprietary host/runtime.
+
+### Interactive islands
+
+Use React only where client interaction materially needs it, such as:
+
+- desktop study rail state;
+- mobile study Drawer;
+- appearance controls;
+- local progress/bookmarks;
+- local search UI;
+- optional word inspector;
+- development/editor review controls.
+
+Do not hydrate the full reader by default.
+
+### UI behavior
+
+Prefer native HTML first. For complex overlays/composites, use one coherent accessible primitive family. **Base UI (`@base-ui/react`, MIT)** is the preferred starting candidate for Drawer/Dialog behavior.
+
+The primitive library is not the design system.
+
+### Styling
+
+Use bespoke project tokens and modern CSS. Prefer CSS custom properties, logical properties, scoped styles/CSS Modules and container queries where useful.
+
+Do not let a utility/component framework determine the visual language.
+
+### Runtime/data model
+
+- strict TypeScript;
+- Astro Content Collections / validated repository-backed content;
+- local approved release corpus;
+- typed Sefaria provider adapter for research/enrichment/deep links;
+- correct RTL/LTR and Unicode handling;
+- static/prerendered passage routes;
+- PWA-ready but license-aware;
+- local-first progress/bookmarks in v1;
+- no account/auth requirement for first release.
+
+### Package/dependency policy
+
+Follow `docs/OPEN_SOURCE_STACK.md`.
+
+Use pnpm/Corepack with a committed frozen lockfile.
+
+Keep dependencies few, maintained and license-approved.
+
+The application must not require a paid credential to build or serve its core reading experience.
+
+## Corpus baseline
+
+Follow `docs/CORPUS_V1.md` rather than choosing API versions opportunistically.
+
+The pilot should start from the audited open corpus, including:
+
+- Public Domain pointed/cantillated Hebrew Tanakh version;
+- Public Domain JPS 1917 English Tanakh baseline;
+- Public Domain Rosenbaum/Silbermann Rashi English baseline;
+- approved Siftei Chakhamim version(s) with exact attribution/license handling;
+- optional OSHB/BDB open data for later word-level enrichment.
+
+Portuguese is first-class in routing/UI/content architecture, but unknown-rights translations are never bundled merely to fill a locale.
 
 ## Source and content rules
 
-Never fabricate citations, source text, translator identity, license, manuscript information, or rabbinic approval.
+Never fabricate:
 
-If a content block is not verified, represent it structurally as a draft fixture. The UI may display draft-only material in development/review mode; production public content must satisfy the release rules in `docs/CONTENT_GOVERNANCE.md`.
+- citations;
+- source wording;
+- translator identity;
+- version identity;
+- license/rights status;
+- manuscript provenance;
+- rabbinic review or approval.
+
+If a modern explanatory block is not verified, keep it structurally in draft/review state.
 
 Do not silently paraphrase a historical source while labeling it as the source.
 
-## Required product surfaces for v1
+Do not redact Israel-specific material inside a quoted source. The product handles applicability through classification, contextual explanation and guided-path selection.
 
-- editorial home / cover
-- Tanakh library navigation
-- Genesis reader
-- READ mode
-- UNDERSTAND interaction
-- SOURCES interaction
-- desktop study rail
-- mobile draggable study sheet
-- Hebrew / translation display architecture
-- reader appearance controls
-- source / provenance drawer
-- beginner glossary behavior
-- review-state mode for editors/rabbis
-- typography proof page
-- responsive empty/loading/error states
-- PWA metadata/shell
-- keyboard navigation and focus management
+## Required v1 product surfaces
+
+- editorial home / cover;
+- Tanakh library navigation;
+- Genesis reader;
+- READ mode;
+- UNDERSTAND interaction;
+- SOURCES interaction;
+- desktop study rail;
+- mobile draggable study sheet;
+- Hebrew / translation display architecture;
+- reader appearance controls;
+- source / provenance view;
+- beginner glossary behavior;
+- applicability/context signal where useful;
+- local reading progress/continue state;
+- review-state mode for editors/rabbis;
+- typography proof page;
+- responsive empty/loading/error states;
+- PWA shell/metadata;
+- keyboard navigation and focus management;
+- free static deployment configuration;
+- generic static-host portability test.
+
+## Design standard
+
+The visual identity is restrained, editorial, white/off-white and deep blue.
+
+Beauty should come from:
+
+- typography;
+- optical spacing;
+- proportion;
+- reading measure;
+- alignment;
+- Hebrew/translation hierarchy;
+- source hierarchy;
+- subtle motion;
+- excellent interaction states.
+
+The interface must never feel like:
+
+- generic SaaS;
+- an AI landing page;
+- a default component library;
+- a templated religious portal;
+- a dashboard disguised as a reader.
+
+The Tanakh itself is the primary visual object.
 
 ## Anti-slop execution protocol
 
-Before accepting a visual direction:
+The visual direction may not be accepted on first render.
 
-1. Build at least three materially different visual treatments on separate implementation branches or isolated design routes using identical content.
-2. Render screenshots at mobile, tablet, and desktop widths.
-3. Compare hierarchy, text measure, Hebrew diacritics, whitespace rhythm, rail behavior, and visual noise.
-4. Select one direction deliberately and document why.
-5. Remove unused experimental styles/components before the final PR.
+1. Build at least three materially different, complete visual treatments using identical Genesis 1:1–5 content:
+   - Editorial Modernism;
+   - Quiet Scholarly;
+   - Immersive Reader.
+2. Render and inspect at:
+   - 390×844;
+   - 768×1024;
+   - 1440×1000.
+3. Capture at least:
+   - home;
+   - reader idle;
+   - selected verse;
+   - Understand open;
+   - Sources open;
+   - enlarged-text state;
+   - Hebrew/LTR mixed state.
+4. Compare hierarchy, type quality, Hebrew diacritics, whitespace rhythm, discoverability, mobile ergonomics and visual distinctiveness.
+5. Choose one direction deliberately and record the decision.
+6. Continue browser/screenshot refinement until the winning direction looks plausibly publishable by a serious editorial design studio.
+7. If the result still resembles a starter kit/default component library, rework composition rather than decorating it.
+8. Delete dead visual experiments before final PR.
 
-Do not improve aesthetics by adding decorative cards, gradients, illustrations, excessive rounding, ornamental religious symbols, or shadows. Improve typography and composition first.
+Use the available build budget for iteration. “Functional and attractive” is not the stop condition; the acceptance bar is visibly authored, coherent and polished.
+
+## Performance standard
+
+The reader should behave like a document, not a JavaScript application shell.
+
+Prioritize:
+
+- static HTML for reading content;
+- minimal client JavaScript;
+- self-hosted fonts;
+- stable layout/font loading;
+- fast LCP;
+- no heavy hero imagery;
+- no runtime AI request;
+- no required live API call for a released passage.
+
+## Accessibility standard
+
+Accessibility is part of editorial quality.
+
+Core requirements:
+
+- semantic landmarks/headings;
+- keyboard-complete verse → Understand → Sources journey;
+- visible focus;
+- correct Drawer/Dialog focus behavior;
+- correct `lang`/`dir` isolation;
+- reduced motion;
+- 200% zoom;
+- large text state;
+- screen-reader verse/action labels;
+- touch ergonomics;
+- automated axe coverage plus manual audits.
+
+## Security and privacy baseline
+
+Follow `docs/SECURITY_AND_QA.md` and the final Astro architecture.
+
+At minimum:
+
+- strict provider validation;
+- no arbitrary source HTML execution;
+- restrictive headers/CSP compatible with static output;
+- no secrets in client bundle;
+- dependency vulnerability/license scanning;
+- secret scanning;
+- secure external URLs;
+- no public privileged review mutation;
+- no unnecessary religious-profile analytics;
+- no runtime AI attack surface in v1.
 
 ## QA gates before a PR is ready
 
-All of these must pass:
+All must pass from a clean checkout:
 
-- install from clean checkout
-- typecheck
-- lint
-- unit/component tests
-- production build
-- Playwright smoke/E2E tests
-- keyboard-only navigation audit
-- axe accessibility checks on core states
-- visual screenshot tests for core reader states
-- RTL/LTR regression checks
-- Lighthouse CI thresholds and performance budget
-- dependency/security audit
-- source/provenance validation
-- license manifest validation
-- no secrets in repository or browser bundle
-
-## Security baseline
-
-Follow `docs/SECURITY_AND_QA.md`. In particular:
-
-- strong Content Security Policy appropriate to the final rendering strategy
-- restrictive security headers
-- no arbitrary HTML rendering from source/API content
-- no remote code execution/eval-style behavior
-- validate external API data at boundaries
-- sanitize any user-authored content introduced later
-- no credentials in client-side environment variables
-- lock dependencies and minimize package surface
+- frozen install;
+- formatting;
+- lint;
+- strict typecheck;
+- unit/component tests;
+- content schema validation;
+- source/provenance validation;
+- license manifest validation;
+- production static build;
+- generic static-server smoke test;
+- external-provider-offline smoke test for Genesis 1:1–5;
+- Playwright mobile/desktop E2E;
+- keyboard-only audit;
+- axe accessibility checks;
+- RTL/LTR regressions;
+- visual screenshot regression;
+- Lighthouse/performance budget;
+- dependency vulnerability/license scan;
+- secret scan;
+- no secrets/caches/build junk committed.
 
 ## Git hygiene
 
-- Work on feature branches.
-- Keep `main` canonical and deployable.
-- Do not rewrite public history.
-- Prefer coherent commits over giant undifferentiated commits.
-- Never commit generated caches, secrets, local env files, test videos, or build outputs unless explicitly required.
-- Every major visual/content/security decision should be traceable in the PR description.
-- Do not merge your own build automatically. Leave the final PR ready for human review.
+- work on `build/grok-production-v1` and coherent sub-branches as needed;
+- keep `main` canonical and deployable;
+- do not rewrite public history;
+- prefer coherent commits;
+- do not commit local env files/caches/test videos/build output unless explicitly part of release evidence;
+- record major visual/content/security decisions in the final PR;
+- never self-merge the completed build.
+
+## Portability gate
+
+Before v1 is complete:
+
+- `pnpm build` produces a self-contained static `dist/`;
+- the core reader works from a generic static HTTP server;
+- no proprietary host API is required;
+- GitHub Pages free deployment is configured/testable;
+- the core Genesis reader works with Sefaria unavailable;
+- no paid service/API key is needed to run the public product;
+- bundled source/font/dependency rights pass repository policy.
+
+## Scalability gate
+
+Before opening the final PR, add **Genesis 1:6** through the documented content workflow without modifying core UI components.
+
+If passage expansion requires route/component surgery, repair the architecture first.
 
 ## Definition of done
 
-The task is not complete because the app runs.
+The task is not complete because routes compile or the app looks good in one screenshot.
 
-It is complete when the reading experience is visibly polished at multiple breakpoints, sources are provenance-safe, the content layers are epistemically distinct, the interface is accessible, the build is secure, tests enforce regressions, and a new reader can move from Genesis 1:1 to understanding Rashi and then into primary sources without needing prior knowledge of Jewish textual-study conventions.
+It is complete when:
+
+- the reader is visibly exceptional across mobile/tablet/desktop;
+- Genesis 1:1–5 proves READ → UNDERSTAND → SOURCES;
+- Rashi/source/editorial/applicability layers remain intelligible and traceable;
+- the release corpus is open-rights and provenance-safe;
+- the product works without live Sefaria availability;
+- accessibility/performance/security tests enforce the experience;
+- another steward can clone, build and host it without paid infrastructure;
+- Genesis 1:6 proves content scalability;
+- a final reviewable PR contains screenshots, evidence, authoring docs, license/source manifest and known limitations.
+
+Leave that PR unmerged for independent audit.
