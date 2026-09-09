@@ -141,10 +141,7 @@ type EditorialSlot =
 
 export type Elucidation = {
   id: string;
-  type:
-    | "EDITORIAL_ELUCIDATION"
-    | "APPLICABILITY_CONTEXT"
-    | "RABBINIC_GUIDANCE";
+  type: "EDITORIAL_ELUCIDATION" | "APPLICABILITY_CONTEXT" | "RABBINIC_GUIDANCE";
   verseId: string;
   slot: EditorialSlot;
   targetSegmentId?: string;
