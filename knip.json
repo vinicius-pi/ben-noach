@@ -1,0 +1,4 @@
+{
+  "ignoreDependencies": ["@lhci/cli", "lighthouse"],
+  "ignoreBinaries": ["gitleaks"]
+}
