@@ -1,0 +1,3 @@
+title = "ben-noach"
+[allowlist]
+paths = ['''tmp-ingest''', '''pnpm-lock.yaml''', '''src/data''']

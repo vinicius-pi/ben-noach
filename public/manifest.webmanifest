@@ -1,0 +1,19 @@
+{
+  "name": "Ben Noach",
+  "short_name": "Ben Noach",
+  "description": "A guided Tanakh reader: READ → UNDERSTAND → SOURCES.",
+  "start_url": "/ben-noach/en/",
+  "scope": "/ben-noach/",
+  "display": "standalone",
+  "background_color": "#FCFDFE",
+  "theme_color": "#102B4E",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/ben-noach/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

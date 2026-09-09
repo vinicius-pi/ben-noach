@@ -1,0 +1,84 @@
+---
+import Mark from "../components/Mark.astro";
+import SearchBox from "../islands/SearchBox";
+import { localePath, t } from "../lib/i18n";
+import type { Locale } from "../lib/types";
+import frankHebrew from "@fontsource-variable/frank-ruhl-libre/files/frank-ruhl-libre-hebrew-wght-normal.woff2?url";
+import literataLatin from "@fontsource-variable/literata/files/literata-latin-wght-normal.woff2?url";
+import "../styles/base.css";
+import "../styles/chrome.css";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const { locale, title, description, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const other = locale === "en" ? "pt" : "en";
+const pathWithoutLocale =
+  Astro.url.pathname.replace(new RegExp(`^${import.meta.env.BASE_URL}${locale}`), "") || "/";
+const enHref = new URL(localePath("en", pathWithoutLocale), Astro.site).href;
+const ptHref = new URL(localePath("pt", pathWithoutLocale), Astro.site).href;
+---
+
+<!doctype html>
+<html lang={locale} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#fcfdfe" />
+    <meta name="description" content={description ?? t(locale, "tagline")} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="pt" href={ptHref} />
+    <link rel="alternate" hreflang="x-default" href={enHref} />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
+    <link rel="preload" href={frankHebrew} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={literataLatin} as="font" type="font/woff2" crossorigin />
+    <title>{title} · {t(locale, "siteName")}</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      {t(locale, "skip")}
+    </a>
+    <header class="site-header">
+      <a class="brand" href={localePath(locale)}>
+        <Mark />
+        <span class="brand-name">{t(locale, "siteName")}</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li>
+            <a href={localePath(locale, "library")}>{t(locale, "library")}</a>
+          </li>
+          <li>
+            <a href={localePath(locale, "paths")}>{t(locale, "paths")}</a>
+          </li>
+          <li>
+            <a href={localePath(locale, "about")}>{t(locale, "about")}</a>
+          </li>
+          <li>
+            <a href={localePath(other, pathWithoutLocale)} hreflang={other}>
+              {other === "pt" ? "PT" : "EN"}
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <SearchBox client:idle locale={locale} />
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>{t(locale, "independent")}</p>
+    </footer>
+  </body>
+</html>

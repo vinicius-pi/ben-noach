@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Astro
+dist/
+.astro/
+
+# build/test output
+coverage/
+playwright-report/
+test-results/
+blob-report/
+lhci/
+*.log
+
+# local environment
+.env
+.env.*
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local caches
+.turbo/
+.cache/
+
+# local review/generated artifacts
+artifacts/
+reports/
+tmp-ingest/
+__pycache__/
+*.pyc

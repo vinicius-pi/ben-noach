@@ -1,0 +1,25 @@
+---
+const { size = 22 } = Astro.props as { size?: number };
+---
+
+<svg
+  class="mark"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+  focusable="false"
+>
+  <polygon
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.15"
+    points="12,2.2 19.6,15.4 4.4,15.4"
+  ></polygon>
+  <polygon
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.15"
+    points="12,21.8 4.4,8.6 19.6,8.6"
+  ></polygon>
+</svg>

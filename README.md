@@ -1,29 +1,64 @@
 # Ben Noach
 
-A source-first, multilingual Tanakh reader designed to make the Hebrew Bible and classical Jewish commentary intelligible to readers who are new to Jewish textual study, especially Bnei Noach and non-Jews approaching Tanakh from outside Judaism.
+**A beautiful guided Tanakh reader for Bnei Noach and non-Jews seeking to understand the Word of Hashem through the Jewish textual tradition.**
 
-## Product thesis
+## Why it exists
 
-**Read → Understand → Sources.**
+A generic Bible can give a reader the text without the interpretive architecture that produced the Jewish reading of that text.
 
-The application should feel like a beautiful book before it feels like software. It presents the Tanakh in a modern reading environment, then progressively opens Rashi, the sages, explanatory context, Noahide-relevant guidance, and full provenance. Readers who want deeper study are led onward to primary-source libraries such as Sefaria.
+Sefaria gives extraordinary access to Tanakh, Rashi, Chazal and thousands of connected sources, but a new reader may not yet know which source to open, who Rashi is, why he comments, or which material is universal, Noahide, or Israel-covenant context.
 
-## Editorial model
+Ben Noach supplies that missing guided layer:
 
-The product keeps three layers visibly distinct:
+**READ → UNDERSTAND → SOURCES**
 
-1. **Source** — canonical or historical text with exact reference, version, provenance, and license.
-2. **Editorial elucidation** — clear modern explanation for a beginner, supported by cited sources.
-3. **Rabbinic guidance** — Noahide-specific normative or scope guidance with explicit review status.
+## Run
 
-The project is independent and under rabbinic review. It does not claim institutional endorsement.
+Requires Node 22+ and pnpm 10.15 (Corepack).
 
-## Current status
+```bash
+corepack enable
+pnpm install --frozen-lockfile
+pnpm dev
+```
 
-Research and build specification phase. The first production-quality demonstrator will cover Genesis 1:1–5, with architecture capable of expanding through Genesis 1–11 and then the Tanakh.
+Open `http://127.0.0.1:4321/ben-noach/en/`.
 
-## Development
+```bash
+pnpm qa          # inner loop: format, lint, types, unit, validators, secrets, build
+pnpm qa:full     # release gate (includes OSV, E2E/axe, visual, Lighthouse)
+```
 
-`main` is the canonical branch. Substantial work should arrive through feature branches and pull requests with source, design, accessibility, security, and provenance checks.
+`pnpm qa` is not the release gate. See `docs/DEPLOYMENT.md`.
 
-See `AGENTS.md` and `docs/` on the active build branch before implementation.
+## v1 corpus
+
+Genesis 1:1–6, from:
+
+- Public Domain pointed/cantillated Hebrew (Tanach with Ta'amei Hamikra / tanach.us)
+- Public Domain JPS 1917
+- Public Domain Rosenbaum/Silbermann Rashi
+- CC BY Metsudah Siftei Chakhamim, with attribution
+
+The reader works with Sefaria unavailable. See `docs/CORPUS_V1.md` and `src/data/source-manifest.json`.
+
+## Design
+
+Production uses **Editorial Modernism**, chosen from rendered evidence of three directions. Comparison: `docs/DESIGN_DECISION.md`. Screenshots: `docs/evidence/`.
+
+## Docs
+
+- `docs/ARCHITECTURE.md`
+- `docs/AUTHORING.md` — how Genesis 1:6 was added without UI surgery
+- `docs/DEPLOYMENT.md`
+- `docs/PATH_TO_GENESIS_1_11.md`
+- `docs/KNOWN_LIMITATIONS.md`
+- `docs/FONTS_AND_LICENSES.md`
+
+## Licensing
+
+- Original software: Apache-2.0
+- Original editorial/docs: CC BY 4.0
+- Third-party texts and fonts retain their own records
+
+The final production PR targets `main` and is not self-merged.

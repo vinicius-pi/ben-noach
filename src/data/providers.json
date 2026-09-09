@@ -1,0 +1,15 @@
+[
+  {
+    "id": "sefaria",
+    "name": "Sefaria",
+    "kind": "enrichment",
+    "baseUrl": "https://www.sefaria.org",
+    "apiBaseUrl": "https://www.sefaria.org/api",
+    "runtimeRequired": false,
+    "allowedHosts": [
+      "www.sefaria.org",
+      "sefaria.org"
+    ],
+    "notes": "Deep-library and deep-link provider. Released passages render from the local corpus."
+  }
+]

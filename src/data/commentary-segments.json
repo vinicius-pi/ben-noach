@@ -1,0 +1,1374 @@
+[
+  {
+    "id": "rashi-genesis-1-1-1",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:1:1",
+    "sefariaRef": "Rashi_on_Genesis.1.1.1",
+    "targetVerseId": "genesis-1-1",
+    "segment": 1,
+    "dibburHamatchil": "בראשית",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "בראשית."
+        },
+        {
+          "kind": "text",
+          "text": " אָמַר רַבִּי יִצְחָק לֹֹֹֹֹא הָיָה צָרִיךְ לְהַתְחִיל אֶת הַתּוֹרָה אֶלָּא מֵהַחֹדֶשׁ הַזֶּה לָכֶם, שֶׁהִיא מִצְוָה רִאשׁוֹנָה שֶׁנִּצְטַוּוּ בָּהּ יִשׂרָאֵל, וּמַה טַּעַם פָּתַח בִּבְרֵאשִׁית? מִשׁוּם כֹּחַ מַעֲשָׂיו הִגִּיד לְעַמּוֹ לָתֵת לָהֶם נַחֲלַת גּוֹיִם (תהילים קי\"א), שֶׁאִם יֹאמְרוּ אֻמּוֹת הָעוֹלָם לְיִשְׁרָאֵל לִסְטִים אַתֶּם, שֶׁכְּבַשְׁתֶּם אַרְצוֹת שִׁבְעָה גוֹיִם, הֵם אוֹמְרִים לָהֶם כָּל הָאָרֶץ שֶׁל הַקָּבָּ\"ה הִיא, הוּא בְרָאָהּ וּנְתָנָהּ לַאֲשֶׁר יָשַׁר בְּעֵינָיו, בִּרְצוֹנוֹ נְתָנָהּ לָהֶם, וּבִרְצוֹנוֹ נְטָלָהּ מֵהֶם וּנְתָנָהּ לָנוּ:"
+        }
+      ],
+      "plain": "בראשית. אָמַר רַבִּי יִצְחָק לֹֹֹֹֹא הָיָה צָרִיךְ לְהַתְחִיל אֶת הַתּוֹרָה אֶלָּא מֵהַחֹדֶשׁ הַזֶּה לָכֶם, שֶׁהִיא מִצְוָה רִאשׁוֹנָה שֶׁנִּצְטַוּוּ בָּהּ יִשׂרָאֵל, וּמַה טַּעַם פָּתַח בִּבְרֵאשִׁית? מִשׁוּם כֹּחַ מַעֲשָׂיו הִגִּיד לְעַמּוֹ לָתֵת לָהֶם נַחֲלַת גּוֹיִם (תהילים קי\"א), שֶׁאִם יֹאמְרוּ אֻמּוֹת הָעוֹלָם לְיִשְׁרָאֵל לִסְטִים אַתֶּם, שֶׁכְּבַשְׁתֶּם אַרְצוֹת שִׁבְעָה גוֹיִם, הֵם אוֹמְרִים לָהֶם כָּל הָאָרֶץ שֶׁל הַקָּבָּ\"ה הִיא, הוּא בְרָאָהּ וּנְתָנָהּ לַאֲשֶׁר יָשַׁר בְּעֵינָיו, בִּרְצוֹנוֹ נְתָנָהּ לָהֶם, וּבִרְצוֹנוֹ נְטָלָהּ מֵהֶם וּנְתָנָהּ לָנוּ:",
+      "checksumSha256": "cb017d27eba9e81551b9f17eab615ff2902f6c5eb976de51dc4b8e1f67c9c224"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "בראשית IN THE BEGINNING — Rabbi Isaac said: The Torah "
+        },
+        {
+          "kind": "emphasis",
+          "text": "which is the Law book of Israel"
+        },
+        {
+          "kind": "text",
+          "text": " should have commenced with the verse (Exodus 12:2) “This month shall be unto you the first of the months” which is the first commandment given to Israel. What is the reason, then, that it commences with the account of the Creation? Because of the thought expressed in the text (Psalms 111:6) “He declared to His people the strength of His works (i.e. He gave an account of the work of Creation), in order that He might give them the heritage of the nations.” For should the peoples of the world say to Israel, “You are robbers, because you took by force the lands of the seven nations of Canaan”, Israel may reply to them, “All the earth belongs to the Holy One, blessed be He; He created it and gave it to whom He pleased. When He willed He gave it to them, and when He willed He took it from them and gave it to us” (Yalkut Shimoni on Torah 187)."
+        }
+      ],
+      "plain": "בראשית IN THE BEGINNING — Rabbi Isaac said: The Torah which is the Law book of Israel should have commenced with the verse (Exodus 12:2) “This month shall be unto you the first of the months” which is the first commandment given to Israel. What is the reason, then, that it commences with the account of the Creation? Because of the thought expressed in the text (Psalms 111:6) “He declared to His people the strength of His works (i.e. He gave an account of the work of Creation), in order that He might give them the heritage of the nations.” For should the peoples of the world say to Israel, “You are robbers, because you took by force the lands of the seven nations of Canaan”, Israel may reply to them, “All the earth belongs to the Holy One, blessed be He; He created it and gave it to whom He pleased. When He willed He gave it to them, and when He willed He took it from them and gave it to us” (Yalkut Shimoni on Torah 187).",
+      "checksumSha256": "4233e591dcf5cc22cc17492c0d5013dffeca1a74fc891c332e8c93880ddfd8d2"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.1.1?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-1-2",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:1:2",
+    "sefariaRef": "Rashi_on_Genesis.1.1.2",
+    "targetVerseId": "genesis-1-1",
+    "segment": 2,
+    "dibburHamatchil": "בראשית ברא",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "בראשית ברא"
+        },
+        {
+          "kind": "text",
+          "text": " אֵין הַמִּקְרָא הַזֶּה אוֹמֵר אֶלָּא דָּרְשֵׁנִי, כְּמוֹ שֶׁדְּרָשׁוּהוּ רַבּוֹתֵינוּ בִּשְׁבִיל הַתּוֹרָה שֶׁנִקְרֵאת רֵאשִׁית דַּרְכּוֹ (משלי ח'), וּבִשְׁבִיל יִשְׂרָאֵל שֶׁנִקְרְאוּ רֵאשִׁית תְּבוּאָתוֹ (ירמיה ב'); וְאִם בָּאתָ לְפָרְשׁוֹ כִּפְשׁוּטוֹ, כָּךְ פָּרְשֵׁהוּ בְּרֵאשִׁית בְּרִיאַת שָׁמַיִם וָאָרֶץ, וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וְלֹא בָא הַמִּקְרָא לְהוֹרוֹת סֵדֶר הַבְּרִיאָה לוֹמַר שֶׁאֵלּוּ קָדְמוּ, שֶׁאִם בָּא לְהוֹרוֹת כָּךְ, הָיָה לוֹ לִכְתֹּב בָּרִאשׁוֹנָה בָּרָא אֶת הַשָּׁמַיִם וְגוֹ' שֶׁאֵין לְךָ רֵאשִׁית בַּמִּקְרָא שֶׁאֵינוֹ דָבוּק לַתֵּבָה שֶׁלְּאַחֲרָיו, כְּמוֹ בְּרֵאשִׁית מַמְלֶכֶת יְהוֹיָקִים (שׁם כ\"ז), רֵאשִׁית מַמְלַכְתּוֹ (בראשית י'), רֵאשִׁית דְּגָנְךָ (דברים י\"ח, ד'), – אַף כָּאן אַתָּה אוֹמֵר בְּרֵאשִׁית בָּרָא אֱלֹהִים וְגוֹ', כְּמוֹ בְּרֵאשִׁית בְּרֹא; וְדוֹמֶה לוֹ תְּחִלַּת דִּבֶּר ה' בְּהוֹשֵׁעַ (הושע א'), כְּלוֹמַר תְּחִלַת דִּבּוּרוֹ שֶׁל הַקָּבָּ\"ה בְּהוֹשֵׁעַ, וַיֹּאמֶר ה' אֶל הוֹשֵׁעַ וְגוֹ'. וְאִ\"תֹּ לְהוֹרוֹת בָּא שֶׁאֵלּוּ תְּחִלָּה נִבְרְאוּ, וּפֵרוּשׁוֹ בְּרֵאשִׁית הַכֹּל בָּרָא אֵלוּ – וְֵישׁ לְךָ מִקְרָאוֹת שֶׁמְּקַצְּרִים לְשׁוֹנָם וּמְמַעֲטִים תֵּבָה אַחַת, כְּמוֹ כִּי לֹא סָגַר דַּלְתֵי בִטְנִי (איוב ג'), וְלֹא פֵּרֵשׁ מִי הַסּוֹגֵר וּכְמוֹ יִשָּׂא אֶת חֵיל דַּמֶּשֶׂק (ישעיהו ח'), וְלֹא פֵּרֵשׁ מִי יִשָּׂאֶנּוּ; וּכְמוֹ אִם יַחֲרוֹשׁ בַּבְּקָרִים (עמוס ו'), וְלֹא פֵּרֵשׁ אִם יַחֲרוֹשׁ אָדָם בַּבְּקָרִים, וּכְמוֹ מַגִּיד מֵרֵאשִׁית אַחֲרִית (ישעיהו מ\"ו), וְלֹא פֵּרֵשׁ מַגִּיד מֵרֵאשִׁית דָּבָר אַחֲרִית דָּבָר – אִ\"כֵּ, תְּמַהּ עַל עַצְמְךָ, שֶׁהֲרֵי הַמַּיִם קָדְמוּ, שֶׁהֲרֵי כְתִיב וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם, וְעַדַיִין לֹא גִלָּה הַמִּקְרָא, בְּרִיאַת הַמַּיִם מָתַי הָיְתָה, הָא לָמַדְתָּ, שֶׁקָּדְמוּ הַמַּיִם לָאָרֶץ, וְעוֹד, שֶׁהַשָּׁמַיִם מֵאֵשׁ וּמַיִם נִבְרְאוּ, עַל כָּרְחֲךָ לֹא לִמֵּד הַמִּקְרָא סֵדֶר הַמֻּקְדָמִים וְהַמְאֻחָרִים כְּלוּם:"
+        }
+      ],
+      "plain": "בראשית ברא אֵין הַמִּקְרָא הַזֶּה אוֹמֵר אֶלָּא דָּרְשֵׁנִי, כְּמוֹ שֶׁדְּרָשׁוּהוּ רַבּוֹתֵינוּ בִּשְׁבִיל הַתּוֹרָה שֶׁנִקְרֵאת רֵאשִׁית דַּרְכּוֹ (משלי ח'), וּבִשְׁבִיל יִשְׂרָאֵל שֶׁנִקְרְאוּ רֵאשִׁית תְּבוּאָתוֹ (ירמיה ב'); וְאִם בָּאתָ לְפָרְשׁוֹ כִּפְשׁוּטוֹ, כָּךְ פָּרְשֵׁהוּ בְּרֵאשִׁית בְּרִיאַת שָׁמַיִם וָאָרֶץ, וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וְלֹא בָא הַמִּקְרָא לְהוֹרוֹת סֵדֶר הַבְּרִיאָה לוֹמַר שֶׁאֵלּוּ קָדְמוּ, שֶׁאִם בָּא לְהוֹרוֹת כָּךְ, הָיָה לוֹ לִכְתֹּב בָּרִאשׁוֹנָה בָּרָא אֶת הַשָּׁמַיִם וְגוֹ' שֶׁאֵין לְךָ רֵאשִׁית בַּמִּקְרָא שֶׁאֵינוֹ דָבוּק לַתֵּבָה שֶׁלְּאַחֲרָיו, כְּמוֹ בְּרֵאשִׁית מַמְלֶכֶת יְהוֹיָקִים (שׁם כ\"ז), רֵאשִׁית מַמְלַכְתּוֹ (בראשית י'), רֵאשִׁית דְּגָנְךָ (דברים י\"ח, ד'), – אַף כָּאן אַתָּה אוֹמֵר בְּרֵאשִׁית בָּרָא אֱלֹהִים וְגוֹ', כְּמוֹ בְּרֵאשִׁית בְּרֹא; וְדוֹמֶה לוֹ תְּחִלַּת דִּבֶּר ה' בְּהוֹשֵׁעַ (הושע א'), כְּלוֹמַר תְּחִלַת דִּבּוּרוֹ שֶׁל הַקָּבָּ\"ה בְּהוֹשֵׁעַ, וַיֹּאמֶר ה' אֶל הוֹשֵׁעַ וְגוֹ'. וְאִ\"תֹּ לְהוֹרוֹת בָּא שֶׁאֵלּוּ תְּחִלָּה נִבְרְאוּ, וּפֵרוּשׁוֹ בְּרֵאשִׁית הַכֹּל בָּרָא אֵלוּ – וְֵישׁ לְךָ מִקְרָאוֹת שֶׁמְּקַצְּרִים לְשׁוֹנָם וּמְמַעֲטִים תֵּבָה אַחַת, כְּמוֹ כִּי לֹא סָגַר דַּלְתֵי בִטְנִי (איוב ג'), וְלֹא פֵּרֵשׁ מִי הַסּוֹגֵר וּכְמוֹ יִשָּׂא אֶת חֵיל דַּמֶּשֶׂק (ישעיהו ח'), וְלֹא פֵּרֵשׁ מִי יִשָּׂאֶנּוּ; וּכְמוֹ אִם יַחֲרוֹשׁ בַּבְּקָרִים (עמוס ו'), וְלֹא פֵּרֵשׁ אִם יַחֲרוֹשׁ אָדָם בַּבְּקָרִים, וּכְמוֹ מַגִּיד מֵרֵאשִׁית אַחֲרִית (ישעיהו מ\"ו), וְלֹא פֵּרֵשׁ מַגִּיד מֵרֵאשִׁית דָּבָר אַחֲרִית דָּבָר – אִ\"כֵּ, תְּמַהּ עַל עַצְמְךָ, שֶׁהֲרֵי הַמַּיִם קָדְמוּ, שֶׁהֲרֵי כְתִיב וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם, וְעַדַיִין לֹא גִלָּה הַמִּקְרָא, בְּרִיאַת הַמַּיִם מָתַי הָיְתָה, הָא לָמַדְתָּ, שֶׁקָּדְמוּ הַמַּיִם לָאָרֶץ, וְעוֹד, שֶׁהַשָּׁמַיִם מֵאֵשׁ וּמַיִם נִבְרְאוּ, עַל כָּרְחֲךָ לֹא לִמֵּד הַמִּקְרָא סֵדֶר הַמֻּקְדָמִים וְהַמְאֻחָרִים כְּלוּם:",
+      "checksumSha256": "6d394f5f2ca5ea4352a2235f73f3c2b2eeceafbe31e92860c70744c7fcefa366"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "בראשית ברא IN THE BEGINNING GOD CREATED — This verse calls aloud for explanation in the manner that our Rabbis explained it: God created the world for the sake of the Torah which is called (Proverbs 8:22) “The beginning (ראשית) of His (God’s) way”, and for the sake of Israel who are called (Jeremiah 2:3) “The beginning (ראשית) of His (God’s) increase’’. If, however, you wish to explain it in its plain sense, explain it thus: At the beginning of the Creation of heaven and earth when the earth was without form and void and there was darkness, God said, “Let there be light”.  The text does not intend to point out the order of the acts of Creation — to state that these (heaven and earth) were created first; for if it intended to point this out, it should have written 'בראשונה ברא את השמים וגו “At first God created etc.” And for this reason: Because, wherever the word ראשית occurs in Scripture, it is in the construct state. E. g., (Jeremiah 26:1) “In the beginning of (בראשית) the reign of Jehoiakim”; (Genesis 10:10) “The beginning of (ראשית) his kingdom”; (Deuteronomy 18:4) “The first fruit of (ראשית) thy corn.” Similarly here you must translate בראשית ברא אלהים as though it read בראשית ברוא, at the beginning of God’s creating. A similar grammatical construction (of a noun in construct followed by a verb) is: (Hosea 1:2) תחלת דבר ה' בהושע, which is as much as to say, “At the beginning of God’s speaking through Hosea, the Lord said to Hosea.” Should you, however, insist that it does actually intend to point out that these (heaven and earth) were created first, and that the meaning is, “At the beginning of everything He created these, admitting therefore that the word בראשית is in the construct state and explaining the omission of a word signifying “everything” by saying that you have texts which are elliptical, omitting a word, as for example (Job 3:10) “Because it shut not up the doors of my mother’s womb” where it does not explicitly explain who it was that closed the womb; and (Isaiah 8:4) “He shall take away the spoil of Samaria” without explaining who shall take it away; and (Amos 6:12) “Doth he plough with oxen,\" and it does not explicitly state, “Doth a man plough with oxen”; (Isaiah 46:10) “Declaring from the beginning the end,” and it does not explicitly state, “Declaring from the beginning of a thing the end of a thing’ — if it is so (that you assert that this verse intends to point out that heaven and earth were created first), you should be astonished at yourself, because as a matter of fact the waters were created before heaven and earth, for, lo, it is written, (v. 2) “The Spirit of God was hovering on the face of the waters,” and Scripture had not yet disclosed when the creation of the waters took place — consequently you must learn from this that the creation of the waters preceded that of the earth. And a further proof that the heavens and earth were not the first thing created is that the heavens were created from fire (אש) and water (מים), from which it follows that fire and water were in existence before the heavens. Therefore you must admit that the text teaches nothing about the earlier or later sequence of the acts of Creation."
+        }
+      ],
+      "plain": "בראשית ברא IN THE BEGINNING GOD CREATED — This verse calls aloud for explanation in the manner that our Rabbis explained it: God created the world for the sake of the Torah which is called (Proverbs 8:22) “The beginning (ראשית) of His (God’s) way”, and for the sake of Israel who are called (Jeremiah 2:3) “The beginning (ראשית) of His (God’s) increase’’. If, however, you wish to explain it in its plain sense, explain it thus: At the beginning of the Creation of heaven and earth when the earth was without form and void and there was darkness, God said, “Let there be light”.  The text does not intend to point out the order of the acts of Creation — to state that these (heaven and earth) were created first; for if it intended to point this out, it should have written 'בראשונה ברא את השמים וגו “At first God created etc.” And for this reason: Because, wherever the word ראשית occurs in Scripture, it is in the construct state. E. g., (Jeremiah 26:1) “In the beginning of (בראשית) the reign of Jehoiakim”; (Genesis 10:10) “The beginning of (ראשית) his kingdom”; (Deuteronomy 18:4) “The first fruit of (ראשית) thy corn.” Similarly here you must translate בראשית ברא אלהים as though it read בראשית ברוא, at the beginning of God’s creating. A similar grammatical construction (of a noun in construct followed by a verb) is: (Hosea 1:2) תחלת דבר ה' בהושע, which is as much as to say, “At the beginning of God’s speaking through Hosea, the Lord said to Hosea.” Should you, however, insist that it does actually intend to point out that these (heaven and earth) were created first, and that the meaning is, “At the beginning of everything He created these, admitting therefore that the word בראשית is in the construct state and explaining the omission of a word signifying “everything” by saying that you have texts which are elliptical, omitting a word, as for example (Job 3:10) “Because it shut not up the doors of my mother’s womb” where it does not explicitly explain who it was that closed the womb; and (Isaiah 8:4) “He shall take away the spoil of Samaria” without explaining who shall take it away; and (Amos 6:12) “Doth he plough with oxen,\" and it does not explicitly state, “Doth a man plough with oxen”; (Isaiah 46:10) “Declaring from the beginning the end,” and it does not explicitly state, “Declaring from the beginning of a thing the end of a thing’ — if it is so (that you assert that this verse intends to point out that heaven and earth were created first), you should be astonished at yourself, because as a matter of fact the waters were created before heaven and earth, for, lo, it is written, (v. 2) “The Spirit of God was hovering on the face of the waters,” and Scripture had not yet disclosed when the creation of the waters took place — consequently you must learn from this that the creation of the waters preceded that of the earth. And a further proof that the heavens and earth were not the first thing created is that the heavens were created from fire (אש) and water (מים), from which it follows that fire and water were in existence before the heavens. Therefore you must admit that the text teaches nothing about the earlier or later sequence of the acts of Creation.",
+      "checksumSha256": "5ee90d5188fd24a1a7fd81a900f6b25785701cd71df6f2e4e2151161e4ab7f63"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.1.2?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-1-3",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:1:3",
+    "sefariaRef": "Rashi_on_Genesis.1.1.3",
+    "targetVerseId": "genesis-1-1",
+    "segment": 3,
+    "dibburHamatchil": "ברא אלהים",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ברא אלהים"
+        },
+        {
+          "kind": "text",
+          "text": " וְלֹא נֶאֱמַר בָּרָא ה', שֶׁבַּתְּחִלָּה עָלָה בְמַחֲשָׁבָה לִבְרֹאתוֹ בְּמִדַּת הַדִּין, רָאָה שֶׁאֵין הָעוֹלָם מִתְקַיֵּם, הִקְדִּים מִדַּת רַחֲמִים וְשִׁתְּפָהּ לְמִהַ\"דִּ, וְהַיְינוּ דִּכְתִיב בְּיוֹם עֲשׂוֹת ה' אֱלֹהִים אֶרֶץ וְשָׁמָיִם:"
+        }
+      ],
+      "plain": "ברא אלהים וְלֹא נֶאֱמַר בָּרָא ה', שֶׁבַּתְּחִלָּה עָלָה בְמַחֲשָׁבָה לִבְרֹאתוֹ בְּמִדַּת הַדִּין, רָאָה שֶׁאֵין הָעוֹלָם מִתְקַיֵּם, הִקְדִּים מִדַּת רַחֲמִים וְשִׁתְּפָהּ לְמִהַ\"דִּ, וְהַיְינוּ דִּכְתִיב בְּיוֹם עֲשׂוֹת ה' אֱלֹהִים אֶרֶץ וְשָׁמָיִם:",
+      "checksumSha256": "4cc6f987c441dfc45b3c2775ad0de2c46a49fb6675276a7aac0a5ffd95912090"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "ברא אלהים GOD [AS JUDGE] CREATED — It does not state 'ברא ה “The Lord (the Merciful One) created, because at first God intended to create it (the world) to be placed under the attribute (rule) of strict justice, but He realised that the world could not thus endure and therefore gave precedence to Divine Mercy allying it with Divine Justice. It is to this that what is written in (Genesis 2:4) alludes — “In the day that the Lord God made earth and heaven”."
+        }
+      ],
+      "plain": "ברא אלהים GOD [AS JUDGE] CREATED — It does not state 'ברא ה “The Lord (the Merciful One) created, because at first God intended to create it (the world) to be placed under the attribute (rule) of strict justice, but He realised that the world could not thus endure and therefore gave precedence to Divine Mercy allying it with Divine Justice. It is to this that what is written in (Genesis 2:4) alludes — “In the day that the Lord God made earth and heaven”.",
+      "checksumSha256": "87f38c66aa5d6c78905ec93c43d2b9a7da2f2bd4bad660fdd4cae87ecbb1b229"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.1.3?lang=bi"
+  },
+  {
+    "id": "siftei-genesis-1-1-1",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:1:1",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.1.1",
+    "targetVerseId": "genesis-1-1",
+    "segment": 1,
+    "dibburHamatchil": "אמר רבי יצחק",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "אמר רבי יצחק."
+        },
+        {
+          "kind": "text",
+          "text": " המפרשים מקשים שלא מצינו שיהא מוזכר בגמרא ובמדרש זה המאמר בשם רבי יצחק אלא מה שאמר מה טעם פתח ותו לא. אלא שזה ר\"י היה אביו של רש\"י ולא היה כ\"כ גדול בתורה ובנו רש\"י רצה לכבדו ולהזכירו בתחלת חבורו ושאל מאביו להקשות איזה קושיא ולכתוב משמו והקשה זאת הקושיא למה התחיל בבראשית ולא הקשו מה טעם. מצא כתוב בכתב ישן. וזה אינו שמביא בפרק בתרא דעבודה זרה (עה.) זה לשון אבא מורי מנוחתו כבוד ומוכח שהיה בעל תורה. [דברי דוד]:"
+        }
+      ],
+      "plain": "אמר רבי יצחק. המפרשים מקשים שלא מצינו שיהא מוזכר בגמרא ובמדרש זה המאמר בשם רבי יצחק אלא מה שאמר מה טעם פתח ותו לא. אלא שזה ר\"י היה אביו של רש\"י ולא היה כ\"כ גדול בתורה ובנו רש\"י רצה לכבדו ולהזכירו בתחלת חבורו ושאל מאביו להקשות איזה קושיא ולכתוב משמו והקשה זאת הקושיא למה התחיל בבראשית ולא הקשו מה טעם. מצא כתוב בכתב ישן. וזה אינו שמביא בפרק בתרא דעבודה זרה (עה.) זה לשון אבא מורי מנוחתו כבוד ומוכח שהיה בעל תורה. [דברי דוד]:",
+      "checksumSha256": "8efbc522ec762a69cabfea6c66b8762ea987b3bc3f9a3fc1bd3516534768060e"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "R. Yitzchok said."
+        },
+        {
+          "kind": "text",
+          "text": " Some commentators object that neither the Talmud nor the Midrash mention this statement in the name of R. Yitzchok. [The Midrash] states only what Rashi said [later]: מה טעם פתח בבראשית וכו' but states no more than that. [These commentators then explain] that R. Yitzchok was Rashi’s father and he was not a great Torah scholar. Rashi wished to honor his father by mentioning him in the beginning of his work. Thus Rashi asked his father to pose a difficulty that could be cited in his name. His father asked: למה התחיל בבראשית but did not ask מה טעם פתח בבראשית [as the Midrash does. Thus, Rashi cites the question in his father’s name.] This explanation, found in an old manuscript, is incorrect. For Rashi’s commentary on Avodah Zarah (75a) cites [a scholarly explanation of the Talmud] and says, “This is the explanation of my father, my teacher, may he rest in peace...” Thus it is clear that Rashi’s father was learned in Torah. ("
+        },
+        {
+          "kind": "emphasis",
+          "text": "Divrei Dovid"
+        },
+        {
+          "kind": "text",
+          "text": ") "
+        }
+      ],
+      "plain": "R. Yitzchok said. Some commentators object that neither the Talmud nor the Midrash mention this statement in the name of R. Yitzchok. [The Midrash] states only what Rashi said [later]: מה טעם פתח בבראשית וכו' but states no more than that. [These commentators then explain] that R. Yitzchok was Rashi’s father and he was not a great Torah scholar. Rashi wished to honor his father by mentioning him in the beginning of his work. Thus Rashi asked his father to pose a difficulty that could be cited in his name. His father asked: למה התחיל בבראשית but did not ask מה טעם פתח בבראשית [as the Midrash does. Thus, Rashi cites the question in his father’s name.] This explanation, found in an old manuscript, is incorrect. For Rashi’s commentary on Avodah Zarah (75a) cites [a scholarly explanation of the Talmud] and says, “This is the explanation of my father, my teacher, may he rest in peace...” Thus it is clear that Rashi’s father was learned in Torah. (Divrei Dovid) ",
+      "checksumSha256": "2403c600ca529bbe8df373ab4f604b9038fb02d3a775e8a1dfbd8a0cd97f572a"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.1.1?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-1-2",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:1:2",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.1.2",
+    "targetVerseId": "genesis-1-1",
+    "segment": 2,
+    "dibburHamatchil": "לא היה צריך להתחיל וכו'",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "לא היה צריך להתחיל וכו'."
+        },
+        {
+          "kind": "text",
+          "text": " דהא התורה לא ניתנה לישראל אלא בשביל המצות הכתובים בה שיקיימו אותן [ועל כן נקראת בלשון תורה] וא\"כ כל הני סיפורי דברים לא היה לו לכתוב בתורה אלא לעשות ספר בפני עצמו כמו ספר יהושע או ספר שופטים:  "
+        }
+      ],
+      "plain": "לא היה צריך להתחיל וכו'. דהא התורה לא ניתנה לישראל אלא בשביל המצות הכתובים בה שיקיימו אותן [ועל כן נקראת בלשון תורה] וא\"כ כל הני סיפורי דברים לא היה לו לכתוב בתורה אלא לעשות ספר בפני עצמו כמו ספר יהושע או ספר שופטים:  ",
+      "checksumSha256": "68f7f87dc0358cf17b1ede793c587e2767b1a9c7cde3838644bc635df25a914f"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "The Torah should have begun..."
+        },
+        {
+          "kind": "text",
+          "text": " This is because the Torah was given to Israel only for the mitzvos it contains, that they should keep them. (Thus it is called Torah, connoting “instructions”). If so, all these narratives should not have been written in the Torah, but they should have been made into a separate book, like Sefer Yehoshua or Sefer Shoftim. "
+        }
+      ],
+      "plain": "The Torah should have begun... This is because the Torah was given to Israel only for the mitzvos it contains, that they should keep them. (Thus it is called Torah, connoting “instructions”). If so, all these narratives should not have been written in the Torah, but they should have been made into a separate book, like Sefer Yehoshua or Sefer Shoftim. ",
+      "checksumSha256": "92badc68c6a2aa61f2a4977b3eb6a9b96317d537b0386a9b5b7fc0eed70c26f2"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.1.2?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-1-3",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:1:3",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.1.3",
+    "targetVerseId": "genesis-1-1",
+    "segment": 3,
+    "dibburHamatchil": "שנצטוו בה ישראל",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "שנצטוו בה ישראל."
+        },
+        {
+          "kind": "text",
+          "text": " משא\"כ מילה וגיד הנשה שלא נצטוו בהם אלא יחידים (בעדם ובעד כל ישראל) וכל זמן שלא נצטוו בם כל ישראל אינה נחשבת מכלל מצוותיה דתורה צוה לנו משה כתיב (דברים לג ד): "
+        }
+      ],
+      "plain": "שנצטוו בה ישראל. משא\"כ מילה וגיד הנשה שלא נצטוו בהם אלא יחידים (בעדם ובעד כל ישראל) וכל זמן שלא נצטוו בם כל ישראל אינה נחשבת מכלל מצוותיה דתורה צוה לנו משה כתיב (דברים לג ד): ",
+      "checksumSha256": "975d9ca0c098f73e0693b952068f2f8174cfbbb901f2fce03e671b1a523f91f2"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "That the Israelites were commanded."
+        },
+        {
+          "kind": "text",
+          "text": " The precepts of "
+        },
+        {
+          "kind": "emphasis",
+          "text": "milah"
+        },
+        {
+          "kind": "text",
+          "text": " and "
+        },
+        {
+          "kind": "emphasis",
+          "text": "gid hanasheh"
+        },
+        {
+          "kind": "text",
+          "text": " [although they appear prior to “This month shall be...”] are different because they were commanded only to individuals (for their sake and for all Israel’s). It is only when all Israel is commanded that it is considered among the Torah’s precepts, for it is written ("
+        },
+        {
+          "kind": "emphasis",
+          "text": "Devarim"
+        },
+        {
+          "kind": "text",
+          "text": " 33:4): “The Torah that Moshe commanded "
+        },
+        {
+          "kind": "emphasis",
+          "text": "us"
+        },
+        {
+          "kind": "text",
+          "text": ".” "
+        }
+      ],
+      "plain": "That the Israelites were commanded. The precepts of milah and gid hanasheh [although they appear prior to “This month shall be...”] are different because they were commanded only to individuals (for their sake and for all Israel’s). It is only when all Israel is commanded that it is considered among the Torah’s precepts, for it is written (Devarim 33:4): “The Torah that Moshe commanded us.” ",
+      "checksumSha256": "432e0ef15380134a4f445d0935bd9ed2fc7d237e2f0c41c52e1c52ed905fb005"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.1.3?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-1-4",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:1:4",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.1.4",
+    "targetVerseId": "genesis-1-1",
+    "segment": 4,
+    "dibburHamatchil": "ומה טעם פתח בבראשית",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ומה טעם פתח בבראשית."
+        },
+        {
+          "kind": "text",
+          "text": " בלשון ניחותא ותירוץ הוא ר\"ל הפסוק בתהלים הוא מפרש הטעם למה התחיל בבראשית. והכי משמע מן הפסוק כח מעשיו פי' דהוא מעשה בראשית ולכך הגיד לעמו משום שרצה לתת להם נחלת גוים דבשביל אברהם שהבטיחו הקב\"ה שיתן לזרעו את ארץ כנען (והירושה היא משכר מצות וחשובה כמצות) וא\"כ צריך להודיע שהבריאה הוא כח מעשיו. א\"נ י\"ל היה לו לכתוב ספר בראשית אחר האזינו ולא להתחיל בו כאן ומתרץ משום כח מעשיו וכו' ר\"ל אם היה כותב ספר בראשית בסוף הספר לא היתה הוכחה שהכתוב בא להעיד שאין בני ישראל כליסטים אלא היינו אומרים מה שנכתב ספר בראשית הוא להגיד שאין העולם קדמון שהוא עיקר האמונה וכמו שכתב הרמב\"ן אבל עכשיו מה שהתחיל בראשית ע\"כ צריכין אנו לומר ולפרש משום כח מעשיו וכו' והכתוב עצמו מעיד על זה ודו\"ק: "
+        }
+      ],
+      "plain": "ומה טעם פתח בבראשית. בלשון ניחותא ותירוץ הוא ר\"ל הפסוק בתהלים הוא מפרש הטעם למה התחיל בבראשית. והכי משמע מן הפסוק כח מעשיו פי' דהוא מעשה בראשית ולכך הגיד לעמו משום שרצה לתת להם נחלת גוים דבשביל אברהם שהבטיחו הקב\"ה שיתן לזרעו את ארץ כנען (והירושה היא משכר מצות וחשובה כמצות) וא\"כ צריך להודיע שהבריאה הוא כח מעשיו. א\"נ י\"ל היה לו לכתוב ספר בראשית אחר האזינו ולא להתחיל בו כאן ומתרץ משום כח מעשיו וכו' ר\"ל אם היה כותב ספר בראשית בסוף הספר לא היתה הוכחה שהכתוב בא להעיד שאין בני ישראל כליסטים אלא היינו אומרים מה שנכתב ספר בראשית הוא להגיד שאין העולם קדמון שהוא עיקר האמונה וכמו שכתב הרמב\"ן אבל עכשיו מה שהתחיל בראשית ע\"כ צריכין אנו לומר ולפרש משום כח מעשיו וכו' והכתוב עצמו מעיד על זה ודו\"ק: ",
+      "checksumSha256": "fa4e786130420a14bc3ccc40d2d35e227f385d15a85c2b0ca899f825dc26af67"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "What is the reason... begins with “In the beginning?” "
+        },
+        {
+          "kind": "text",
+          "text": "This is not a question but [the start of] the answer. Rashi is saying: The verse in Tehillim explains the reason why the Torah begins with “In the beginning.” For the verse means, “He declared the power of His works” (i.e., the Creation of the world) “to His people.” Why? Because He wanted “to give them the inheritance of nations.” It is on account of Avraham, whom Hashem promised to give Eretz Canaan to his offspring, (and the inheritance was in reward for the mitzvos, and it is considered like the mitzvos). [Thus, the Torah indeed begins with the mitzvos]. For this reason [of giving them “the inheritance of nations,”] Hashem needed to declare that the Creation of the world is the power of His works. Alternatively, we could say [that Rashi is asking]: The Book of Bereishis should have been written [at the end,] after Parshas Haazinu. Why then does the Torah begin with it? Rashi answers: Because of “He declared the power of his works, etc.” Rashi is saying that if Bereishis would be at the end of the Torah, it would not be clear that the Torah’s intention was to testify that Bnei Yisrael are not robbers. Rather, we would think that Bereishis was written to teach that the world [is Hashem’s Creation and] did not always exist; this is central to our faith, as Ramban explains. But now that the Torah "
+        },
+        {
+          "kind": "emphasis",
+          "text": "begins"
+        },
+        {
+          "kind": "text",
+          "text": " with Creation, we must say that the Torahs’s intention is to testify that “He declared the power of His works....” "
+        }
+      ],
+      "plain": "What is the reason... begins with “In the beginning?” This is not a question but [the start of] the answer. Rashi is saying: The verse in Tehillim explains the reason why the Torah begins with “In the beginning.” For the verse means, “He declared the power of His works” (i.e., the Creation of the world) “to His people.” Why? Because He wanted “to give them the inheritance of nations.” It is on account of Avraham, whom Hashem promised to give Eretz Canaan to his offspring, (and the inheritance was in reward for the mitzvos, and it is considered like the mitzvos). [Thus, the Torah indeed begins with the mitzvos]. For this reason [of giving them “the inheritance of nations,”] Hashem needed to declare that the Creation of the world is the power of His works. Alternatively, we could say [that Rashi is asking]: The Book of Bereishis should have been written [at the end,] after Parshas Haazinu. Why then does the Torah begin with it? Rashi answers: Because of “He declared the power of his works, etc.” Rashi is saying that if Bereishis would be at the end of the Torah, it would not be clear that the Torah’s intention was to testify that Bnei Yisrael are not robbers. Rather, we would think that Bereishis was written to teach that the world [is Hashem’s Creation and] did not always exist; this is central to our faith, as Ramban explains. But now that the Torah begins with Creation, we must say that the Torahs’s intention is to testify that “He declared the power of His works....” ",
+      "checksumSha256": "cfca13fa8cb7b0791770c87b93cc505b622d2bebf1848ca668cf55020ee942f4"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.1.4?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "rashi-genesis-1-2-1",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:2:1",
+    "sefariaRef": "Rashi_on_Genesis.1.2.1",
+    "targetVerseId": "genesis-1-2",
+    "segment": 1,
+    "dibburHamatchil": "תהו ובהו",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "תהו ובהו."
+        },
+        {
+          "kind": "text",
+          "text": " תֹּהוּ לְשׁוֹן תֵּמַהּ וְשִׁמָּמוֹן, שֶׁאָדָם תּוֹהֵא וּמִשְׁתּוֹמֵם עַל בֹּהוּ שֶׁבָּהּ:"
+        }
+      ],
+      "plain": "תהו ובהו. תֹּהוּ לְשׁוֹן תֵּמַהּ וְשִׁמָּמוֹן, שֶׁאָדָם תּוֹהֵא וּמִשְׁתּוֹמֵם עַל בֹּהוּ שֶׁבָּהּ:",
+      "checksumSha256": "77888201ad7637ca04611a8f864c88370109a3a797f2d34e233e55ae968b2eb5"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "תהו ובהו DESOLATE AND VOID — The word תהו signifies astonishment and amazement, for a person would have been astonished and amazed at its emptiness."
+        }
+      ],
+      "plain": "תהו ובהו DESOLATE AND VOID — The word תהו signifies astonishment and amazement, for a person would have been astonished and amazed at its emptiness.",
+      "checksumSha256": "af84ca632cfdf78cb225fbaef3b006f479bf3241a202fec7ec67d46c91acc85f"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.2.1?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-2-2",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:2:2",
+    "sefariaRef": "Rashi_on_Genesis.1.2.2",
+    "targetVerseId": "genesis-1-2",
+    "segment": 2,
+    "dibburHamatchil": "תהו",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "תהו."
+        },
+        {
+          "kind": "text",
+          "text": " אשטורדי\"שון בְּלַעַ\"ז:"
+        }
+      ],
+      "plain": "תהו. אשטורדי\"שון בְּלַעַ\"ז:",
+      "checksumSha256": "810a6b5c8d0ac072260a6409551da37b66032e6ca06dde6073b1c1a8106a9b11"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "תהו is estordison in old French."
+        }
+      ],
+      "plain": "תהו is estordison in old French.",
+      "checksumSha256": "51dd7260e303642a2f38fc89d39e82d53bf6d23290b5161cd898e463bce5d62e"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.2.2?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-2-3",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:2:3",
+    "sefariaRef": "Rashi_on_Genesis.1.2.3",
+    "targetVerseId": "genesis-1-2",
+    "segment": 3,
+    "dibburHamatchil": "בהו",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "בהו."
+        },
+        {
+          "kind": "text",
+          "text": " לְשׁוֹן רֵקוּת וְצָדוּ:"
+        }
+      ],
+      "plain": "בהו. לְשׁוֹן רֵקוּת וְצָדוּ:",
+      "checksumSha256": "ceb84af4ce852a39b4337941e8c2c11d6185479d1e11802c3411401c02ff5b7b"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "בהו VOID — The word signifies emptiness and empty space."
+        }
+      ],
+      "plain": "בהו VOID — The word signifies emptiness and empty space.",
+      "checksumSha256": "fd17f5ea047f618f2496bb76e83a61b107286ae1c28b2cbe51e9dcb08b8a5021"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.2.3?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-2-4",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:2:4",
+    "sefariaRef": "Rashi_on_Genesis.1.2.4",
+    "targetVerseId": "genesis-1-2",
+    "segment": 4,
+    "dibburHamatchil": "על פני תהום",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "על פני תהום."
+        },
+        {
+          "kind": "text",
+          "text": " עַל פְּנֵי הַמַּיִם שֶׁעַל הָאָרֶץ:"
+        }
+      ],
+      "plain": "על פני תהום. עַל פְּנֵי הַמַּיִם שֶׁעַל הָאָרֶץ:",
+      "checksumSha256": "0b6e2718d0d7f7c9eeff70f13933f2b2e788de3298be1b51e1e623664404e85a"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "על פני תהום ON THE FACE OF THE DEEP — i. e. the waters which were upon the earth."
+        }
+      ],
+      "plain": "על פני תהום ON THE FACE OF THE DEEP — i. e. the waters which were upon the earth.",
+      "checksumSha256": "13511747841ae6e227bb77fc4f57c1d166f6153e8648f6ed05a94965c4faa5f2"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.2.4?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-2-5",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:2:5",
+    "sefariaRef": "Rashi_on_Genesis.1.2.5",
+    "targetVerseId": "genesis-1-2",
+    "segment": 5,
+    "dibburHamatchil": "ורוח אלהים מרחפת",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ורוח אלהים מרחפת."
+        },
+        {
+          "kind": "text",
+          "text": " כִּסֵא הַכָּבוֹד עוֹמֵד בָּאֲוִיר וּמְרַחֵף עַל פְּנֵי הַמַּיִם בְּרוּחַ פִּיו שֶׁל הַקָּבָּ\"ה וּבְמַאֲמָרוֹ, כְּיוֹנָה הַמְרַחֶפֶת עַל הַקֵּן, אקוב\"טיר בְּלַעַ\"ז:"
+        }
+      ],
+      "plain": "ורוח אלהים מרחפת. כִּסֵא הַכָּבוֹד עוֹמֵד בָּאֲוִיר וּמְרַחֵף עַל פְּנֵי הַמַּיִם בְּרוּחַ פִּיו שֶׁל הַקָּבָּ\"ה וּבְמַאֲמָרוֹ, כְּיוֹנָה הַמְרַחֶפֶת עַל הַקֵּן, אקוב\"טיר בְּלַעַ\"ז:",
+      "checksumSha256": "1d08e1cead0f6da42e6e814b83aca80ed54a6d48ad236aa0b92fcf834269f4cc"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "ורוח אלהים מרחפת AND THE SPIRIT OF GOD WAS HOVERING — The throne of Divine Glory was standing in space, hovering over the face of the waters by the breath of the mouth of the Holy One, blessed be He, and by His command, even as a dove hovers over its nest. In old French acoveter."
+        }
+      ],
+      "plain": "ורוח אלהים מרחפת AND THE SPIRIT OF GOD WAS HOVERING — The throne of Divine Glory was standing in space, hovering over the face of the waters by the breath of the mouth of the Holy One, blessed be He, and by His command, even as a dove hovers over its nest. In old French acoveter.",
+      "checksumSha256": "4bb2c6170b1d871a1dbffb8cb1f603c7af067cefce5f312ac2d5ae76d8ddf531"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.2.5?lang=bi"
+  },
+  {
+    "id": "siftei-genesis-1-2-1",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:2:1",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.2.1",
+    "targetVerseId": "genesis-1-2",
+    "segment": 1,
+    "dibburHamatchil": "לשון ריקות וצדו",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "לשון ריקות וצדו."
+        },
+        {
+          "kind": "text",
+          "text": " נראה דרש\"י סובר שהם מן שמות הנרדפין ר\"ל ששניהם ל' שממה אי נמי ר\"ל ריקות הוא ל' מקרא וצדיא הוא ל' ארמי ושניהם הם לשון ריקות לאפוקי מן התרגום שתירגם על תוהו ובהו לשון צדייא ורקניא לכן פי' בהו לשון צדו ורקנית ופירושו תהו לשון תימא שיתמה על בהו כלומר על השממון שבו והוי וי\"ו ובהו מתחלף בב' כמו ה' אלהים שלחני ורוחו (ישעיה מח טז) דהוה כמו ברוחו: "
+        }
+      ],
+      "plain": "לשון ריקות וצדו. נראה דרש\"י סובר שהם מן שמות הנרדפין ר\"ל ששניהם ל' שממה אי נמי ר\"ל ריקות הוא ל' מקרא וצדיא הוא ל' ארמי ושניהם הם לשון ריקות לאפוקי מן התרגום שתירגם על תוהו ובהו לשון צדייא ורקניא לכן פי' בהו לשון צדו ורקנית ופירושו תהו לשון תימא שיתמה על בהו כלומר על השממון שבו והוי וי\"ו ובהו מתחלף בב' כמו ה' אלהים שלחני ורוחו (ישעיה מח טז) דהוה כמו ברוחו: ",
+      "checksumSha256": "47c9d7c63ee29dc3c061ad13c527a34da0e581afa477285cf3f72bf50ddaf178"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "Desolation and empty space. "
+        },
+        {
+          "kind": "text",
+          "text": "It seems that Rashi treats ריקות וצדו as synonyms; both mean desolation. Alternatively, Rashi is saying that ריקות is biblical Hebrew and צדיא is Aramaic, both meaning desolation. And Rashi disagrees with Targum Onkelos, who translates תוהו ובהו [respectively,] as desolation and empty space. Rashi explains בהו as desolation and empty space, and תהו as astonishment, i.e., that one would be astonished by its emptiness. Thus the ו of ובהו is like a ב, for ו is interchangeable with ב, as in (Yeshayah 48:16): “אֲדֹנָי יֱהֹוִה שְׁלָחַנִי וְרוּחוֹ,” which means, “Hashem Elohim has sent me "
+        },
+        {
+          "kind": "emphasis",
+          "text": "with"
+        },
+        {
+          "kind": "text",
+          "text": " His Spirit (ברוחו).” "
+        }
+      ],
+      "plain": "Desolation and empty space. It seems that Rashi treats ריקות וצדו as synonyms; both mean desolation. Alternatively, Rashi is saying that ריקות is biblical Hebrew and צדיא is Aramaic, both meaning desolation. And Rashi disagrees with Targum Onkelos, who translates תוהו ובהו [respectively,] as desolation and empty space. Rashi explains בהו as desolation and empty space, and תהו as astonishment, i.e., that one would be astonished by its emptiness. Thus the ו of ובהו is like a ב, for ו is interchangeable with ב, as in (Yeshayah 48:16): “אֲדֹנָי יֱהֹוִה שְׁלָחַנִי וְרוּחוֹ,” which means, “Hashem Elohim has sent me with His Spirit (ברוחו).” ",
+      "checksumSha256": "36480d74c75756f95493fb3bfbd0c774568b5c88191788e4681434a6caa265ef"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.2.1?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-2-2",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:2:2",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.2.2",
+    "targetVerseId": "genesis-1-2",
+    "segment": 2,
+    "dibburHamatchil": "ע\"פ המים",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ע\"פ המים."
+        },
+        {
+          "kind": "text",
+          "text": " ק\"ל היה לו לכתוב על תהום מאי על פני אלא שקאי על המים שהם על הארץ והם פני הארץ והיינו דכתיב נמי ורוח אלהים וכו' דהיינו החושך דכתיב לעיל וחושך על פני תהום. ועי\"ל דהוכחתו הואיל וכל הני עשרה מאמרות האמורות כאן משום דקודם לכן לא היה כן לכך הוצרך לומר יהיה דבר זה כגון בתחלה כתיב בראשית וכו' משמע שלא היה אלא הארץ לבד ולא היה על הארץ כלום לכך אמר אח\"כ ויאמר אלהים תדשא הארץ וא\"כ מה דכתיב ויאמר אלהים יהי אור צריך לומר דקודם מאמר זה היה חושך והיכא כתיב וחושך כו' ע\"כ צ\"ל מה שכתיב וחושך על פני תהום שהם המים שפירוש תהום בכל מקום מורה על המים ש\"מ דהמים היו על הארץ וכן משמע מתוך פרש\"י דויהי אור קאי על וחושך על פני תהום דלעיל (בד\"ה בראשית ברא) פי' בראשית בריאת שמים וארץ והארץ היתה תהו ובהו וחשך על פני תהום וגו' ויאמר אלהים יהי אור מדלא הביא הפסוק כולו או לא היה לו להביאו כלל משמע דקאי עליו כי אילו לא היה חושך על פניה לא גזר על האור: "
+        }
+      ],
+      "plain": "ע\"פ המים. ק\"ל היה לו לכתוב על תהום מאי על פני אלא שקאי על המים שהם על הארץ והם פני הארץ והיינו דכתיב נמי ורוח אלהים וכו' דהיינו החושך דכתיב לעיל וחושך על פני תהום. ועי\"ל דהוכחתו הואיל וכל הני עשרה מאמרות האמורות כאן משום דקודם לכן לא היה כן לכך הוצרך לומר יהיה דבר זה כגון בתחלה כתיב בראשית וכו' משמע שלא היה אלא הארץ לבד ולא היה על הארץ כלום לכך אמר אח\"כ ויאמר אלהים תדשא הארץ וא\"כ מה דכתיב ויאמר אלהים יהי אור צריך לומר דקודם מאמר זה היה חושך והיכא כתיב וחושך כו' ע\"כ צ\"ל מה שכתיב וחושך על פני תהום שהם המים שפירוש תהום בכל מקום מורה על המים ש\"מ דהמים היו על הארץ וכן משמע מתוך פרש\"י דויהי אור קאי על וחושך על פני תהום דלעיל (בד\"ה בראשית ברא) פי' בראשית בריאת שמים וארץ והארץ היתה תהו ובהו וחשך על פני תהום וגו' ויאמר אלהים יהי אור מדלא הביא הפסוק כולו או לא היה לו להביאו כלל משמע דקאי עליו כי אילו לא היה חושך על פניה לא גזר על האור: ",
+      "checksumSha256": "5943ddca76ad73006796955934bdbc39df7ca71b404f38d7d06001779de33566"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "Upon the waters. "
+        },
+        {
+          "kind": "text",
+          "text": "Rashi is answering the question: It should say simply על תהום. Why does it say על פני תהום? It must refer to the water that is upon the earth, and is the surface (פני) of the earth. The verse continues similarly, “The breath of Elohim hovered above the "
+        },
+        {
+          "kind": "emphasis",
+          "text": "surface"
+        },
+        {
+          "kind": "text",
+          "text": " of the water.” This [surface] is like [the surface] mentioned earlier regarding the darkness: “And darkness covered the "
+        },
+        {
+          "kind": "emphasis",
+          "text": "surface"
+        },
+        {
+          "kind": "text",
+          "text": " of the abyss.” Another explanation is: The proof for Rashi’s comment [that the waters were upon the earth] is that prior to each of these ten Divine utterances of Creation, the subject of the utterance did not exist. Thus Hashem needed to say, “Let there be...” For example, first it is written: “In the beginning Elohim created the heavens and the earth. The earth was unformed and desolate,” implying there was only the earth, with nothing upon it. Thus it says later: “Elohim said, ‘Let the earth sprout grass.’” Accordingly, when it says: “Elohim said, ‘Let there be light,’” beforehand there was only darkness [upon the earth]. But where it is written that there was darkness? It must be that when it is written, “And darkness covered the surface of the תהום,” and תהום always means water. Perforce, the waters were upon the "
+        },
+        {
+          "kind": "emphasis",
+          "text": "earth"
+        },
+        {
+          "kind": "text",
+          "text": " — [and for the sake of the earth, light was created]. Rashi earlier implied that “Let there be light” connects back to the “darkness covered the surface of the abyss,” as he explained (בד\"ה בראשית ברא): “At the beginning of the creation... and darkness covered the surface of the abyss... Hashem said, ‘Let there be light.’” Rashi could have quoted the entire verse, or not have quoted it at all. By quoting only, “Let there be light...” Rashi implies that the creation of light connects back to the darkness on the abyss. I.e., if not for the darkness upon it, Hashem would not have commanded that there be light. "
+        }
+      ],
+      "plain": "Upon the waters. Rashi is answering the question: It should say simply על תהום. Why does it say על פני תהום? It must refer to the water that is upon the earth, and is the surface (פני) of the earth. The verse continues similarly, “The breath of Elohim hovered above the surface of the water.” This [surface] is like [the surface] mentioned earlier regarding the darkness: “And darkness covered the surface of the abyss.” Another explanation is: The proof for Rashi’s comment [that the waters were upon the earth] is that prior to each of these ten Divine utterances of Creation, the subject of the utterance did not exist. Thus Hashem needed to say, “Let there be...” For example, first it is written: “In the beginning Elohim created the heavens and the earth. The earth was unformed and desolate,” implying there was only the earth, with nothing upon it. Thus it says later: “Elohim said, ‘Let the earth sprout grass.’” Accordingly, when it says: “Elohim said, ‘Let there be light,’” beforehand there was only darkness [upon the earth]. But where it is written that there was darkness? It must be that when it is written, “And darkness covered the surface of the תהום,” and תהום always means water. Perforce, the waters were upon the earth — [and for the sake of the earth, light was created]. Rashi earlier implied that “Let there be light” connects back to the “darkness covered the surface of the abyss,” as he explained (בד\"ה בראשית ברא): “At the beginning of the creation... and darkness covered the surface of the abyss... Hashem said, ‘Let there be light.’” Rashi could have quoted the entire verse, or not have quoted it at all. By quoting only, “Let there be light...” Rashi implies that the creation of light connects back to the darkness on the abyss. I.e., if not for the darkness upon it, Hashem would not have commanded that there be light. ",
+      "checksumSha256": "cbbcd22fda2ed7af78c4231464e520f0adf33e7af5e0e946160a547302b5176c"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.2.2?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-2-3",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:2:3",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.2.3",
+    "targetVerseId": "genesis-1-2",
+    "segment": 3,
+    "dibburHamatchil": "כסא כבוד כו'",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "כסא כבוד כו'."
+        },
+        {
+          "kind": "text",
+          "text": " דק\"ל היה לו לכתוב סתם ורוח מרחפת: "
+        }
+      ],
+      "plain": "כסא כבוד כו'. דק\"ל היה לו לכתוב סתם ורוח מרחפת: ",
+      "checksumSha256": "ce7b9f82832c243ac0860eee7681e77d4655ae3aa53670327d18c8b20251d7b0"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "The Throne of Glory. "
+        },
+        {
+          "kind": "text",
+          "text": "Rashi is answering the question: Why did it not say simply, “The breath hovered above...”? "
+        }
+      ],
+      "plain": "The Throne of Glory. Rashi is answering the question: Why did it not say simply, “The breath hovered above...”? ",
+      "checksumSha256": "4d0ca88cf430de579cfd9bb37b8a343958887ff6a830fa6583e62fc4b24762b4"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.2.3?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-2-4",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:2:4",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.2.4",
+    "targetVerseId": "genesis-1-2",
+    "segment": 4,
+    "dibburHamatchil": "ומרחף על פני המים כו'",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ומרחף על פני המים כו'."
+        },
+        {
+          "kind": "text",
+          "text": " דקשה דאי קאי על כסא הכבוד למה אמר מרחפת לא לכתוב אלא ורוח אלהים על המים או קשה מפני מה נקרא כסא הכבוד ורוח אלהים:"
+        }
+      ],
+      "plain": "ומרחף על פני המים כו'. דקשה דאי קאי על כסא הכבוד למה אמר מרחפת לא לכתוב אלא ורוח אלהים על המים או קשה מפני מה נקרא כסא הכבוד ורוח אלהים:",
+      "checksumSha256": "49b49c85ed4f7e691aae51546dfbab5668df55cbffe2cb8d28aed29d81bb4ea2"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "Hovering over the surface of the waters..."
+        },
+        {
+          "kind": "text",
+          "text": " Rashi is answering the question: If the verse is referring to the Throne of Glory, why does it say it was hovering? It should simply say, “The breath of Elohim was above the waters.” [Thus Rashi explains that it was hovering in space.] Alternatively, Rashi is answering the question: Why is the Throne of Glory called “the breath of Elohim”? [The answer is: It was hovering.] "
+        }
+      ],
+      "plain": "Hovering over the surface of the waters... Rashi is answering the question: If the verse is referring to the Throne of Glory, why does it say it was hovering? It should simply say, “The breath of Elohim was above the waters.” [Thus Rashi explains that it was hovering in space.] Alternatively, Rashi is answering the question: Why is the Throne of Glory called “the breath of Elohim”? [The answer is: It was hovering.] ",
+      "checksumSha256": "330c242f675acb52d246b177dd3bdc89916cbed77f9894d3b37f7da3cf1596a6"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.2.4?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "rashi-genesis-1-4-1",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:4:1",
+    "sefariaRef": "Rashi_on_Genesis.1.4.1",
+    "targetVerseId": "genesis-1-4",
+    "segment": 1,
+    "dibburHamatchil": "וירא אלהים את האור כי טוב ויבדל",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "וירא אלהים את האור כי טוב ויבדל."
+        },
+        {
+          "kind": "text",
+          "text": " אַף בָּזֶה אָנוּ צְרִיכִין לְדִבְרֵי אַגַּדָה, רָאָהוּ שֶׁאֵינוֹ כְדַאי לְהִשְׁתַּמֵשׁ בּוֹ רְשָׁעִים, וְהִבְדִּילוֹ לַצַּדִּיקִים לֶעָתִיד לָבֹא. וּלְפִי פְּשׁוּטוֹ כָּךְ פָּרְשֵׁהוּ, רָאָהוּ כִּי טוֹב, וְאֵין נָאֶה לוֹ וְלַחֹשֶׁךְ שֶׁיִּהְיוּ מִשְׁתַּמְּשִׁים בְּעִרְבּוּבְיָא, וְקָבַע לָזֶה תְחוּמוֹ בַּיּוֹם, וְלָזֶה תְחוּמוֹ בַּלַּיְלָה:"
+        }
+      ],
+      "plain": "וירא אלהים את האור כי טוב ויבדל. אַף בָּזֶה אָנוּ צְרִיכִין לְדִבְרֵי אַגַּדָה, רָאָהוּ שֶׁאֵינוֹ כְדַאי לְהִשְׁתַּמֵשׁ בּוֹ רְשָׁעִים, וְהִבְדִּילוֹ לַצַּדִּיקִים לֶעָתִיד לָבֹא. וּלְפִי פְּשׁוּטוֹ כָּךְ פָּרְשֵׁהוּ, רָאָהוּ כִּי טוֹב, וְאֵין נָאֶה לוֹ וְלַחֹשֶׁךְ שֶׁיִּהְיוּ מִשְׁתַּמְּשִׁים בְּעִרְבּוּבְיָא, וְקָבַע לָזֶה תְחוּמוֹ בַּיּוֹם, וְלָזֶה תְחוּמוֹ בַּלַּיְלָה:",
+      "checksumSha256": "13aa87a24c881e032e3e63d4453355c08eea0efbdc69d13ffc58764cd5dfaf03"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "וירא אלהים את האור כי טוב ויבדל AND GOD SAW THE LIGHT THAT IT WAS GOOD, AND GOD CAUSED A DIVISION — Here, also, we must depend upon the statement of the Agada: He saw that the wicked were unworthy of using it (the light); He, therefore, set it apart (ויבדל), reserving it for the righteous in the world to come (Chagigah 12a). But according to the plain sense explain it thus: He saw that it was good, and that it was not seemly that light and darkness should function together in a confused manner. He therefore limited this one’s sphere of activity to the daytime, and this one’s sphere of activity to the nighttime (see Genesis Rabbah 3:6)."
+        }
+      ],
+      "plain": "וירא אלהים את האור כי טוב ויבדל AND GOD SAW THE LIGHT THAT IT WAS GOOD, AND GOD CAUSED A DIVISION — Here, also, we must depend upon the statement of the Agada: He saw that the wicked were unworthy of using it (the light); He, therefore, set it apart (ויבדל), reserving it for the righteous in the world to come (Chagigah 12a). But according to the plain sense explain it thus: He saw that it was good, and that it was not seemly that light and darkness should function together in a confused manner. He therefore limited this one’s sphere of activity to the daytime, and this one’s sphere of activity to the nighttime (see Genesis Rabbah 3:6).",
+      "checksumSha256": "b8b278d2ba2b5b1c25e0ff1143ddc5554b96c4bafd6f6d958fd04eff554ac0fb"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.4.1?lang=bi"
+  },
+  {
+    "id": "siftei-genesis-1-4-1",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:4:1",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.4.1",
+    "targetVerseId": "genesis-1-4",
+    "segment": 1,
+    "dibburHamatchil": "צריכין לדברי אגדה",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "צריכין לדברי אגדה."
+        },
+        {
+          "kind": "text",
+          "text": " דלפי פשוטו של מקרא משמע דבתחלה היו מעורבין יחד דלשון הבדלה שייך בדבר המעורב יחד וזה א\"א כיון שיש אור אין חושך דאור וחושך אינם אלא קנין והעדר וא\"א חיבורם יחד בעת מן העתים. [רא\"ם]: דקשה דאיך אפשר לפרש שקבע לזה תחומו בלילה והלא לא נעשה ההבדלה עד יום ד' דכתיב ביה (להלן פסוק יד) להבדיל בין היום ובין הלילה לכך צריכין אנו לדברי אגדה. [נח\"י]: "
+        }
+      ],
+      "plain": "צריכין לדברי אגדה. דלפי פשוטו של מקרא משמע דבתחלה היו מעורבין יחד דלשון הבדלה שייך בדבר המעורב יחד וזה א\"א כיון שיש אור אין חושך דאור וחושך אינם אלא קנין והעדר וא\"א חיבורם יחד בעת מן העתים. [רא\"ם]: דקשה דאיך אפשר לפרש שקבע לזה תחומו בלילה והלא לא נעשה ההבדלה עד יום ד' דכתיב ביה (להלן פסוק יד) להבדיל בין היום ובין הלילה לכך צריכין אנו לדברי אגדה. [נח\"י]: ",
+      "checksumSha256": "c6fda1537ed8762f90457a3e8325b98a820a5fdeef1e956441f99c4cf7ec5ca8"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "The Aggadaic explanation is necessary"
+        },
+        {
+          "kind": "text",
+          "text": ". This is because the verse’s simple meaning implies that light and darkness originally were mingled, for “to divide” is said only about things that are mingled with each other. But this cannot be true here, since darkness disappears the moment there is light. The two cannot exist simultaneously. ("
+        },
+        {
+          "kind": "emphasis",
+          "text": "Re’m"
+        },
+        {
+          "kind": "text",
+          "text": ") [Alternatively,] Rashi’s question was as follows: How could Hashem establish that the darkness be bounded by the night, when this division did not actually take place until the fourth day, on which it is written (v. 14): “To divide between the day and the night”? Therefore, the Aggadaic explanation is necessary. ("
+        },
+        {
+          "kind": "emphasis",
+          "text": "Nachalas Yaakov"
+        },
+        {
+          "kind": "text",
+          "text": ") "
+        }
+      ],
+      "plain": "The Aggadaic explanation is necessary. This is because the verse’s simple meaning implies that light and darkness originally were mingled, for “to divide” is said only about things that are mingled with each other. But this cannot be true here, since darkness disappears the moment there is light. The two cannot exist simultaneously. (Re’m) [Alternatively,] Rashi’s question was as follows: How could Hashem establish that the darkness be bounded by the night, when this division did not actually take place until the fourth day, on which it is written (v. 14): “To divide between the day and the night”? Therefore, the Aggadaic explanation is necessary. (Nachalas Yaakov) ",
+      "checksumSha256": "be3482867df26e39f485aee2679f1083eee232ee0a801be53fd36d6b22cbb722"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.4.1?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-4-2",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:4:2",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.4.2",
+    "targetVerseId": "genesis-1-4",
+    "segment": 2,
+    "dibburHamatchil": "ראה שאינו כדאי כו'",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ראה שאינו כדאי כו'."
+        },
+        {
+          "kind": "text",
+          "text": " הרמב\"ן טען שאין זה נכון שא\"כ יראה כענין המלכה ועצה חדשה אחרי כי אמר אלהים יהי אור וראה אותו כי טוב פי' כאילו מתחלה לא ידע ח\"ו שהאור יהיה טוב שהוצרך להבדילו. והרא\"ם השיב כי כיוצא בו מצינו (להלן ו ה) גבי וירא ה' כי רבה רעת האדם וגו'. ולא נהירא דבריו כי אע\"פ שהיה שם המלכה ועצה חדשה אין בכך כלום כי הכל בידי שמים חוץ מיראת שמים. [נח\"י]: "
+        }
+      ],
+      "plain": "ראה שאינו כדאי כו'. הרמב\"ן טען שאין זה נכון שא\"כ יראה כענין המלכה ועצה חדשה אחרי כי אמר אלהים יהי אור וראה אותו כי טוב פי' כאילו מתחלה לא ידע ח\"ו שהאור יהיה טוב שהוצרך להבדילו. והרא\"ם השיב כי כיוצא בו מצינו (להלן ו ה) גבי וירא ה' כי רבה רעת האדם וגו'. ולא נהירא דבריו כי אע\"פ שהיה שם המלכה ועצה חדשה אין בכך כלום כי הכל בידי שמים חוץ מיראת שמים. [נח\"י]: ",
+      "checksumSha256": "0ad98a0dcc0c4f7614aafd370207d4801f9addae617ff2b13365f75c2484e4bd"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "He saw that it was not fitting"
+        },
+        {
+          "kind": "text",
+          "text": "... "
+        },
+        {
+          "kind": "emphasis",
+          "text": "Ramban"
+        },
+        {
+          "kind": "text",
+          "text": " objected: This makes it seem that Hashem reconsidered and changed His plan. For Hashem said, “Let there be light” and then “He saw that the light was good” and had to set it apart — implying that at first, He did not know that the light would be good. And this is far from the truth! "
+        },
+        {
+          "kind": "emphasis",
+          "text": "Re’m"
+        },
+        {
+          "kind": "text",
+          "text": " deflected this objection, saying that such an idea is mentioned later as well, [regarding Generation of the Flood]: “Adonoy saw that man’s wickedness had increased... and Adonoy’s "
+        },
+        {
+          "kind": "emphasis",
+          "text": "thought turned"
+        },
+        {
+          "kind": "text",
+          "text": "...” [as Rashi explains it there (6:5)]. "
+        },
+        {
+          "kind": "emphasis",
+          "text": "Nachalas Yaakov "
+        },
+        {
+          "kind": "text",
+          "text": "challenged "
+        },
+        {
+          "kind": "emphasis",
+          "text": "Re’m"
+        },
+        {
+          "kind": "text",
+          "text": ": Although Hashem reconsidered in v. 6:5, it is no proof for our issue, since everything is in the hands of Heaven except for the fear of Heaven. [And there they sinned greatly, bringing about Hashem’s change of thought]. "
+        }
+      ],
+      "plain": "He saw that it was not fitting... Ramban objected: This makes it seem that Hashem reconsidered and changed His plan. For Hashem said, “Let there be light” and then “He saw that the light was good” and had to set it apart — implying that at first, He did not know that the light would be good. And this is far from the truth! Re’m deflected this objection, saying that such an idea is mentioned later as well, [regarding Generation of the Flood]: “Adonoy saw that man’s wickedness had increased... and Adonoy’s thought turned...” [as Rashi explains it there (6:5)]. Nachalas Yaakov challenged Re’m: Although Hashem reconsidered in v. 6:5, it is no proof for our issue, since everything is in the hands of Heaven except for the fear of Heaven. [And there they sinned greatly, bringing about Hashem’s change of thought]. ",
+      "checksumSha256": "5e5ff9899845644a8da5a266f863dc986914d7cff515958e3a61c9ec49666cc2"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.4.2?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-4-3",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:4:3",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.4.3",
+    "targetVerseId": "genesis-1-4",
+    "segment": 3,
+    "dibburHamatchil": "והבדילו לצדיקים",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "והבדילו לצדיקים."
+        },
+        {
+          "kind": "text",
+          "text": " לצדיק שהוא טוב לכך ויבדל ר\"ל כדי שיהיה הפרש בין הצדיק שהוא אור ובין הרשע שהוא חושך. [רא\"ם]: "
+        }
+      ],
+      "plain": "והבדילו לצדיקים. לצדיק שהוא טוב לכך ויבדל ר\"ל כדי שיהיה הפרש בין הצדיק שהוא אור ובין הרשע שהוא חושך. [רא\"ם]: ",
+      "checksumSha256": "7cee7135c41748f9abd7ddc5dfbb23216bcc7dc147efb6dc29537953ebafb0c2"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "He set it apart for the righteous"
+        },
+        {
+          "kind": "text",
+          "text": ". I.e., “good” in our verse refers to the righteous one. Thus Hashem “divided,” to set apart the righteous one, who is light, from the wicked one, who is darkness. ("
+        },
+        {
+          "kind": "emphasis",
+          "text": "Re’m"
+        },
+        {
+          "kind": "text",
+          "text": ") "
+        }
+      ],
+      "plain": "He set it apart for the righteous. I.e., “good” in our verse refers to the righteous one. Thus Hashem “divided,” to set apart the righteous one, who is light, from the wicked one, who is darkness. (Re’m) ",
+      "checksumSha256": "d6f2306c4860ac090ab8ec68563d688f2b4747ae8f099489c4283c1ba97fa727"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.4.3?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-4-4",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:4:4",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.4.4",
+    "targetVerseId": "genesis-1-4",
+    "segment": 4,
+    "dibburHamatchil": "בערבוביא",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "בערבוביא."
+        },
+        {
+          "kind": "text",
+          "text": " ר\"ל במדינה זו יש אור ובמדינה זו יש חושך או ר\"ל לפי שעות כגון שעה אחת יום וב' שעות לילה ואח\"כ להיפך היינו ערבוביא אבל אין לפרש בשעה אחת ממש זה א\"א כדפרישית לעיל (בד\"ה צריכין לדברי אגדה) וא\"כ יהיה פי' ויבדל הבדיל זמנם לזה תחומו ביום ולזה תחומו בלילה: "
+        }
+      ],
+      "plain": "בערבוביא. ר\"ל במדינה זו יש אור ובמדינה זו יש חושך או ר\"ל לפי שעות כגון שעה אחת יום וב' שעות לילה ואח\"כ להיפך היינו ערבוביא אבל אין לפרש בשעה אחת ממש זה א\"א כדפרישית לעיל (בד\"ה צריכין לדברי אגדה) וא\"כ יהיה פי' ויבדל הבדיל זמנם לזה תחומו ביום ולזה תחומו בלילה: ",
+      "checksumSha256": "f3a0e73c1f358033bf44c9484601c47d30c47d1ffb282770424ee3c52f3ffd36"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "In confusion"
+        },
+        {
+          "kind": "text",
+          "text": ". This means that one territory would have light while another has darkness. Or, it means hours: it would be day for one hour and then night for two hours, and then the opposite; that was the confusion. But it cannot mean light and darkness simultaneously, because this is impossible, as explained earlier (בד\"ה צריכין לדברי אגדה). Accordingly, “Elohim divided” means that He divided their times; one to be bounded by the day, and the other, by the night. "
+        }
+      ],
+      "plain": "In confusion. This means that one territory would have light while another has darkness. Or, it means hours: it would be day for one hour and then night for two hours, and then the opposite; that was the confusion. But it cannot mean light and darkness simultaneously, because this is impossible, as explained earlier (בד\"ה צריכין לדברי אגדה). Accordingly, “Elohim divided” means that He divided their times; one to be bounded by the day, and the other, by the night. ",
+      "checksumSha256": "cb92eb5303cff38dd470d3f3319fe81b43527942e170ee40404e59ce0e1990ce"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.4.4?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "rashi-genesis-1-5-1",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:5:1",
+    "sefariaRef": "Rashi_on_Genesis.1.5.1",
+    "targetVerseId": "genesis-1-5",
+    "segment": 1,
+    "dibburHamatchil": "יום אחד",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "יום אחד."
+        },
+        {
+          "kind": "text",
+          "text": " לְפִי סֵדֶר לְשׁוֹן הַפָּרָשָׁה הָיָה לוֹ לִכְתֹּב יוֹם רִאשׁוֹן, כְּמוֹ שֶׁכָּתוּב בִּשְׁאָר הַיָּמִים שֵׁנִי, שְׁלִישִׁי, רְבִיעִי, לָמָּה כָתַב אֶחָד? לְפִי שֶׁהָיָה הַקָּבָּ\"ה יָחִיד בְּעוֹלָמוֹ, שֶׁלֹא נִבְרְאוּ הַמַּלְאָכִים עַד יוֹם שֵׁנִי, כָּךְ מְפֹרָשׁ בּבְ\"רַ:"
+        }
+      ],
+      "plain": "יום אחד. לְפִי סֵדֶר לְשׁוֹן הַפָּרָשָׁה הָיָה לוֹ לִכְתֹּב יוֹם רִאשׁוֹן, כְּמוֹ שֶׁכָּתוּב בִּשְׁאָר הַיָּמִים שֵׁנִי, שְׁלִישִׁי, רְבִיעִי, לָמָּה כָתַב אֶחָד? לְפִי שֶׁהָיָה הַקָּבָּ\"ה יָחִיד בְּעוֹלָמוֹ, שֶׁלֹא נִבְרְאוּ הַמַּלְאָכִים עַד יוֹם שֵׁנִי, כָּךְ מְפֹרָשׁ בּבְ\"רַ:",
+      "checksumSha256": "7935f264d009d3dd6ba2968ca49a5255dc1ca11dc0195ad0905d7ce344ddcb33"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "יום אחד THE FIRST DAY (literally, one day) — According to the regular mode of expression used in this chapter it should be written here “first day”, just as it is written with regard to the other days “the second”, “the third”, “the fourth”. Why, then, does it write אחד “one”? Because the Holy One, blessed be He, was then the Only One (Sole Being) in His Universe, since the angels were not created until the second day. Thus it is explained in Genesis Rabbah (Genesis Rabbah 3:8)."
+        }
+      ],
+      "plain": "יום אחד THE FIRST DAY (literally, one day) — According to the regular mode of expression used in this chapter it should be written here “first day”, just as it is written with regard to the other days “the second”, “the third”, “the fourth”. Why, then, does it write אחד “one”? Because the Holy One, blessed be He, was then the Only One (Sole Being) in His Universe, since the angels were not created until the second day. Thus it is explained in Genesis Rabbah (Genesis Rabbah 3:8).",
+      "checksumSha256": "6c4358bf6889fbb6ea241ce2d112ca7916ddc810d9f8cb1d2495f270307baf89"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.5.1?lang=bi"
+  },
+  {
+    "id": "siftei-genesis-1-5-1",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:5:1",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.5.1",
+    "targetVerseId": "genesis-1-5",
+    "segment": 1,
+    "dibburHamatchil": "ה\"ל לכתוב יום ראשון",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ה\"ל לכתוב יום ראשון."
+        },
+        {
+          "kind": "text",
+          "text": " והא דכתיב לקמן (ב יא) גבי ד' נהרות שם האחד פישון אעפ\"י דכתיב בתר הכי שני שלישי וכו' י\"ל דאי כתב ראשון היה עולה על הדעת דמה שנאמר משם יפרד והי' לד' ראשים לא שנתפרדו במקום אחד לד' ראשים אלא הפירוד הוא בזה אחר זה בד' מקומות מחולקות דרך משל מתחלה נפרד נהר אחד ואח\"כ בכמה פרסאות נהר שני וכן כולם ע\"ד זה לכך נאמר אחד ולא ראשון להוציא מן הטעות ולומר שכולה במקום אחד מתפרדים ולא זה אחר זה ויהיה שני שלישי במעלה ולא במקום: "
+        }
+      ],
+      "plain": "ה\"ל לכתוב יום ראשון. והא דכתיב לקמן (ב יא) גבי ד' נהרות שם האחד פישון אעפ\"י דכתיב בתר הכי שני שלישי וכו' י\"ל דאי כתב ראשון היה עולה על הדעת דמה שנאמר משם יפרד והי' לד' ראשים לא שנתפרדו במקום אחד לד' ראשים אלא הפירוד הוא בזה אחר זה בד' מקומות מחולקות דרך משל מתחלה נפרד נהר אחד ואח\"כ בכמה פרסאות נהר שני וכן כולם ע\"ד זה לכך נאמר אחד ולא ראשון להוציא מן הטעות ולומר שכולה במקום אחד מתפרדים ולא זה אחר זה ויהיה שני שלישי במעלה ולא במקום: ",
+      "checksumSha256": "032a803833ac84e29cbb7250641eece491313b000a3c4e2f9ae0375d72a5233f"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "It should have said “the first day.”"
+        },
+        {
+          "kind": "text",
+          "text": " [You might ask:] Later it is written concerning the four rivers (2:11): “The name of the "
+        },
+        {
+          "kind": "emphasis",
+          "text": "one"
+        },
+        {
+          "kind": "text",
+          "text": " is Pishon,” although afterwards it is written “the second” and “the third.” [Why does this not raise the same question?] The answer is: If there it would say “the first,” we might think that what is stated, “And from there it separated and became four headwaters” (2:10) means that the rivers separated off from one another successively, in four different places, rather than breaking into four headwaters at one place. For example, the second river might separate off several miles downstream from “the first” river, and so forth. Thus it says “one,” and not “first,” to prevent us from making this error. Accordingly, “second” and “third” reflects importance rather than location. "
+        }
+      ],
+      "plain": "It should have said “the first day.” [You might ask:] Later it is written concerning the four rivers (2:11): “The name of the one is Pishon,” although afterwards it is written “the second” and “the third.” [Why does this not raise the same question?] The answer is: If there it would say “the first,” we might think that what is stated, “And from there it separated and became four headwaters” (2:10) means that the rivers separated off from one another successively, in four different places, rather than breaking into four headwaters at one place. For example, the second river might separate off several miles downstream from “the first” river, and so forth. Thus it says “one,” and not “first,” to prevent us from making this error. Accordingly, “second” and “third” reflects importance rather than location. ",
+      "checksumSha256": "6210a76c35118271db2492579c571a066f59aca2d375dcac9487841a14549ade"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.5.1?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-5-2",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:5:2",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.5.2",
+    "targetVerseId": "genesis-1-5",
+    "segment": 2,
+    "dibburHamatchil": "לפי שהיה כו'",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "לפי שהיה כו'."
+        },
+        {
+          "kind": "text",
+          "text": " בעל נח\"י הסכים עם הרמב\"ן כי התורה הזאת כמעתיק מסדר שנכתב בזמנו ולכן כל התורה בלשון הווה ולכן בזמן הראשון עדיין לא היה השני בנמצא ממילא היה לו לכתוב אחד: "
+        }
+      ],
+      "plain": "לפי שהיה כו'. בעל נח\"י הסכים עם הרמב\"ן כי התורה הזאת כמעתיק מסדר שנכתב בזמנו ולכן כל התורה בלשון הווה ולכן בזמן הראשון עדיין לא היה השני בנמצא ממילא היה לו לכתוב אחד: ",
+      "checksumSha256": "6f5f9409a3be1f860c82eaa957fe98147bea6f8bb7066fc9168e8d1dca9e6a16"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "This is because..."
+        },
+        {
+          "kind": "text",
+          "text": " "
+        },
+        {
+          "kind": "emphasis",
+          "text": "Nachalas Yaakov"
+        },
+        {
+          "kind": "text",
+          "text": " [diverged from Rashi and] agreed with "
+        },
+        {
+          "kind": "emphasis",
+          "text": "Ramban"
+        },
+        {
+          "kind": "text",
+          "text": " [that it says “one day”] because the Torah is written as if copied from a sequence of events recorded as they happened. That is why the entire Torah is [written] in the present tense. And initially, the second day was not yet in existence, so it was appropriate for the first day to be called “one” [whereas “first” is a relative term that is followed by a “second”]. "
+        }
+      ],
+      "plain": "This is because... Nachalas Yaakov [diverged from Rashi and] agreed with Ramban [that it says “one day”] because the Torah is written as if copied from a sequence of events recorded as they happened. That is why the entire Torah is [written] in the present tense. And initially, the second day was not yet in existence, so it was appropriate for the first day to be called “one” [whereas “first” is a relative term that is followed by a “second”]. ",
+      "checksumSha256": "986686d312b79fbbd4794904edc67c7d75eec6986b9e9c30f13a3c6b2fb25f31"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.5.2?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "rashi-genesis-1-6-1",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:6:1",
+    "sefariaRef": "Rashi_on_Genesis.1.6.1",
+    "targetVerseId": "genesis-1-6",
+    "segment": 1,
+    "dibburHamatchil": "יהי רקיע",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "יהי רקיע."
+        },
+        {
+          "kind": "text",
+          "text": " יֶחֱזַק הָרָקִיעַ, שֶׁאַף עַל פִּי שֶׁנִּבְרְאוּ שָׁמַיִם בְּיוֹם א' עֲדַיִן לַחִים הָיוּ וְקָרְשׁוּ בַשֵּׁנִי מִגַּעֲרַת הַקָּבָּ\"ה בְּאָמְרוֹ יְהִי רָקִיעַ, וְזֶהוּ שֶׁכָּתַב (איוב כ\"ו) עַמּוּדֵי שָׁמַיִם יְרוֹפָפוּ – כָּל יוֹם רִאשׁוֹן, וּבַשֵּׁנִי יִתְמְהוּ מִגַּעֲרָתוֹ, כְּאָדָם שֶׁמִּשְׁתּוֹמֵם וְעוֹמֵד מִגַּעֲרַת הַמְאַיֵּם עָלָיו:"
+        }
+      ],
+      "plain": "יהי רקיע. יֶחֱזַק הָרָקִיעַ, שֶׁאַף עַל פִּי שֶׁנִּבְרְאוּ שָׁמַיִם בְּיוֹם א' עֲדַיִן לַחִים הָיוּ וְקָרְשׁוּ בַשֵּׁנִי מִגַּעֲרַת הַקָּבָּ\"ה בְּאָמְרוֹ יְהִי רָקִיעַ, וְזֶהוּ שֶׁכָּתַב (איוב כ\"ו) עַמּוּדֵי שָׁמַיִם יְרוֹפָפוּ – כָּל יוֹם רִאשׁוֹן, וּבַשֵּׁנִי יִתְמְהוּ מִגַּעֲרָתוֹ, כְּאָדָם שֶׁמִּשְׁתּוֹמֵם וְעוֹמֵד מִגַּעֲרַת הַמְאַיֵּם עָלָיו:",
+      "checksumSha256": "04d91366e1290afb74443e609ed6746af3fe36bd81fb83e7c239ead57ed10ce7"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "יהי רקיע BE THERE AN EXPANSE — Let the expansion become fixed; for although the heavens were created on the first day, they were still in a fluid form, and they became solidified only on the second day at the dread command (literally, rebuke) of the Holy One, blessed be He, when he said “Let the firmament be stable” (Genesis Rabbah 4:2). It is to this that allusion is made in what is written in (Job 26:11): “The pillars of heaven were trembling” (i. e. they were unstable) — this was during the whole of the first day — and on the second (Job 26:11): “they were astonished at His rebuke”, like a man who stands immovable, amazed at the rebuke of one who terrifies him."
+        }
+      ],
+      "plain": "יהי רקיע BE THERE AN EXPANSE — Let the expansion become fixed; for although the heavens were created on the first day, they were still in a fluid form, and they became solidified only on the second day at the dread command (literally, rebuke) of the Holy One, blessed be He, when he said “Let the firmament be stable” (Genesis Rabbah 4:2). It is to this that allusion is made in what is written in (Job 26:11): “The pillars of heaven were trembling” (i. e. they were unstable) — this was during the whole of the first day — and on the second (Job 26:11): “they were astonished at His rebuke”, like a man who stands immovable, amazed at the rebuke of one who terrifies him.",
+      "checksumSha256": "3a777e80f770f933b81b1389e26ee665392d369ba2594dae246fcde01df4f7c3"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.6.1?lang=bi"
+  },
+  {
+    "id": "rashi-genesis-1-6-2",
+    "workId": "rashi-on-genesis",
+    "canonicalRef": "Rashi on Genesis 1:6:2",
+    "sefariaRef": "Rashi_on_Genesis.1.6.2",
+    "targetVerseId": "genesis-1-6",
+    "segment": 2,
+    "dibburHamatchil": "בתוך המים",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "rashi-rosenbaum-silbermann-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "בתוך המים."
+        },
+        {
+          "kind": "text",
+          "text": " בְּאֶמְצַע הַמַּיִם, שֶׁיֵּש הֶפְרֵשׁ בֵּין מַיִם הָעֶליוֹנִים לָרָקִיעַ כְּמוֹ בֵין הָרָקִיעַ לַמַּיִם שֶׁעַל הָאָרֶץ, הָא לָמַדְתָּ, שֶׁהֵם תְּלוּיִים בְּמַאֲמָרוֹ שֶׁל מֶלֶךְ:"
+        }
+      ],
+      "plain": "בתוך המים. בְּאֶמְצַע הַמַּיִם, שֶׁיֵּש הֶפְרֵשׁ בֵּין מַיִם הָעֶליוֹנִים לָרָקִיעַ כְּמוֹ בֵין הָרָקִיעַ לַמַּיִם שֶׁעַל הָאָרֶץ, הָא לָמַדְתָּ, שֶׁהֵם תְּלוּיִים בְּמַאֲמָרוֹ שֶׁל מֶלֶךְ:",
+      "checksumSha256": "638abf2ae7b5c37ab0e32749293dd26405f4955cad50d6a9a5caf1090805f418"
+    },
+    "english": {
+      "versionId": "rashi-rosenbaum-silbermann",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "בתוך המים IN THE MIDST OF THE WATERS — In the exact centre of the waters; because there is the same distance between the upper waters and the firmament as there is between the firmament and the waters that are upon the earth. Thus you may infer that they (the upper waters) are suspended in space by the command of the King (Genesis Rabbah 4:3). "
+        }
+      ],
+      "plain": "בתוך המים IN THE MIDST OF THE WATERS — In the exact centre of the waters; because there is the same distance between the upper waters and the firmament as there is between the firmament and the waters that are upon the earth. Thus you may infer that they (the upper waters) are suspended in space by the command of the King (Genesis Rabbah 4:3). ",
+      "checksumSha256": "ad6c169f288e768a864c98073423994fcb0e8606326e15a8ea2f6fcb0c0aa969"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Rashi_on_Genesis.1.6.2?lang=bi"
+  },
+  {
+    "id": "siftei-genesis-1-6-1",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:6:1",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.6.1",
+    "targetVerseId": "genesis-1-6",
+    "segment": 1,
+    "dibburHamatchil": "יתחזק",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "יתחזק."
+        },
+        {
+          "kind": "text",
+          "text": " דקשה הא כבר ברא שמים אע\"ג דרש\"י פי' לעיל (פסוק א ד\"ה בראשית ברא) לפי פשוטו בראשית ברוא דמשמע דעדיין לא ברא שמים לאו למימרא דלא ברא ביום ראשון אלא ה\"ק בתחילת בריאת וכו' ובאמת בריאת שמים וארץ היה ביום ראשון: "
+        }
+      ],
+      "plain": "יתחזק. דקשה הא כבר ברא שמים אע\"ג דרש\"י פי' לעיל (פסוק א ד\"ה בראשית ברא) לפי פשוטו בראשית ברוא דמשמע דעדיין לא ברא שמים לאו למימרא דלא ברא ביום ראשון אלא ה\"ק בתחילת בריאת וכו' ובאמת בריאת שמים וארץ היה ביום ראשון: ",
+      "checksumSha256": "83dab0963cde267790f19678fc212ca370b76f79c545b3cdd4b61dcdceff7c4b"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "Be solidified"
+        },
+        {
+          "kind": "text",
+          "text": ". Rashi is answering the question: [“Let there be a רקיע” implies that it was created now.] But was the שמים [which is the רקיע, see v. 8,] not already created earlier? [For it says (1:1), “In the beginning Elohim created the heavens and the earth.” Thus Rashi answers, “Be solidified.”] Although the simple interpretation of verse 1:1 is explained there by Rashi as, “At the beginning of the creating of heaven and earth,” implying that Hashem did not yet create the heavens, this does not mean that the heavens were not created on the first day. Rather, the Torah was starting to recount how heaven and earth were created on the first day. "
+        }
+      ],
+      "plain": "Be solidified. Rashi is answering the question: [“Let there be a רקיע” implies that it was created now.] But was the שמים [which is the רקיע, see v. 8,] not already created earlier? [For it says (1:1), “In the beginning Elohim created the heavens and the earth.” Thus Rashi answers, “Be solidified.”] Although the simple interpretation of verse 1:1 is explained there by Rashi as, “At the beginning of the creating of heaven and earth,” implying that Hashem did not yet create the heavens, this does not mean that the heavens were not created on the first day. Rather, the Torah was starting to recount how heaven and earth were created on the first day. ",
+      "checksumSha256": "6890de339ee20bb4f6ce01dbf4c96015b460a4feaffc9bd9fb1cab94431489bd"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.6.1?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-6-2",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:6:2",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.6.2",
+    "targetVerseId": "genesis-1-6",
+    "segment": 2,
+    "dibburHamatchil": "ירופפו",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "ירופפו."
+        },
+        {
+          "kind": "text",
+          "text": " פי' שהיו רפויין:"
+        }
+      ],
+      "plain": "ירופפו. פי' שהיו רפויין:",
+      "checksumSha256": "6e54639e73f5eaac8fff42045181af83e3e426a8897506c0f1db9d3535b66f59"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "“Quivered.”"
+        },
+        {
+          "kind": "text",
+          "text": " ירופפו means they were weak and loose."
+        }
+      ],
+      "plain": "“Quivered.” ירופפו means they were weak and loose.",
+      "checksumSha256": "dbeefd801710e889a0fe1d326a947f08d9319dca0ec4a8cc4a44c3ba77194638"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.6.2?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-6-3",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:6:3",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.6.3",
+    "targetVerseId": "genesis-1-6",
+    "segment": 3,
+    "dibburHamatchil": "יתמהו",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "יתמהו."
+        },
+        {
+          "kind": "text",
+          "text": " פי' שהיו תמוהין ונתחזקו:"
+        }
+      ],
+      "plain": "יתמהו. פי' שהיו תמוהין ונתחזקו:",
+      "checksumSha256": "be9eec83e8bfbf223f80e999876f25b6987e9cf831206ffeb843978b6e65bf4f"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "text",
+          "text": "Astonished. יתמהו means they were startled and strengthened."
+        }
+      ],
+      "plain": "Astonished. יתמהו means they were startled and strengthened.",
+      "checksumSha256": "af13c7254934cf6fe240e6030c57d4ceacedd53fa3a42604ab1555a13e607e85"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.6.3?lang=bi",
+    "attributionRequired": true
+  },
+  {
+    "id": "siftei-genesis-1-6-4",
+    "workId": "siftei-chakhamim-on-genesis",
+    "canonicalRef": "Siftei Chakhamim, Genesis 1:6:4",
+    "sefariaRef": "Siftei_Chakhamim,_Genesis.1.6.4",
+    "targetVerseId": "genesis-1-6",
+    "segment": 4,
+    "dibburHamatchil": "שיש הפרש כו'",
+    "languagePair": "he-en",
+    "hebrew": {
+      "versionId": "siftei-metsudah-2009-he",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "שיש הפרש כו'."
+        },
+        {
+          "kind": "text",
+          "text": " לאו למימרא דהוכחתו הוא מדכתיב בתוך המים שהוא ל' אמצע דהא כתיב (שמות טו יט) ובני ישראל הלכו ביבשה בתוך הים ואיננו באמצע אלא הוכחתו הוא מדכתיב ויהי מבדיל בין מים למים וגו' דמלתא דפשיטא הוא דכיון שהוא בתוך המים שהוא מבדיל בין מים למים אלא להכי כתיב בין מים למים וגו' שיהא הפרש בין מים העליונים לרקיע כמו שיש הפרש מן הרקיע למים התחתונים שעל הארץ והיינו באמצע:"
+        }
+      ],
+      "plain": "שיש הפרש כו'. לאו למימרא דהוכחתו הוא מדכתיב בתוך המים שהוא ל' אמצע דהא כתיב (שמות טו יט) ובני ישראל הלכו ביבשה בתוך הים ואיננו באמצע אלא הוכחתו הוא מדכתיב ויהי מבדיל בין מים למים וגו' דמלתא דפשיטא הוא דכיון שהוא בתוך המים שהוא מבדיל בין מים למים אלא להכי כתיב בין מים למים וגו' שיהא הפרש בין מים העליונים לרקיע כמו שיש הפרש מן הרקיע למים התחתונים שעל הארץ והיינו באמצע:",
+      "checksumSha256": "2167db2b9c5d39bab978bfcf5ddd3ba510017446dfde0972743ed37b27fb3600"
+    },
+    "english": {
+      "versionId": "siftei-metsudah-2009",
+      "spans": [
+        {
+          "kind": "lemma",
+          "text": "Because the separation..."
+        },
+        {
+          "kind": "text",
+          "text": " Rashi’s proof is not because it is written, “בתוך the waters” and that בתוך means “in the middle.” For it is written (Shemos 15:19), “Bnei Yisrael walked on dry land בתוך the sea,” and it was not in the middle [of the sea]. Rather, the proof is from what is written: “And let it divide between waters and waters.” Since the canopy is in the midst of the waters, obviously it divides between waters and waters! It must therefore mean that the upper waters are separated from the canopy in the same manner as the lower waters are separated from the canopy. Thus, the canopy is in the middle."
+        }
+      ],
+      "plain": "Because the separation... Rashi’s proof is not because it is written, “בתוך the waters” and that בתוך means “in the middle.” For it is written (Shemos 15:19), “Bnei Yisrael walked on dry land בתוך the sea,” and it was not in the middle [of the sea]. Rather, the proof is from what is written: “And let it divide between waters and waters.” Since the canopy is in the midst of the waters, obviously it divides between waters and waters! It must therefore mean that the upper waters are separated from the canopy in the same manner as the lower waters are separated from the canopy. Thus, the canopy is in the middle.",
+      "checksumSha256": "f4e6765ceccc9360201b856d16e65efeb3408b07e50e1ad1bf445d6863f97651"
+    },
+    "sefariaUrl": "https://www.sefaria.org/Siftei_Chakhamim,_Genesis.1.6.4?lang=bi",
+    "attributionRequired": true
+  }
+]

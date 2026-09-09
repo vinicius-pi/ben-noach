@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import genesis from "../../data/verses.json";
+
+const samples = genesis.slice(0, 5) as {
+  canonicalRef: { display: { en: string } };
+  hebrew: { text: string };
+  translation: { text: string };
+}[];
+const families = [
+  { name: "Frank Ruhl Libre", className: "he-frank" },
+  { name: "Noto Serif Hebrew", className: "he-noto" },
+];
+---
+
+<Layout locale="en" title="Typography proof" noindex>
+  <article class="reading">
+    <p class="kicker">Design</p>
+    <h1 class="page-title-xs">Type proof</h1>
+    <p>
+      Same verses, two Hebrew families, several sizes. Choose by diacritics, not by brand
+      familiarity.
+    </p>
+    {families.map((family) => (
+      <section class="type-family">
+        <h2 class="kicker">{family.name}</h2>
+        {["100", "125", "160"].map((suffix) => (
+          <div class={`type-scale type-scale-${suffix}`}>
+            {samples.map((verse) => (
+              <p class:list={["hebrew", family.className]} lang="he" dir="rtl">
+                {verse.hebrew.text}
+              </p>
+            ))}
+            <p class="latin" lang="en" dir="ltr">
+              {samples[0]?.translation.text}
+            </p>
+          </div>
+        ))}
+      </section>
+    ))}
+  </article>
+</Layout>
+<style>
+  .he-frank {
+    font-family: "Frank Ruhl Libre Variable", serif;
+  }
+  .he-noto {
+    font-family: "Noto Serif Hebrew", serif;
+  }
+</style>

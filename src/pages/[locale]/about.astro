@@ -1,0 +1,69 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { GLOSSARY, SOURCE_MANIFEST } from "../../lib/corpus";
+import { t } from "../../lib/i18n";
+import type { Locale } from "../../lib/types";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "en" } }, { params: { locale: "pt" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+---
+
+<Layout locale={locale} title={t(locale, "about")}>
+  <article class="reading latin prose">
+    <p class="kicker">{t(locale, "about")}</p>
+    <h1 class="page-title-sm">Ben Noach</h1>
+    {locale === "en" ? (
+      <>
+        <p>
+          A guided Tanakh reader for Bnei Noach and non-Jews seeking the Word of Hashem through the
+          Jewish textual tradition.
+        </p>
+        <p>
+          A generic Bible gives text without that architecture. Sefaria gives extraordinary depth
+          but assumes the reader already knows how to enter it. This product supplies the missing
+          path: <strong>Read → Understand → Sources</strong>.
+        </p>
+        <p>{t(locale, "independent")}</p>
+      </>
+    ) : (
+      <>
+        <p>
+          Um leitor guiado do Tanakh para Bnei Noach e não-judeus que buscam a Palavra de Hashem
+          pela tradição textual judaica.
+        </p>
+        <p>
+          Uma Bíblia genérica dá o texto sem essa arquitetura. A Sefaria dá profundidade
+          extraordinária, mas pressupõe que o leitor já saiba entrar nela. Este produto oferece o
+          caminho que falta: <strong>Ler → Entender → Fontes</strong>.
+        </p>
+        <p>{t(locale, "independent")}</p>
+        <p class="pt-note">{t(locale, "pendingPtSource")}</p>
+      </>
+    )}
+    <h2 id="glossary" class="kicker section-kicker">
+      {t(locale, "terms")}
+    </h2>
+    <dl class="glossary-catalog">
+      {GLOSSARY.map((entry) => (
+        <div>
+          <dt>
+            <strong>{locale === "pt" ? entry.term.pt : entry.term.en}</strong>
+          </dt>
+          <dd>{locale === "pt" ? entry.short.pt : entry.short.en}</dd>
+        </div>
+      ))}
+    </dl>
+    <h2 class="kicker section-kicker">{t(locale, "provenance")}</h2>
+    <ul class="source-catalog">
+      {SOURCE_MANIFEST.map((item) => (
+        <li>
+          <strong>{item.versionTitle}</strong> · {item.licenseLabel}
+          <div class="meta-line">{item.attribution}</div>
+        </li>
+      ))}
+    </ul>
+  </article>
+</Layout>

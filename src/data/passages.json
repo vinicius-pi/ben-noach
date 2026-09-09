@@ -1,0 +1,22 @@
+[
+  {
+    "id": "genesis-1",
+    "bookId": "genesis",
+    "chapter": 1,
+    "title": {
+      "en": "Genesis 1",
+      "he": "בראשית א׳",
+      "pt": "Gênesis 1"
+    },
+    "verseIds": [
+      "genesis-1-1",
+      "genesis-1-2",
+      "genesis-1-3",
+      "genesis-1-4",
+      "genesis-1-5",
+      "genesis-1-6"
+    ],
+    "released": true,
+    "defaultPathId": "creation-and-humanity"
+  }
+]

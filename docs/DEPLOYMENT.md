@@ -1,0 +1,37 @@
+# Deployment
+
+## GitHub Pages (free)
+
+Active workflow files live at `.github/workflows/{ci,pages}.yml`. Reviewed copies are also kept in `docs/github-workflows/` for diffing.
+
+Configure the repository:
+
+1. Settings → Pages → Source: GitHub Actions.
+2. `astro.config.ts` already sets `site: https://viniciusdaniel-law.github.io` and `base: /ben-noach`.
+3. After merge to `main`, the site is `https://viniciusdaniel-law.github.io/ben-noach/`.
+
+## Generic static host
+
+```bash
+pnpm install --frozen-lockfile
+pnpm build
+pnpm smoke:static
+```
+
+Serve `dist/` with any static server. Paths are prefixed with `/ben-noach/`. For a domain root, set `base: '/'` and `site` to that origin, then rebuild.
+
+Nginx recipe: `deploy/nginx.conf` (CSP and related headers).
+
+`public/_headers` is honored by some static hosts; GitHub Pages is not one of them, so the app also emits a CSP `<meta>` tag.
+
+## No paid credentials
+
+The public reader builds and runs without API keys, databases, or auth.
+
+## Release gate
+
+`pnpm qa` is the fast inner loop (format, lint, types, unit, validators, secrets, build).
+
+`pnpm qa:full` is the sequential release gate: the inner loop plus fail-closed OSV, static-host smoke, Playwright E2E/axe, visual regression, and Lighthouse CI.
+
+`pnpm scan:osv:local` may warn if the official scanner cannot be obtained; it is **not** a release gate. `pnpm scan:osv` and CI fail closed.

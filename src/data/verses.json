@@ -1,0 +1,224 @@
+[
+  {
+    "id": "genesis-1-1",
+    "canonicalRef": {
+      "work": "Genesis",
+      "bookId": "genesis",
+      "chapter": 1,
+      "verse": 1,
+      "osis": "Gen.1.1",
+      "sefaria": "Genesis.1.1",
+      "display": {
+        "en": "Genesis 1:1",
+        "he": "בראשית א׳:1",
+        "pt": "Gênesis 1:1"
+      }
+    },
+    "hebrew": {
+      "versionId": "tanach-taamei-hamikra",
+      "text": "בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃",
+      "checksumSha256": "707c96583d95fb1957b4916673ab36ec2d6cfdc168b97a7f7e2125f4d0f23647"
+    },
+    "translation": {
+      "versionId": "jps-1917",
+      "text": "In the beginning God created the heaven and the earth.",
+      "checksumSha256": "6f785a86b2716dcc5a48caa0de944396ba871d5c7f3bf776993648335fcb2bb2"
+    },
+    "scopeTags": [
+      "UNIVERSAL_CREATION",
+      "EMUNAH",
+      "ISRAEL_COVENANT_CONTEXT"
+    ],
+    "address": "humanity",
+    "addressNote": {
+      "en": "The verse narrates the creation of heaven and earth. It is not a commandment addressed to Israel or to Bnei Noach. Rashi’s first comment, however, explains why Israel’s Torah begins here, which is Israel-covenant context.",
+      "pt": "O versículo narra a criação dos céus e da terra. Não é um mandamento dirigido a Israel ou aos Bnei Noach. O primeiro comentário de Rashi, porém, explica por que a Torá de Israel começa aqui — contexto da aliança de Israel."
+    },
+    "sefariaUrl": "https://www.sefaria.org/Genesis.1.1?vhe=Tanach_with_Ta'amei_Hamikra&ven=The_Holy_Scriptures:_A_New_Translation_(JPS_1917)&lang=bi",
+    "payloadChecksumSha256": "d145ea8051d18513a0793aeb6ece568709733d2b9981569392657cf0ca3052ea"
+  },
+  {
+    "id": "genesis-1-2",
+    "canonicalRef": {
+      "work": "Genesis",
+      "bookId": "genesis",
+      "chapter": 1,
+      "verse": 2,
+      "osis": "Gen.1.2",
+      "sefaria": "Genesis.1.2",
+      "display": {
+        "en": "Genesis 1:2",
+        "he": "בראשית א׳:2",
+        "pt": "Gênesis 1:2"
+      }
+    },
+    "hebrew": {
+      "versionId": "tanach-taamei-hamikra",
+      "text": "וְהָאָ֗רֶץ הָיְתָ֥ה תֹ֙הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְה֑וֹם וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃",
+      "checksumSha256": "f85df461cd35652a655a1636965f57a6cc82a2aa04b5d73556f9ce884ff4317e"
+    },
+    "translation": {
+      "versionId": "jps-1917",
+      "text": "Now the earth was unformed and void, and darkness was upon the face of the deep; and the spirit of God hovered over the face of the waters.",
+      "checksumSha256": "cb7d6d44806e3b4b5d68ad5f1452a4d54194bdecfdced83a0f19f19ee79eb6f1"
+    },
+    "scopeTags": [
+      "UNIVERSAL_CREATION",
+      "EMUNAH"
+    ],
+    "address": "humanity",
+    "addressNote": {
+      "en": "A description of the earth before formed order. No legal address.",
+      "pt": "Descrição da terra antes da ordem formada. Sem endereço legal."
+    },
+    "sefariaUrl": "https://www.sefaria.org/Genesis.1.2?vhe=Tanach_with_Ta'amei_Hamikra&ven=The_Holy_Scriptures:_A_New_Translation_(JPS_1917)&lang=bi",
+    "payloadChecksumSha256": "9765f7ac6a029f2ed7994fd8ded9ed38ceb460e30171e626f2dde2039a167019"
+  },
+  {
+    "id": "genesis-1-3",
+    "canonicalRef": {
+      "work": "Genesis",
+      "bookId": "genesis",
+      "chapter": 1,
+      "verse": 3,
+      "osis": "Gen.1.3",
+      "sefaria": "Genesis.1.3",
+      "display": {
+        "en": "Genesis 1:3",
+        "he": "בראשית א׳:3",
+        "pt": "Gênesis 1:3"
+      }
+    },
+    "hebrew": {
+      "versionId": "tanach-taamei-hamikra",
+      "text": "וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽיְהִי־אֽוֹר׃",
+      "checksumSha256": "15da9f05ea03b1fbc8f4414eca91856d9951bd98efb5de14cc731fd2bab4a044"
+    },
+    "translation": {
+      "versionId": "jps-1917",
+      "text": "And God said: ‘Let there be light.’ And there was light.",
+      "checksumSha256": "b5508f218fed94b3a490692377b241b33e9b4bcc5b8232b54472f89e818fbe1d"
+    },
+    "scopeTags": [
+      "UNIVERSAL_CREATION",
+      "EMUNAH"
+    ],
+    "address": "humanity",
+    "addressNote": {
+      "en": "Divine speech brings light into being. Universal narrative, not a human obligation.",
+      "pt": "A fala divina faz a luz existir. Narrativa universal, não uma obrigação humana."
+    },
+    "sefariaUrl": "https://www.sefaria.org/Genesis.1.3?vhe=Tanach_with_Ta'amei_Hamikra&ven=The_Holy_Scriptures:_A_New_Translation_(JPS_1917)&lang=bi",
+    "payloadChecksumSha256": "b22af70aaf611bb93b8eda6e7b1dec75ae38c1482e43829e7fe6ff4069045cdf"
+  },
+  {
+    "id": "genesis-1-4",
+    "canonicalRef": {
+      "work": "Genesis",
+      "bookId": "genesis",
+      "chapter": 1,
+      "verse": 4,
+      "osis": "Gen.1.4",
+      "sefaria": "Genesis.1.4",
+      "display": {
+        "en": "Genesis 1:4",
+        "he": "בראשית א׳:4",
+        "pt": "Gênesis 1:4"
+      }
+    },
+    "hebrew": {
+      "versionId": "tanach-taamei-hamikra",
+      "text": "וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ׃",
+      "checksumSha256": "b763364452ed7b5b725bb2b2c94e0922fad7105843fb72edde7e46e1ef47327a"
+    },
+    "translation": {
+      "versionId": "jps-1917",
+      "text": "And God saw the light, that it was good; and God divided the light from the darkness.",
+      "checksumSha256": "d2ab6186e63d5c18476bb0c76fd040d3470b4d7b1f5a5b07c1948f83023f74f7"
+    },
+    "scopeTags": [
+      "UNIVERSAL_CREATION",
+      "EMUNAH"
+    ],
+    "address": "humanity",
+    "addressNote": {
+      "en": "God evaluates and separates light from darkness. Cosmic order, not covenantal law.",
+      "pt": "Deus avalia e separa a luz das trevas. Ordem cósmica, não lei da aliança."
+    },
+    "sefariaUrl": "https://www.sefaria.org/Genesis.1.4?vhe=Tanach_with_Ta'amei_Hamikra&ven=The_Holy_Scriptures:_A_New_Translation_(JPS_1917)&lang=bi",
+    "payloadChecksumSha256": "68e695748ad6c73f50e4d87a1f2e0c1b291cf1bd93dca910829ec7fdd3eadfaf"
+  },
+  {
+    "id": "genesis-1-5",
+    "canonicalRef": {
+      "work": "Genesis",
+      "bookId": "genesis",
+      "chapter": 1,
+      "verse": 5,
+      "osis": "Gen.1.5",
+      "sefaria": "Genesis.1.5",
+      "display": {
+        "en": "Genesis 1:5",
+        "he": "בראשית א׳:5",
+        "pt": "Gênesis 1:5"
+      }
+    },
+    "hebrew": {
+      "versionId": "tanach-taamei-hamikra",
+      "text": "וַיִּקְרָ֨א אֱלֹהִ֤ים ׀ לָאוֹר֙ י֔וֹם וְלַחֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם אֶחָֽד׃ (פ)",
+      "checksumSha256": "dc2670cd81aee31211e9c787d3e389669f97f3b26d5e540e51dd6f843f816212"
+    },
+    "translation": {
+      "versionId": "jps-1917",
+      "text": "And God called the light Day, and the darkness He called Night. And there was evening and there was morning, one day.",
+      "checksumSha256": "5e55b1aaab51c266b304b696c96c8eb89bb0ff9a2a9d5d5e4d04416721440584"
+    },
+    "scopeTags": [
+      "UNIVERSAL_CREATION",
+      "EMUNAH"
+    ],
+    "address": "hashem_alone",
+    "addressNote": {
+      "en": "Naming Day and Night, and the first day’s close. Rashi reads “one day” as pointing to God’s uniqueness before the angels are created.",
+      "pt": "A nomeação de Dia e Noite, e o encerramento do primeiro dia. Rashi lê “um dia” como apontando à unicidade de Deus antes da criação dos anjos."
+    },
+    "sefariaUrl": "https://www.sefaria.org/Genesis.1.5?vhe=Tanach_with_Ta'amei_Hamikra&ven=The_Holy_Scriptures:_A_New_Translation_(JPS_1917)&lang=bi",
+    "payloadChecksumSha256": "9e8adc1be447e0948f0dc580df033334c68b091077c4c6aaf973b0891daeaf52"
+  },
+  {
+    "id": "genesis-1-6",
+    "canonicalRef": {
+      "work": "Genesis",
+      "bookId": "genesis",
+      "chapter": 1,
+      "verse": 6,
+      "osis": "Gen.1.6",
+      "sefaria": "Genesis.1.6",
+      "display": {
+        "en": "Genesis 1:6",
+        "he": "בראשית א׳:6",
+        "pt": "Gênesis 1:6"
+      }
+    },
+    "hebrew": {
+      "versionId": "tanach-taamei-hamikra",
+      "text": "וַיֹּ֣אמֶר אֱלֹהִ֔ים יְהִ֥י רָקִ֖יעַ בְּת֣וֹךְ הַמָּ֑יִם וִיהִ֣י מַבְדִּ֔יל בֵּ֥ין מַ֖יִם לָמָֽיִם׃",
+      "checksumSha256": "e12a9eb31bc91566101e8c722decc5ebf09db364313211f10b4d2014a077c642"
+    },
+    "translation": {
+      "versionId": "jps-1917",
+      "text": "And God said: ‘Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.’",
+      "checksumSha256": "d787bcf736357f097d8f25696165950e655a9c8ff51a48f205d80c2bd7e074f7"
+    },
+    "scopeTags": [
+      "UNIVERSAL_CREATION"
+    ],
+    "address": "humanity",
+    "addressNote": {
+      "en": "The command that establishes the firmament. Creation narrative, not a Noahide statute.",
+      "pt": "O comando que estabelece o firmamento. Narrativa da criação, não um estatuto noahide."
+    },
+    "sefariaUrl": "https://www.sefaria.org/Genesis.1.6?vhe=Tanach_with_Ta'amei_Hamikra&ven=The_Holy_Scriptures:_A_New_Translation_(JPS_1917)&lang=bi",
+    "payloadChecksumSha256": "e90d64d0a636c947a62725934b4573ab3a5c78e41f44a71b032fea8b20438f2d"
+  }
+]
