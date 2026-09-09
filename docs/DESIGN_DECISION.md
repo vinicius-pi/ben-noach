@@ -1,10 +1,8 @@
 # Design decision — v1
 
-Three complete directions were built on identical Genesis 1:1–5 (then 1:6) data and inspected at 390×844, 768×1024, and 1440×1000.
+Three complete directions were built on identical Genesis 1:1–5 (then 1:6) data and inspected at 390×844, 768×1024, and 1440×1000 before the v1 direction was selected.
 
-Evidence lives in `docs/evidence/` (`dir-editorial-*`, `dir-scholarly-*`, `dir-immersive-*`).
-
-Rejected token experiments are archived (not shipped) at `docs/design-experiments/tokens-rejected.css`.
+The rejected render sets and token experiments are intentionally not retained in the canonical repository tree. Git history preserves that design experiment; current visual regression baselines under `tests/e2e/visual.spec.ts-snapshots/` are the operational evidence for the accepted product.
 
 ## A. Editorial Modernism
 
@@ -20,11 +18,11 @@ Dark field, larger type. Strong at night; weaker as a first encounter with scrip
 
 ## Winner: Editorial Modernism
 
-Chosen from the rendered screenshots, not from code preference.
+Chosen from rendered screenshots, not from code preference.
 
 - Reading calm is highest when chrome recedes on a white field.
 - Hebrew with niqqud/te'amim is clearest on `--paper`.
 - The product identity in `DESIGN_RESEARCH.md` is white/off-white and deep blue.
 - Mobile sheet and desktop rail remain the same interaction; only tokens change.
 
-Losing directions are not production routes. Comparison evidence is the screenshot set plus the archived tokens. Production pages use Editorial Modernism. Typography proof remains at `/design/type-proof/` (`noindex`).
+Losing directions are not production routes. Production pages use Editorial Modernism. Typography proof remains at `/design/type-proof/` (`noindex`).
