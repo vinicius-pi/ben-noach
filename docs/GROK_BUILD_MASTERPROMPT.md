@@ -1,108 +1,199 @@
 # Grok/Codex production build masterprompt
 
-Use this document as the execution brief for the first complete build.
+Use this document as the execution brief for the first complete production build.
 
 ---
 
-You are the principal product engineer and design engineer for **Ben Noach**.
+You are the principal product engineer, design engineer, information architect and release engineer for **Ben Noach**.
 
-Your mandate is to take the repository from its current research/specification state to a **production-grade, deployable, visually exceptional web product**.
+Your mandate is to take the repository from its research/specification state to a **production-grade, deployable, visually exceptional public web product**.
 
-Read `AGENTS.md` and every file in `docs/` before implementation. Treat those documents as the project's design, content-integrity, rabbinic-governance, and security constitution.
+Do not stop at scaffolding, a mockup, a plausible first draft or a generic “clean” UI. Use the available build budget for repeated browser inspection, comparison and refinement until the final reader feels authored by a serious editorial product studio.
+
+## Read first
+
+Read the repository in the precedence order in `AGENTS.md` before implementation.
+
+The highest-value documents are:
+
+1. `AGENTS.md`
+2. `docs/PRODUCT_NORTH_STAR.md`
+3. `docs/OPEN_SOURCE_STACK.md`
+4. `docs/CORPUS_V1.md`
+5. `docs/DESIGN_RESEARCH.md`
+6. `docs/CONTENT_GOVERNANCE.md`
+7. `docs/SECURITY_AND_QA.md`
+8. `docs/IMPLEMENTATION_RISKS_AND_DECISIONS.md`
+9. `docs/GROK_BUILD_MASTERPROMPT.md`
+
+The Tovia Singer research documents supply audience/product alignment; they are not an endorsement claim.
 
 ## Product
 
-Ben Noach is a multilingual guided Tanakh reader for people who are new to Jewish textual study, especially Bnei Noach, non-religious readers, and people coming from Christian backgrounds who want to encounter the Hebrew Bible through Jewish sources.
+Ben Noach is a multilingual guided Tanakh reader designed first for Bnei Noach, non-Jews seeking to become righteous gentiles, and readers approaching Jewish textual study from outside a yeshiva/library context.
 
-Its experience is:
+Its distinctive experience is:
 
 > **READ → UNDERSTAND → SOURCES**
 
-The public reader feels like a beautifully typeset contemporary book. The deeper system carries source identity, versioning, licenses, evidence links, commentary relationships, and Noahide review status.
+The product wins by giving the reader the right first path through the Jewish textual tradition rather than by owning the largest corpus.
 
-The application should be compelling enough that a serious rabbi, editor, designer, or engineer can inspect it and immediately see both care and restraint.
+The essential journey is:
+
+`Tanakh → select verse → understand the verse → Rashi → why Rashi comments → classical source chain → applicability/context → deeper sources → Sefaria`
+
+A generic Bible gives text without this Jewish interpretive architecture. Sefaria gives extraordinary depth but assumes the user can navigate that architecture. Ben Noach fills the layer between them and should gradually make the reader more capable of using primary sources independently.
 
 ## Product character
 
-Create a product that communicates:
+Build a product that communicates:
 
-- reverence without kitsch;
-- confidence without aggression;
-- accessibility without simplification of the sources;
+- exactness;
+- confidence;
+- beauty;
+- textual reverence without kitsch;
 - modernity without trend-chasing;
-- Jewish textual authenticity without requiring prior yeshiva vocabulary;
-- dignity for the righteous gentile path;
-- transparent scholarship underneath an effortless reading experience.
+- Jewish textual authenticity;
+- serious long-term usefulness for a Ben Noach;
+- a low-friction entrance for a person who does not know Rashi, Chazal or Sefaria yet;
+- scholarship and provenance underneath an effortless reading experience.
 
-The primary interaction is not marketing. It is a person reading Genesis, selecting a verse, meeting Rashi, understanding why Rashi commented, seeing where the explanation comes from, receiving reviewed Noahide context where applicable, and then opening the primary sources when ready.
+The Tanakh is the hero visual.
 
-## Phase 0 — repository and framework foundation
+## Open-source / portability constitution
 
-Establish a clean production foundation.
+The v1 public product must require **no paid service** to build, host or use its core reader.
 
-1. Verify the current patched Active LTS release of Next.js at build time, including the latest security patch.
-2. Scaffold a Next.js App Router + strict TypeScript application.
-3. Use a deterministic package manager/lockfile workflow.
-4. Configure formatting, linting, strict typechecking and tests.
-5. Create a clean module/domain architecture around reader, content, sources, review, design system, localization, and provider adapters.
-6. Add GitHub Actions gates described in `docs/SECURITY_AND_QA.md`.
-7. Add Dependabot and security/static-analysis workflow appropriate to the final stack.
-8. Keep the dependency graph intentionally small.
-9. Preserve `main` as canonical; implement on the current build branch and leave a reviewable PR rather than self-merging.
+Use only open-source software and openly distributable/explicitly permitted corpus assets according to `docs/OPEN_SOURCE_STACK.md` and `docs/CORPUS_V1.md`.
 
-Use current Next.js agent-ready documentation from the installed framework/version while working. Prefer version-matched docs over remembered API patterns.
+The final product must not require:
 
-## Phase 1 — content and provenance architecture
+- proprietary hosting runtime;
+- hosted database;
+- auth SaaS;
+- paid search service;
+- paid CMS;
+- runtime AI inference;
+- proprietary webfont;
+- analytics SaaS;
+- a live Sefaria request for released passages.
 
-Implement the source-aware content model before hard-coding page copy.
+The repository must remain transferable to another individual, rabbinic body or nonprofit without architectural hostage-taking.
+
+## Phase 0 — verify and establish the foundation
+
+1. Verify the current patched stable Astro 7.x release, compatible maintained Node LTS, and relevant security advisories at execution time.
+2. Scaffold **Astro static output + strict TypeScript**.
+3. Use pnpm/Corepack with a pinned `packageManager` field and committed frozen lockfile.
+4. Add React integration only for islands that materially require client interaction.
+5. Prefer native HTML and modern CSS; use **Base UI `@base-ui/react`** as the preferred candidate for complex Drawer/Dialog behavior if needed.
+6. Configure formatting, linting, strict typechecking, unit/component tests and content validation.
+7. Implement the repository security/quality workflows using open-source local commands as the baseline.
+8. Keep the dependency graph deliberately small and license-audited.
+9. Configure a static build that is portable across GitHub Pages and a generic HTTP server.
+10. Keep `main` untouched; work on `build/grok-production-v1` and coherent sub-branches. Final output is a reviewable PR, not a self-merge.
+
+Use version-matched Astro documentation rather than remembered APIs.
+
+## Phase 1 — design the source/content domain before pages
+
+Implement source-aware content schemas before hard-coding passage-specific UI.
 
 Model at minimum:
 
-- canonical passage;
-- text version/edition;
+- canonical passage/ref;
+- exact text version/edition;
 - translation version;
-- classical commentary;
-- commentary relationships;
+- classical commentary work;
+- commentary segment and `dibbur hamatchil` where available;
+- source relationships;
 - beginner elucidation;
 - claim/evidence refs;
-- Noahide scope;
-- rabbinic review status;
-- reviewer metadata;
+- applicability/scope tags from `PRODUCT_NORTH_STAR.md`;
+- Noahide/rabbinic review state where relevant;
+- reviewer/revision metadata;
 - source license/attribution;
 - provider metadata;
-- outbound canonical links.
+- outbound canonical links;
+- checksum/integrity data.
 
-Create runtime validation for content/provider payloads.
+Use Astro Content Collections and/or equivalent schema-validated repository data.
 
-Create a source manifest and CI validators so production content cannot silently lose provenance.
+Production build validation must reject:
 
-Create real fixture/content objects for Genesis 1:1–5 using only sources whose provenance and rights status are known. Preserve any unreviewed modern explanatory/religious prose as explicit draft content in development/review state.
+- missing canonical refs;
+- missing version identity;
+- bundled text with unknown rights;
+- required attribution without attribution metadata;
+- broken evidence refs;
+- invalid review-state transitions;
+- unrecognized provider payloads.
 
-## Phase 2 — design exploration before convergence
+## Phase 2 — build the local release corpus
 
-Produce three complete visual hypotheses using identical Genesis 1:1–5 data.
+Implement the audited v1 corpus in `docs/CORPUS_V1.md`.
+
+For Genesis 1:1–5, use only release-approved concrete versions, starting from:
+
+- Public Domain pointed/cantillated Hebrew Tanakh source;
+- Public Domain JPS 1917 English Tanakh;
+- Public Domain Rosenbaum/Silbermann Rashi English baseline;
+- approved Siftei Chakhamim version(s) with exact attribution/rights handling;
+- additional Chazal/supercommentary text only when its concrete version is rights-approved.
+
+The public reader must render Genesis 1:1–5 from the local release corpus.
+
+Sefaria is a research/enrichment/deep-link provider, not the runtime source of truth for the released passage.
+
+Build the Sefaria adapter behind a typed boundary and provide graceful failure.
+
+Test the core reader with Sefaria unavailable.
+
+## Phase 3 — create the product applicability model
+
+Implement the scope taxonomy from `PRODUCT_NORTH_STAR.md`, including categories such as:
+
+- universal/creation;
+- Noahide core;
+- emunah;
+- teshuvah/prayer;
+- justice/ethics;
+- nations/prophecy;
+- Israel covenant context;
+- Jewish-practice-specific material;
+- advanced Oral Torah.
+
+A passage may carry multiple tags.
+
+Use these tags to guide beginner curation and contextual signals; never use them to alter a quoted source.
+
+When Israel-specific material is necessary to understand the passage, make the address/context intelligible without presenting it as the reader's obligation.
+
+Do not force a Noahide note onto every verse. Applicability/context is a data decision, not a template slot that must be filled.
+
+## Phase 4 — visual research through implementation
+
+Build **three materially different complete design hypotheses** using the same real Genesis 1:1–5 dataset.
 
 ### Direction A — Editorial Modernism
 
-Emphasize book design, optical typography, large calm whitespace, restrained blue, strong reading measure, minimal persistent chrome.
+Book-design discipline, optical typography, large calm whitespace, restrained deep blue, extremely low chrome.
 
 ### Direction B — Quiet Scholarly
 
-Retain the calm reader while making provenance and source relationships slightly more legible for study-oriented users.
+The calm reader remains dominant while source/provenance relationships become slightly more visible and elegant.
 
 ### Direction C — Immersive Reader
 
-Emphasize gesture/mobile ergonomics, disappearing chrome, focus state, continuity of reading, and an exceptionally polished study sheet.
+Strongest mobile/gesture ergonomics, disappearing chrome, focus continuity and exceptionally polished study sheet.
 
-Build these as isolated routes/branches/components that can be compared without contaminating the final design system.
+For each direction, render and inspect at:
 
-For each direction render and inspect screenshots at:
+- 390 × 844;
+- 768 × 1024;
+- 1440 × 1000.
 
-- 390 × 844
-- 768 × 1024
-- 1440 × 1000
-
-Capture:
+Capture at least:
 
 - home/cover;
 - reader idle;
@@ -110,292 +201,462 @@ Capture:
 - Understand open;
 - Sources open;
 - enlarged text;
-- bilingual Hebrew/LTR state.
+- mixed Hebrew/LTR state.
 
-Write a short comparison in the repository explaining which direction wins and why. Converge deliberately into one final design system, then remove dead experiments.
+Write a comparison across:
 
-## Phase 3 — typography laboratory
+- reading calm;
+- Hebrew quality;
+- type hierarchy;
+- visual distinctiveness;
+- discoverability;
+- novice comprehension;
+- whitespace rhythm;
+- mobile ergonomics;
+- accessibility;
+- source-layer clarity;
+- implementation complexity.
+
+Select a winner deliberately, synthesize any superior element from another direction only when it strengthens coherence, then delete dead experiments.
+
+If the winner still resembles a starter kit, Shadcn/demo page, dashboard or generic “minimal” template, continue iterating.
+
+## Phase 5 — typography laboratory
 
 Create `/design/type-proof`.
 
-Render real Hebrew with full niqqud and te'amim using legally usable candidate fonts documented in `docs/DESIGN_RESEARCH.md`.
+Self-host and compare legally approved fonts documented in the stack research.
 
-Test at several sizes and line heights:
+At minimum compare:
+
+- Frank Ruhl Libre;
+- Noto Serif Hebrew;
+- any additional verified open Hebrew candidates retained after license check;
+- Literata or another verified long-form open Latin candidate.
+
+Render real Hebrew with full niqqud and te'amim at several sizes/line heights using:
 
 - Genesis 1:1;
 - Deuteronomy 6:4–5;
 - Isaiah 52:13–53:3;
-- Psalm 119 sample.
+- a Psalm 119 sample.
 
 Inspect:
 
-- diacritic placement;
+- diacritic/cantillation placement;
 - glyph clarity;
-- mobile rendering;
+- mobile rasterization;
 - mixed-direction punctuation;
 - rhythm over multiple lines;
-- readability at enlarged settings.
+- long-form fatigue;
+- enlarged-text behavior.
 
-Select the final typography system from rendered evidence. Document the chosen font license and source in the manifest/repository.
+Choose by rendered evidence and record exact font source/license in the manifest.
 
-## Phase 4 — public product surfaces
+## Phase 6 — public product surfaces
 
-### Home
+### Home / cover
 
-Create an editorial cover rather than a marketing funnel.
+Treat the home as a contemporary book cover and entrance to a library, not a marketing funnel.
 
-The first viewport should contain approximately:
+First viewport should be compositionally restrained:
 
-- a small precise Magen David publishing mark;
+- precise custom geometric Magen David publishing mark;
 - project wordmark;
-- one concise description;
+- one concise statement of purpose;
 - Begin Reading / Continue Reading;
 - quiet orientation to Tanakh.
 
-Further down, provide:
+Below the fold:
 
-- Torah / Nevi'im / Ketuvim entry;
-- a small number of guided paths;
+- Torah / Nevi'im / Ketuvim;
+- a small set of guided pathways;
 - project/source/review transparency.
 
-Create a custom geometric SVG mark that is crisp at small sizes and feels like a publishing imprint.
+A screenshot with every optional control closed must still look complete and intentional.
 
 ### Library
 
-Create clear Tanakh navigation that works for a beginner while preserving traditional book structure.
+Create clear Tanakh navigation for a reader who may know Christian/Portuguese book names but not Hebrew naming conventions.
 
-Support localized book names and Hebrew titles.
+Support:
+
+- canonical project refs independent of display names;
+- Hebrew titles;
+- English/Portuguese aliases;
+- localized routing;
+- predictable chapter navigation.
 
 ### READ
 
-Create an immersive long-form reader.
+Create a distraction-free long-form reader.
 
 Desktop target:
 
-- reading measure roughly 680–760px;
+- approximate 680–760px primary reading measure;
 - excellent Hebrew line-height;
-- translation that reads naturally without visually competing with Hebrew;
-- subtle verse affordances;
-- receding navigation controls;
-- stable layout with font loading.
+- translation readable but visually subordinate to Hebrew/source hierarchy;
+- subtle verse affordance;
+- controls recede during reading;
+- stable font/layout loading.
 
 Mobile target:
 
-- one primary reading column;
-- natural Hebrew/translation stacking;
-- touch-friendly verse selection;
-- minimal top/bottom chrome while reading.
+- single primary column;
+- Hebrew/translation stack naturally;
+- large touch target without turning every verse into a card;
+- minimal chrome while reading.
 
-Support appearance controls with the smallest useful set: text size, Hebrew/translation visibility, and any additional option justified by testing.
+Appearance controls should be only the ones that materially improve reading, such as:
+
+- text size;
+- Hebrew visibility;
+- translation visibility/version;
+- optional low-light mode only if executed at the same quality bar.
 
 ### UNDERSTAND
 
-Selecting a verse opens the unique value layer.
+This is the defining product surface.
 
-Desktop: open a polished 380–430px study rail while preserving a readable main text measure.
+Selecting a verse opens a clear guided layer while preserving reading context.
 
-Mobile: open an accessible draggable/expandable study sheet with compact and expanded states.
+Desktop: polished 380–430px rail.
 
-When data exists, organize content in this hierarchy:
+Mobile: accessible Drawer/bottom sheet with compact and expanded states.
 
-- Understanding the verse
-- Rashi
-- What question is Rashi answering?
-- Understanding Rashi
-- Where this comes from
-- Terms
-- For Bnei Noach
-- Sources & provenance
-- Continue in Sefaria
+When data exists, organize approximately:
 
-Keep historical source blocks and modern explanation visually distinct with typography and small metadata signals rather than alarm-like badges.
+1. Understanding the verse
+2. Rashi
+3. Why Rashi comments here
+4. Understanding Rashi
+5. Where this comes from
+6. Words / terms
+7. Who is being addressed? / applicability context where useful
+8. For Bnei Noach where a real reviewed relevance exists
+9. Sources & provenance
+10. Continue in Sefaria
+
+Historical source, project elucidation and reviewed normative guidance should feel like distinct editorial species without using ugly warning-card UI.
 
 ### SOURCES
 
-Provide deliberate depth:
+Allow deliberate depth:
 
-- full selected Rashi source/version;
-- relevant supercommentary;
-- Midrash/Talmud source links;
+- exact Rashi segment/version;
+- relevant Siftei Chakhamim;
+- approved additional supercommentary;
+- Midrash/Gemara links or bundled source where rights allow;
+- related Tanakh passages;
 - alternative classical voices where useful;
-- provenance/version/license details;
-- source graph or relationship list;
+- source relationship/provenance view;
+- version/license details;
 - canonical Sefaria links.
 
-The Sources view may be denser because the user explicitly chose depth.
+The Sources mode may be denser because the reader explicitly requested depth.
 
-## Phase 5 — localization architecture
+## Phase 7 — durable reasons to return
 
-Build locale-aware routing and content architecture from the start.
+Implement the highest-value low-cost retention features that strengthen study rather than gamify belief.
 
-English and Portuguese should be first-class interface targets even if the initial verified content corpus is not equally complete in both languages.
+### Required v1
+
+Local-first/privacy-preserving:
+
+- Continue Reading;
+- last passage;
+- reading progress;
+- display preferences;
+- simple local saved passages/bookmarks if this can be executed cleanly.
+
+No account is required.
+
+### High-value interaction candidates
+
+Implement if they can meet the same design/quality bar without delaying the core:
+
+- **Why is this here?** — explains why the selected commentary/source was surfaced.
+- **Who is this addressed to?** — compact address/context explanation.
+- **Source ladder** — restrained relation path such as `Genesis 1:1 → Rashi → Siftei Chakhamim → project elucidation`.
+- **Read around it** — expand surrounding literary context.
+- **What the classical reader notices** — identify the textual feature that triggered commentary.
+
+### Optional word inspector
+
+Only if the core experience is already polished, use the open OSHB/BDB stack to prototype a word-level inspector for:
+
+- pointed Hebrew;
+- lemma;
+- basic morphology;
+- concise gloss;
+- BDB/deeper lexical link.
+
+Do not introduce a proprietary lexical API.
+
+## Phase 8 — guided-path architecture
+
+Create the route/content architecture for guided pathways, even if only the first one is substantially populated in v1.
+
+Priority order:
+
+1. Creation and Humanity — Genesis 1–11.
+2. What Hashem Requires of Humanity.
+3. The One God.
+4. Teshuvah.
+5. Justice and the Righteous Gentile.
+6. The Nations in the Prophets.
+7. Reading Rashi for the First Time.
+8. Coming from a Christian Bible — optional textual orientation, context-first.
+
+Guided paths should be structured editorial sequences over canonical passages, not duplicate/copy the passage corpus.
+
+## Phase 9 — localization
+
+Build locale-aware routing and UI from the first implementation.
+
+English and Portuguese are first-class interface targets.
 
 Requirements:
 
 - correct RTL/LTR isolation;
 - localized UI strings;
-- localized book names;
-- version-aware translations;
-- graceful absence of a translation/commentary in one language;
-- language selection that never changes the underlying canonical ref.
+- localized book names/aliases;
+- version-aware translation availability;
+- graceful absence of a source translation in one language;
+- language changes never alter the canonical ref.
 
-Keep translation licensing version-specific.
+Do not bundle a Portuguese Tanakh translation whose concrete rights are unknown merely to fill the locale.
 
-## Phase 6 — review mode
+Project-written Portuguese elucidation is separate from scripture translation.
 
-Build an editor/rabbinic review surface that can initially work against repository-backed content.
+## Phase 10 — local/static search
 
-A reviewer should be able to inspect Genesis 1:1–5 and see compact states for:
+Implement useful v1 search without recreating Sefaria search.
 
-- source verified;
-- citations/evidence resolve;
-- license verified;
-- editorial explanation status;
-- Noahide scope status;
-- rabbinic review status.
+Prioritize:
 
-Create interaction architecture for:
+- canonical refs;
+- book/chapter/verse;
+- Hebrew/English/Portuguese aliases;
+- project glossary;
+- guided paths/topics.
 
-- approve;
+Use a simple local index or Pagefind if justified by final architecture.
+
+Deep full-library search remains a Sefaria handoff.
+
+## Phase 11 — review/editor surface
+
+Build a compact review-state view suitable for a rabbi/editor who is not a GitHub power user.
+
+A reviewer inspecting Genesis 1:1–5 should be able to see:
+
+- source/version verified;
+- citation/evidence state;
+- rights/license state;
+- editorial elucidation state;
+- applicability/scope state;
+- rabbinic review state where relevant;
+- content revision/hash.
+
+Design interaction architecture for:
+
+- approve/review;
 - request correction;
 - add source/note;
 - choose scope category;
 - mark dispute.
 
-For the first implementation, privileged persistence can remain development/repository-oriented. Architect it so authenticated persistence can be added later without changing public content types.
+For v1, privileged persistence may remain repository/development-oriented. Do not create a public auth/database system just to simulate a future editor backend.
 
-## Phase 7 — source integration
+## Phase 12 — accessibility
 
-Create a typed provider boundary for Sefaria.
+Treat accessibility as editorial quality.
 
-Support:
+Implement/test:
 
-- canonical ref normalization;
-- exact version metadata;
-- text retrieval where license policy permits;
-- link/cross-reference retrieval;
-- outbound deep links;
-- caching appropriate to largely stable text data;
-- graceful upstream failure.
-
-Use Sefaria's API/MCP/export ecosystem according to its documented terms and per-version licensing.
-
-Keep research-only providers such as ALHATORAH outside automated ingestion unless explicit permission exists.
-
-## Phase 8 — accessibility
-
-Treat text accessibility as a core product feature.
-
-Implement and test:
-
-- semantic HTML/landmarks;
-- keyboard-complete reader/study workflow;
+- semantic HTML and landmarks;
+- keyboard-complete reading/study workflow;
 - visible focus;
-- correct dialog/sheet focus behavior;
+- correct Drawer/Dialog focus and dismissal;
 - screen-reader verse/action labels;
-- correct `dir`/language attributes;
+- correct `lang`/`dir`;
 - reduced motion;
-- sufficient contrast;
+- contrast;
 - 200% zoom;
-- large text states;
-- touch ergonomics.
+- enlarged text;
+- touch ergonomics;
+- mixed RTL/LTR punctuation.
 
-Add Playwright + axe tests for core states and perform manual keyboard/zoom audits.
+Use Playwright + axe automation and manual keyboard/zoom testing.
 
-## Phase 9 — security
+## Phase 13 — security and supply chain
 
-Implement the read-only architecture and controls in `docs/SECURITY_AND_QA.md`.
+Implement the controls in `docs/SECURITY_AND_QA.md` and the final open-source stack.
 
 Establish:
 
-- validated external-provider boundaries;
-- safe source-markup normalization;
-- restrictive security headers;
-- a Content Security Policy matched to the final rendering strategy;
-- secret-safe configuration;
-- no privileged review mutations exposed publicly;
-- dependency/static-analysis security checks;
-- secure handling of external links/URLs.
+- strict schema validation of external/provider data;
+- safe text/markup handling;
+- restrictive static-compatible security headers/CSP;
+- no secrets in browser/build output;
+- no public privileged review mutations;
+- external URL validation;
+- dependency vulnerability scan;
+- dependency license allowlist scan;
+- gitleaks CLI secret scan;
+- GitHub-native CodeQL/Dependabot as optional additional layers where available;
+- zero runtime AI prompt-injection surface in v1.
 
-Run an adversarial pass before the PR is ready.
+Do not rely exclusively on a paid/hosted security service. Core checks must be runnable locally/open-source.
 
-## Phase 10 — performance and quality gates
+## Phase 14 — PWA/offline
 
-Set up CI for:
+Make the app installable only if the implementation remains clean and license-aware.
 
-- formatting;
+If PWA is enabled:
+
+- cache application shell/assets;
+- cache text only when its manifest says offline is allowed;
+- tie corpus cache versioning to manifest/content hashes;
+- never indiscriminately cache unknown-rights API responses;
+- do not make the site depend on service-worker success.
+
+## Phase 15 — performance and regression gates
+
+Set up local + CI commands for:
+
+- format;
 - lint;
 - strict typecheck;
 - unit/component tests;
-- content-integrity validation;
-- production build;
-- Playwright E2E desktop/mobile;
+- content schema validation;
+- source/provenance validation;
+- license manifest validation;
+- production static build;
+- generic static-server smoke test;
+- provider-offline smoke test;
+- Playwright E2E mobile/desktop;
 - axe accessibility;
-- visual screenshot regression;
+- RTL/LTR regressions;
+- screenshot visual regression;
 - Lighthouse CI/performance budgets;
-- dependency/security scanning.
+- dependency vulnerability/license checks;
+- secret scanning.
 
-Optimize the core reader so it behaves like a document:
+Optimize for document behavior:
 
-- minimal client JavaScript;
-- stable font/layout loading;
+- static HTML;
+- minimal hydration;
+- self-hosted fonts;
+- stable layout;
 - fast LCP;
-- no unnecessary heavy imagery;
-- no global hydration for content that can stay server-rendered/static.
+- no heavy decorative imagery;
+- no required live API for the released chapter.
 
-## Phase 11 — polish loop
+## Phase 16 — free deployment and portability
 
-Use a real browser repeatedly after the implementation is functionally complete.
+Configure a working free deployment path for the public repository using **GitHub Pages** and Astro's supported static deployment workflow.
 
-Inspect every key state on desktop, tablet and mobile.
+Also prove host independence:
 
-Refine:
+- `pnpm build` creates self-contained `dist/`;
+- serve `dist/` with a generic static HTTP server;
+- no Vercel/Cloudflare-specific runtime API is required;
+- custom-domain instructions are host-agnostic;
+- optional minimal Nginx/static-container recipe may be added for future institutional hosting.
+
+The public product must remain usable if deployment moves away from GitHub.
+
+## Phase 17 — polish loop
+
+After functional completion, begin the serious visual refinement pass.
+
+Use a real browser repeatedly on desktop/tablet/mobile.
+
+Inspect and refine:
 
 - exact text measure;
-- baseline and vertical rhythm;
+- optical alignment;
+- baseline/vertical rhythm;
 - Hebrew/translation hierarchy;
 - whitespace;
+- selected verse state;
 - study rail entrance/exit;
-- mobile sheet ergonomics;
-- hover/focus/selected states;
+- mobile sheet snap points and keyboard behavior;
+- focus/hover/touch states;
 - line breaks;
-- Magen David/wordmark optical balance;
+- Magen David/wordmark balance;
 - animation timing;
-- loading transitions;
-- empty/error states.
+- loading/error/empty states;
+- responsive transitions;
+- enlarged text;
+- all visual states required by screenshot regression.
 
-Prefer subtractive refinement. If a screen feels generic or busy, improve composition, typography and hierarchy before adding visual elements.
+Use subtractive refinement first.
 
-## Phase 12 — documentation and handoff
+If a screen feels generic, fix composition/type/hierarchy rather than adding cards, gradients, shadows, illustrations or ornaments.
+
+Repeat this loop until the final key screenshots are materially stronger than the first functional implementation.
+
+## Phase 18 — prove content scalability
+
+After Genesis 1:1–5 is complete, add **Genesis 1:6** using only the documented content/ingestion workflow.
+
+Do not modify core UI components merely to accommodate the new verse.
+
+If the new passage requires component surgery, repair the architecture before final PR.
+
+## Phase 19 — documentation and handoff
 
 Before opening the final PR:
 
-- update README with real run/build/deploy instructions;
+- update README with actual run/build/test/deploy commands;
 - document architecture;
-- document source/provider flow;
+- document corpus/provider flow;
+- document exact source/font/dependency licenses;
 - document content authoring/review workflow;
-- document fonts and licenses;
-- document test/security commands;
-- include screenshots of the final key states;
+- document how to add a passage;
+- document local progress/storage behavior;
+- document security/test commands;
+- include final screenshots at required breakpoints;
+- include the visual-direction decision record;
 - include known limitations;
-- explain how to expand Genesis 1:1–5 to Genesis 1–11;
-- include a short reviewer guide suitable for a rabbi/editor who is not a GitHub power user.
+- explain the path from Genesis 1:1–5 to Genesis 1–11;
+- include a reviewer guide for a rabbi/editor who is not a GitHub power user.
 
-## Final acceptance test
+## Final acceptance journey
 
-A new reader should be able to:
+A first-time user should be able to:
 
 1. arrive without knowing what Rashi or Sefaria is;
-2. begin Genesis immediately;
-3. understand how Hebrew/source/translation relate;
-4. select Genesis 1:1;
-5. meet Rashi as Rashi rather than as anonymous app prose;
-6. understand the question Rashi is addressing;
-7. see the source chain behind the explanation;
-8. distinguish editorial elucidation from historical source;
-9. see Noahide relevance only with its correct review status;
-10. enter Sources and continue into Sefaria when ready;
-11. complete the same journey comfortably by touch, keyboard and screen reader;
-12. trust that the product knows the difference between a source, an explanation, and a ruling.
+2. understand immediately why this product is more useful to them than a generic Bible reader;
+3. begin Genesis without onboarding friction;
+4. see Hebrew/source/translation hierarchy clearly;
+5. select Genesis 1:1;
+6. meet Rashi as Rashi rather than anonymous app prose;
+7. understand why Rashi comments there;
+8. inspect the classical/source chain supporting the elucidation;
+9. understand whether a point is universal/Noahide, Israel-covenant context, or Jewish-practice-specific when that distinction matters;
+10. enter Sources without losing reading context;
+11. continue into Sefaria when ready;
+12. resume their reading later without an account;
+13. complete the journey by touch, keyboard and screen reader;
+14. trust the exact version/provenance/license behind bundled sources.
 
-The build is complete when this experience is polished, tested, secure, provenance-safe, responsive, and deployable — not merely when routes compile.
+## Final technical acceptance
+
+The build is complete only when:
+
+- the final reader is visibly polished at mobile/tablet/desktop;
+- all open-source/rights manifests pass;
+- Genesis 1:1–5 works with external APIs unavailable;
+- the build needs no paid credentials;
+- static `dist/` works on a generic server;
+- GitHub Pages deployment is configured/testable;
+- tests enforce content integrity, accessibility, security, performance and visual regressions;
+- Genesis 1:6 proves scalability;
+- all dead design experiments/dependencies are removed;
+- the repository is understandable by a future technical or rabbinic steward.
+
+Open a final PR into `main` with all evidence. **Do not merge it.**
