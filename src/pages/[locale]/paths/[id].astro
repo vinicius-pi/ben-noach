@@ -1,11 +1,11 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { GUIDED_PATHS, VERSES } from "../../../lib/corpus";
-import { localePath, t } from "../../../lib/i18n";
+import { LOCALES, localePath, t } from "../../../lib/i18n";
 import type { Locale } from "../../../lib/types";
 
 export function getStaticPaths() {
-  return (["en", "pt"] as const).flatMap((locale) =>
+  return LOCALES.flatMap((locale) =>
     GUIDED_PATHS.map((path) => ({ params: { locale, id: path.id } })),
   );
 }

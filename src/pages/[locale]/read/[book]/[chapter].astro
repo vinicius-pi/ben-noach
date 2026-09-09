@@ -2,11 +2,11 @@
 import Layout from "../../../../layouts/Layout.astro";
 import ReaderApp from "../../../../islands/ReaderApp";
 import { BOOKS, PASSAGES, buildReaderPayload } from "../../../../lib/corpus";
+import { LOCALES } from "../../../../lib/i18n";
 import type { Locale } from "../../../../lib/types";
 
 export function getStaticPaths() {
-  const locales: Locale[] = ["en", "pt"];
-  return locales.flatMap((locale) =>
+  return LOCALES.flatMap((locale) =>
     PASSAGES.filter((passage) => passage.released).flatMap((passage) => {
       const book = BOOKS.find((item) => item.id === passage.bookId);
       if (!book) return [];
