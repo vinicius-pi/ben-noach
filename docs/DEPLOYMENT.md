@@ -2,7 +2,7 @@
 
 ## GitHub Pages (free)
 
-Active workflow files live at `.github/workflows/{ci,pages}.yml`. Reviewed copies are also kept in `docs/github-workflows/` for diffing.
+Active workflow files live at `.github/workflows/{ci,pages}.yml`.
 
 Configure the repository:
 
