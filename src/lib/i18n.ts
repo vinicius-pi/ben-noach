@@ -1,6 +1,9 @@
 import type { Locale } from "./types";
 
-export const LOCALES: Locale[] = ["en", "pt"];
+// v0.1 ships only the rights-verified Hebrew + English reading experience.
+// Portuguese copy remains in the codebase for future activation after a reviewed
+// Portuguese Tanakh version is approved for the release corpus.
+export const LOCALES: Locale[] = ["en"];
 
 export const UI = {
   en: {
