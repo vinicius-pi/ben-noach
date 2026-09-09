@@ -134,11 +134,14 @@ export type CommentarySegment = {
 };
 
 export type EditorialSlot =
-  "understanding-the-verse" | "why-rashi" | "understanding-rashi" | "for-bnei-noach";
+  | "understanding-the-verse"
+  | "why-rashi"
+  | "understanding-rashi"
+  | "for-bnei-noach";
 
 export type Elucidation = {
   id: string;
-  type: "EDITORIAL_ELUCIDATION" | "NOAHIDE_GUIDANCE";
+  type: "EDITORIAL_ELUCIDATION" | "APPLICABILITY_CONTEXT" | "RABBINIC_GUIDANCE";
   verseId: string;
   slot: EditorialSlot;
   targetSegmentId?: string;
