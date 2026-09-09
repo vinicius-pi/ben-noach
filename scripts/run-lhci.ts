@@ -12,10 +12,10 @@ const outDir = join(root, "lhci");
 const evidencePath = join(root, "docs", "evidence", "lighthouse.md");
 
 const MIN_SCORE = {
-  performance: 0.9,
-  accessibility: 0.95,
-  "best-practices": 0.9,
-  seo: 0.9,
+  performance: 0.95,
+  accessibility: 0.98,
+  "best-practices": 0.95,
+  seo: 0.95,
 } as const;
 
 type Form = "desktop" | "mobile";
@@ -126,7 +126,7 @@ function writeEvidence(reports: Report[], chrome: string): void {
     `Chrome: \`${chrome}\``,
     "Runner: `lighthouse` CLI (`scripts/run-lhci.ts`), not `lhci autorun`.",
     "Flags: `--headless=new --no-sandbox --disable-dev-shm-usage`.",
-    "Thresholds: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 90, SEO ≥ 90.",
+    "Thresholds: Performance ≥ 95, Accessibility ≥ 98, Best Practices ≥ 95, SEO ≥ 95.",
     "",
     "| Page | Form | P | A | BP | SEO | FCP | LCP | CLS | Bytes |",
     "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
