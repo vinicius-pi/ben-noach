@@ -12,7 +12,7 @@ export type ScopeTag =
   | "ADVANCED_ORAL_TORAH"
   | "REVIEW_REQUIRED";
 
-export type AddressKind =
+type AddressKind =
   | "humanity"
   | "noah_bnei_noach"
   | "israel_nation"
@@ -21,20 +21,20 @@ export type AddressKind =
   | "prophetic_nations"
   | "hashem_alone";
 
-export type LicenseStatus = "public-domain" | "open-license" | "permission" | "unknown";
+type LicenseStatus = "public-domain" | "open-license" | "permission" | "unknown";
 
 export type SourceSpan = {
   kind: "text" | "emphasis" | "lemma";
   text: string;
 };
 
-export type Localized = {
+type Localized = {
   en: string;
   pt: string;
   he?: string;
 };
 
-export type CanonicalRef = {
+type CanonicalRef = {
   work: string;
   bookId: string;
   chapter: number;
@@ -133,7 +133,7 @@ export type CommentarySegment = {
   attributionRequired?: boolean;
 };
 
-export type EditorialSlot =
+type EditorialSlot =
   | "understanding-the-verse"
   | "why-rashi"
   | "understanding-rashi"
@@ -141,7 +141,10 @@ export type EditorialSlot =
 
 export type Elucidation = {
   id: string;
-  type: "EDITORIAL_ELUCIDATION" | "APPLICABILITY_CONTEXT" | "RABBINIC_GUIDANCE";
+  type:
+    | "EDITORIAL_ELUCIDATION"
+    | "APPLICABILITY_CONTEXT"
+    | "RABBINIC_GUIDANCE";
   verseId: string;
   slot: EditorialSlot;
   targetSegmentId?: string;
