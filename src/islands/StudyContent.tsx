@@ -160,7 +160,8 @@ function UnderstandBlock({
       {showApplicability && (
         <Section title={t(locale, "whoAddressed")}>
           <p>
-            <strong>{ADDRESS_LABELS[verse.address][locale]}.</strong> {loc(verse.addressNote, locale)}
+            <strong>{ADDRESS_LABELS[verse.address][locale]}.</strong>{" "}
+            {loc(verse.addressNote, locale)}
           </p>
           <p className="meta-line">
             {verse.scopeTags.map((tag) => SCOPE_LABELS[tag][locale]).join(" · ")}

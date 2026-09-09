@@ -134,10 +134,7 @@ export type CommentarySegment = {
 };
 
 type EditorialSlot =
-  | "understanding-the-verse"
-  | "why-rashi"
-  | "understanding-rashi"
-  | "for-bnei-noach";
+  "understanding-the-verse" | "why-rashi" | "understanding-rashi" | "for-bnei-noach";
 
 export type Elucidation = {
   id: string;
