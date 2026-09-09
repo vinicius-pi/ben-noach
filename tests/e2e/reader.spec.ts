@@ -45,7 +45,11 @@ test("provider-offline still reads Genesis", async ({ page, context }) => {
   await expect(page.getByText("Understanding the verse")).toBeVisible();
 });
 
-test("unreleased Portuguese locale is not generated", async ({ page }) => {
+test("unreleased Portuguese locale is neither generated nor advertised", async ({ page }) => {
+  await page.goto("./en/");
+  await expect(page.getByRole("link", { name: "PT", exact: true })).toHaveCount(0);
+  await expect(page.locator('link[rel="alternate"][hreflang="pt"]')).toHaveCount(0);
+
   const response = await page.goto("./pt/read/genesis/1/");
   expect(response?.status()).toBe(404);
 });
