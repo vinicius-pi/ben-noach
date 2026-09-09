@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# build/test output
+coverage/
+playwright-report/
+test-results/
+*.log
+
+# local environment
+.env
+.env.*
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local caches
+.turbo/
+.cache/
+
+# local review/generated artifacts
+artifacts/
+reports/
