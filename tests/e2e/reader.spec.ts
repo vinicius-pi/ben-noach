@@ -10,9 +10,7 @@ test("home to Genesis READ UNDERSTAND SOURCES", async ({ page }) => {
     .click();
   await expect(page.getByRole("heading", { name: "בראשית" })).toBeVisible();
   await page.locator("#v1").click();
-  await expect(
-    page.getByRole("heading", { name: /Understanding the verse|Entendendo o versículo/ }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Understanding the verse" })).toBeVisible();
   await expect(page.getByRole("heading", { name: /^Rashi/ }).first()).toBeVisible();
   await page.getByRole("button", { name: "Sources", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Sources & provenance" })).toBeVisible();
@@ -47,10 +45,9 @@ test("provider-offline still reads Genesis", async ({ page, context }) => {
   await expect(page.getByText("Understanding the verse")).toBeVisible();
 });
 
-test("portuguese UI without unknown translation", async ({ page }) => {
-  await page.goto("./pt/read/genesis/1/");
-  await expect(page.getByText(/tradução portuguesa/i)).toBeVisible();
-  await expect(page.getByText("In the beginning God created")).toBeVisible();
+test("unreleased Portuguese locale is not generated", async ({ page }) => {
+  const response = await page.goto("./pt/read/genesis/1/");
+  expect(response?.status()).toBe(404);
 });
 
 test("glossary is contextual to the selected verse", async ({ page }) => {
