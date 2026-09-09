@@ -1,277 +1,373 @@
 # Implementation risks and preemptive decisions
 
-This file records failure modes that are easy for an autonomous build agent to miss even when the design brief is good.
+This file records failure modes an autonomous build agent can miss even with a strong design brief.
 
-## 1. Do not turn “Noahide” into a new sectarian brand
+## 1. Applicability must be modeled, not inferred by the reader
 
-Rabbi Tovia Singer's public framing of righteous gentiles emphasizes that a non-Jew need not convert to Judaism and can live a sacred path as a righteous gentile. Contemporary Noahide discourse also warns against constructing an imitation-Judaism or replacement religion.
-
-Product decision:
-
-- use **Ben Noach / Bnei Noach / righteous gentile** as descriptive identities;
-- avoid language that presents “Noahidism” as a new church-like denomination;
-- avoid progress systems that imply the user is leveling toward becoming Jewish;
-- guided learning tracks are about understanding Tanakh and one's obligations, not acquiring Jewish covenantal status.
-
-## 2. Christian-background users bring familiarity and hidden numbering assumptions
-
-A former Christian may know a passage extremely well while using a different book order, naming convention, translation tradition, or verse-numbering convention.
+The target user should not need advanced halakhic/textual literacy to distinguish universal material, Noahide material, Israel-covenant context and Jewish-practice-specific detail.
 
 Product decision:
 
-- canonical internal IDs must be independent of display-language book names;
-- build a reference alias/normalization layer;
-- allow search aliases such as `Genesis`, `Bereshit`, `Gênesis`;
-- plan for numbering divergences between Jewish/Christian editions where they occur rather than assuming all external references are identical;
-- share URLs should resolve canonical project refs and show the displayed source/version.
+- applicability/scope is first-class structured data;
+- use the taxonomy in `docs/PRODUCT_NORTH_STAR.md`;
+- a passage can carry multiple scope tags;
+- source wording remains intact;
+- default guided paths prioritize material relevant to the target reader;
+- Israel-specific material appears as context when needed to understand the source rather than being silently removed or treated as the reader's obligation.
 
-## 3. Do not synthesize the Divine Name inside source text
+## 2. Christian-background users bring familiarity and hidden reference assumptions
 
-Different Jewish translations render the Tetragrammaton differently; public editorial prose may use “Hashem,” “the LORD,” “God,” or another convention depending on language/context.
-
-Product decision:
-
-- preserve the selected source/translation exactly;
-- do not algorithmically replace Divine Names inside quoted source material;
-- choose an explicit editorial style guide for project-written prose;
-- keep that style separate from source rendering.
-
-## 4. Hebrew normalization can silently corrupt scholarly identity
-
-Unicode normalization, diacritics, cantillation, punctuation and copied source HTML can alter byte-level text while remaining visually similar.
+A reader may know a passage well while using another book order, naming convention, translation tradition or verse-numbering scheme.
 
 Product decision:
 
-- preserve a raw/provider representation or deterministic normalized canonical representation with hashes;
-- define normalization once at ingestion boundary;
-- test niqqud/te'amim and mixed punctuation;
-- never apply display transformations that change the stored source silently;
-- source-integrity CI should detect unexpected fixture changes.
+- canonical IDs are independent of display-language book names;
+- build reference aliases/normalization;
+- support `Genesis`, `Bereshit`, `Gênesis` and analogous names;
+- plan for numbering divergences where they exist;
+- share URLs resolve project-canonical refs and expose source/version identity.
 
-## 5. Rashi alignment is not just “commentary on verse”
+## 3. Preserve Divine Names inside source text
 
-Rashi comments often have a `dibbur hamatchil` and multiple comments can attach to one verse. A beginner explanation may explain one Rashi unit rather than the entire verse.
+Different Jewish translations render the Tetragrammaton differently. Project prose may follow its own editorial convention.
+
+Product decision:
+
+- preserve the selected translation/source exactly;
+- never algorithmically replace Divine Names inside quoted source material;
+- maintain a separate editorial style guide for project-authored prose.
+
+## 4. Hebrew normalization can silently corrupt source identity
+
+Unicode normalization, cantillation, niqqud and punctuation can change byte-level content while appearing visually similar.
+
+Product decision:
+
+- define one deterministic ingestion normalization policy;
+- preserve provider/raw provenance where practical;
+- hash release payloads;
+- regression-test niqqud/te'amim;
+- never let a display transform silently rewrite stored canonical source data.
+
+## 5. Rashi alignment is segment-level, not merely verse-level
+
+One verse can contain multiple Rashi comments with separate `dibbur hamatchil` units.
 
 Product decision:
 
 - model commentary segments independently;
-- preserve commentator work + canonical ref + segment identity + dibbur hamatchil where available;
-- let an elucidation target a specific commentary segment;
-- do not flatten all Rashi on a verse into one anonymous block.
+- preserve work + canonical ref + segment identity + `dibbur hamatchil` when available;
+- let elucidation target a concrete commentary segment;
+- never flatten all Rashi on a verse into anonymous prose.
 
 ## 6. Source graphs can explode recursively
 
-Rashi can point to Midrash; a supercommentary can explain Rashi; that source can itself have commentary. Naive recursive fetching can create huge graphs, slow pages, and confusing UX.
+Rashi can point to Midrash; a supercommentary explains Rashi; that work itself may have commentary.
 
 Product decision:
 
-- define explicit relationship types;
-- fetch/display bounded depth in the public UI;
-- cache normalized source nodes;
-- reveal further depth only by deliberate user action;
-- deep-link to Sefaria rather than trying to reproduce the whole library.
+- model explicit relationship types;
+- fetch/display bounded public depth;
+- cache normalized local source nodes where rights permit;
+- reveal further depth deliberately;
+- hand off to Sefaria rather than recreating the entire library.
 
-## 7. Avoid a mixed overlay stack
+## 7. External-provider availability cannot be a reader dependency
 
-Modern React starter kits often combine multiple overlapping primitive systems (for example Radix Dialog/Popover plus a separate drawer library plus another command/menu system). This can create focus, portal, z-index, scroll-lock and mobile keyboard conflicts.
-
-Product decision:
-
-- choose one primary accessible overlay primitive family wherever practical;
-- evaluate **Base UI Drawer/Dialog** as a current option because its Drawer extends the same Dialog foundation and supports gestures/snap points/mobile keyboard behavior;
-- alternatively use Radix consistently and implement the mobile study sheet deliberately;
-- do not mix libraries merely because a component generator installs them by default;
-- test Select/Popover inside the study sheet before committing to the primitive stack.
-
-Current Base UI Drawer docs:
-https://base-ui.com/react/components/drawer
-
-Current Base UI releases/docs:
-https://base-ui.com/
-
-## 8. Component generators are not a design system
-
-Shadcn-style code generation is useful for accessible scaffolding, but default generated appearance will make the product look generic.
+A beautiful product that goes blank when Sefaria is unavailable is not a durable edition.
 
 Product decision:
 
-- primitives may be copied/generated for behavior;
-- visual tokens, typography, spacing, states, rails, reader composition and motion must be authored for Ben Noach;
-- no “card + badge + tabs + rounded button” vocabulary unless the interaction genuinely requires it;
-- run the three-direction anti-slop design experiment before convergence.
+- released passages render from a local approved corpus;
+- provider adapters are used for ingestion/research/enrichment/deep links;
+- provider-offline E2E is a release gate;
+- manifests freeze exact release versions/hashes.
 
-## 9. CSP and static rendering can conflict
+## 8. Provider versions can change without the project changing
 
-Next.js nonce-based CSP strategies can force dynamic rendering because each request needs a nonce. The product benefits strongly from static/pre-rendered reading routes.
-
-Product decision:
-
-- choose CSP strategy alongside rendering architecture, not after it;
-- prefer a static-compatible strict policy when possible;
-- if nonces are truly required, isolate dynamic surfaces rather than sacrificing static delivery for the whole reader;
-- document every external origin allowed by CSP.
-
-Reference:
-https://nextjs.org/docs/app/guides/content-security-policy
-
-## 10. PWA/offline caching changes the licensing question
-
-Caching a translation offline is effectively distributing a local copy to the user's device.
+An upstream API may alter metadata, translations, markup or version selection.
 
 Product decision:
 
-- PWA shell may be cacheable early;
-- cache textual content offline only when the specific text/version license permits the intended distribution;
-- do not let a generic service-worker strategy indiscriminately cache unknown-rights source responses;
-- tie offline eligibility to the source manifest.
+- never request “default translation” as a release identity;
+- request/store explicit version identifiers;
+- update tooling compares upstream state with local release metadata;
+- source change requires an explicit project corpus update and new checksum.
 
-## 11. Review mode must not become fake authority
+## 9. Avoid a mixed overlay stack
 
-A development query parameter such as `?review=1` is acceptable for displaying local draft metadata; it cannot grant privileged mutation rights in production.
-
-Product decision:
-
-- keep public review visualization separate from authenticated mutation capability;
-- if persistence is added, authorize server-side by reviewer identity/role;
-- record reviewer, scope, timestamp and revision;
-- a UI label cannot promote content to `rabbinically-reviewed` without valid reviewer metadata.
-
-## 12. AI-generated prose tends to homogenize source voices
-
-An LLM can make Rashi, Rambam, Midrash and the project editor all sound like the same contemporary narrator.
+Combining multiple Dialog/Drawer/Popover systems creates focus, portal, z-index, scroll-lock and mobile keyboard bugs.
 
 Product decision:
 
-- primary/classical voices retain their own labeled blocks;
-- project prose explains rather than ventriloquizes;
-- use short editorial bridges and definitions;
-- prohibit phrases such as “Rashi is basically saying…” unless the claim is explicitly supported and clearly editorial;
-- evidence refs live at claim level;
-- human/rabbinic review concentrates on high-impact interpretation, not merely grammar.
+- choose one primary accessible primitive family;
+- Base UI `@base-ui/react` is the preferred current candidate because Drawer and Dialog share one foundation and the package is MIT;
+- test nested Select/Popover/focus behavior inside the study Drawer before convergence;
+- do not install an additional overlay library merely for convenience.
 
-## 13. Source licensing must be a build concern, not a cleanup task
+## 10. Component generators are not a design system
 
-The easiest autonomous-build failure is to populate the application with whatever translation appears first in an API.
+Generated components can accelerate behavior implementation but often impose generic visual grammar.
 
 Product decision:
 
-- ingestion refuses production bundling without license metadata;
-- development fixtures with uncertain rights must be visibly marked and excluded from production export/build where appropriate;
-- generated `source-manifest` becomes part of CI;
-- commercial elucidations (ArtScroll/Koren etc.) are design/method references, not source text.
+- primitives are behavior infrastructure;
+- Ben Noach owns typography, spacing, source hierarchy, reader composition, states and motion;
+- no automatic `card + badge + tabs + pill button` vocabulary;
+- run the three-direction design experiment before convergence.
 
-## 14. The product should not become counter-missionary media first
+## 11. Static CSP/security must be designed with the actual Astro build
 
-Singer's strongest alignment is textual confidence: return to Hebrew Scripture, context and Jewish interpretation, while keeping controversy issue-focused.
-
-Product decision:
-
-- first-run experience never asks the user which religion they are leaving;
-- Genesis/Isaiah/Psalms are presented first as Tanakh;
-- optional comparative readings come after the constructive Jewish reading;
-- no engagement optimization based on humiliating another religion;
-- former-Christian onboarding adapts terminology/context density, not the dignity of the user.
-
-## 15. “For Bnei Noach” must not appear on every verse by force
-
-A templated AI system will tend to generate a Noahide takeaway for every passage even when none is warranted.
+Security headers often get pasted from framework examples without testing the generated deployment.
 
 Product decision:
 
-- Noahide note is optional/nullable;
-- absence is preferable to manufactured relevance;
-- many passages need only peshat/context/Rashi;
-- when a universal or Noahide implication is asserted, it needs source/review status.
+- v1 is Astro static output;
+- use current Astro CSP/security facilities where appropriate;
+- inspect emitted HTML/assets;
+- test headers/policy on the actual static host;
+- keep allowed origins minimal because fonts/content are local;
+- do not sacrifice static portability for an unnecessary dynamic nonce architecture.
 
-## 16. Beginner explanations must not become devotional fan-fiction
+## 12. PWA/offline caching changes the rights question
 
-The product can be beautiful, moving and spiritually serious without inventing emotional morals.
-
-Product decision:
-
-- every explanatory block answers a concrete comprehension problem;
-- define why this explanation exists: language, context, Rashi's question, classical source, historical term, covenantal boundary, or reviewed Noahide relevance;
-- decorative inspirational prose is not a substitute for commentary.
-
-## 17. Search should start narrower than the corpus
-
-Full Jewish-library search is an enormous product in itself.
+Caching a translation locally is distribution.
 
 Product decision:
 
-Initial search prioritizes:
+- service worker may cache application shell/assets;
+- text enters offline cache only when manifest says `offlineAllowed: true`;
+- provider/research responses are never indiscriminately cached;
+- corpus cache version is tied to release manifest hashes.
 
-- book/chapter/verse refs;
-- Hebrew/English/Portuguese book aliases;
-- guided pathways/topics present in the project;
-- project glossary.
+## 13. Review mode must not manufacture authority
 
-Use Sefaria for deep corpus search until there is evidence that duplicating it improves the beginner product.
-
-## 18. SEO/share previews can accidentally present draft theology as canonical
-
-Search engines/social previews may index development text.
+A development `?review=1` view can display review metadata but cannot create privileged status.
 
 Product decision:
 
-- draft/review routes use `noindex`;
+- review visualization is separate from authenticated mutation;
+- v1 may remain repository-backed;
+- reviewed state requires reviewer identity + revision/hash + timestamp according to governance;
+- changing reviewed content invalidates prior reviewed state unless the review record explicitly covers the new hash.
+
+## 14. AI-generated prose tends to homogenize source voices
+
+An LLM can make Rashi, Rambam, Midrash and project prose sound like one contemporary narrator.
+
+Product decision:
+
+- source voices retain labeled source blocks;
+- project prose elucidates rather than ventriloquizes;
+- claim-level evidence refs support interpretive bridges;
+- generated drafts are editorial input, not automatic publication;
+- source text is never “cleaned up” into model prose.
+
+## 15. Source licensing is a build concern
+
+The easiest failure is to ingest whichever translation/provider result is convenient.
+
+Product decision:
+
+- `docs/CORPUS_V1.md` controls v1 source choices;
+- manifest validators block production bundling with unknown rights;
+- source count never outranks rights certainty;
+- commercial editions are methodological references, not corpus assets.
+
+## 16. Software dependency licenses can drift
+
+An otherwise useful package can later introduce transfer/friction through a license change or dependency expansion.
+
+Product decision:
+
+- follow `docs/OPEN_SOURCE_STACK.md` license allowlist;
+- pin/rescan resolved dependencies;
+- treat copyleft/source-available/proprietary runtime additions as explicit architecture decisions;
+- prefer native browser/CSS capabilities when a dependency adds little value.
+
+## 17. Comparative material must not displace constructive reading
+
+A reader coming from Christianity may have strong inherited prooftext assumptions, but the product's highest value is reconstructive Jewish reading.
+
+Product decision:
+
+- base Tanakh/Hebrew/context/classical reading comes first;
+- later comparative modules are optional and subordinate;
+- `Read around it` and textual context precede polemical claims;
+- no engagement design built around outrage at another religion.
+
+## 18. “For Bnei Noach” must not become a mandatory template field
+
+Automated content generation tends to invent a takeaway for every verse.
+
+Product decision:
+
+- Noahide-specific note is optional/nullable;
+- applicability metadata may be enough;
+- absence is better than manufactured relevance;
+- normative/application claims require their appropriate review state.
+
+## 19. Beginner elucidation must answer a real textual problem
+
+A beautiful reader can still become shallow if every verse gets generic inspirational prose.
+
+Product decision:
+
+Each explanatory block should exist for a concrete reason, such as:
+
+- language/grammar;
+- literary context;
+- Rashi's question;
+- classical source;
+- historical term;
+- address/covenantal context;
+- reviewed applicability.
+
+Do not fill whitespace with devotional filler.
+
+## 20. Search should start narrower than the corpus universe
+
+Full Jewish-library search is a separate major product.
+
+Product decision:
+
+v1 search prioritizes:
+
+- canonical refs;
+- localized book aliases;
+- project glossary;
+- guided paths/topics;
+- released project content.
+
+Use Sefaria for deep corpus search until product evidence justifies owning more.
+
+## 21. Portuguese rights uncertainty must not turn into a hidden shortcut
+
+The user experience needs Portuguese, but inspected Sefaria Portuguese Genesis versions included unknown/blank rights metadata.
+
+Product decision:
+
+- PT interface/routing/elucidation architecture is first-class;
+- unknown-rights source translation is blocked from production;
+- do not auto-generate a scripture translation and label it source text;
+- actively seek an approved Jewish Portuguese translation or explicit permission;
+- graceful source-language fallback is preferable to legal/provenance ambiguity.
+
+## 22. SEO/share previews can accidentally promote draft commentary
+
+Search engines may index a development elucidation or review state as if canonical.
+
+Product decision:
+
+- draft/review routes are `noindex`;
 - only release-eligible passages enter sitemap;
 - metadata distinguishes source quotation from project description;
-- preview cards should never say “Rabbinically approved” unless that exact scope is true.
+- never put approval claims in preview metadata unless that exact revision/status is true.
 
-## 19. Do not optimize analytics into a religious-profile database
+## 23. Do not turn analytics into a sensitive study-profile database
 
-A user's path from Christian-background content into Noahide study could reveal sensitive belief information.
-
-Product decision:
-
-- no religion-profile field for basic use;
-- no third-party ad tracking;
-- collect minimal aggregate interaction/performance telemetry if needed;
-- do not create cross-site advertising audiences from study behavior;
-- document analytics before enabling them.
-
-## 20. A beautiful first five verses can hide an unscalable editorial workflow
-
-The app is only valuable if Genesis 1:1–5 can become Genesis 1–11 and eventually Tanakh without manual code surgery.
+Study routes can expose religious background or belief transition.
 
 Product decision:
 
-- all passage-specific content lives in validated data/content files or a clear content layer;
-- UI components remain generic;
-- add a contributor/editor workflow early;
-- document exactly how to add Genesis 1:6 as the scalability test;
-- before final PR, add at least one new passage using only the documented workflow to prove it works.
+- no religion/background field is required for v1;
+- no ad tracking;
+- no third-party analytics dependency by default;
+- progress/bookmarks local-first;
+- future telemetry requires a separate privacy decision.
 
-## 21. Security patch level is a hard pre-build gate
+## 24. A beautiful Genesis 1:1–5 can hide an unscalable content workflow
 
-At the September 2026 research checkpoint, Next.js 16.x is Active LTS and August 2026 security advisories require patched versions in the 16.3.3+ line. This will change.
-
-Product decision:
-
-- the build agent must verify the current advisory state at execution time;
-- never pin to a version copied from this research document without checking;
-- CI/Dependabot must keep framework/security updates visible.
-
-## 22. The simplest credible launch has no account system
+Passage-specific JSX would produce a polished demo but a failed edition architecture.
 
 Product decision:
 
-Initial public release can be:
+- all passage-specific content lives in validated content/data;
+- UI components are generic;
+- document the authoring/ingestion workflow;
+- add Genesis 1:6 exclusively through that workflow before final PR;
+- if UI code changes are needed merely to add the verse, repair architecture first.
 
-- static/public reading;
-- no login;
-- no comments;
-- no public LLM chat;
-- no user-generated content;
-- no payments.
+## 25. Framework patch level is a hard pre-build gate
 
-This preserves speed, privacy and security while the editorial model is validated. Bookmarks/progress can begin local-first and move server-side only if the product later needs accounts.
+Research documents age.
+
+Product decision:
+
+- verify current patched Astro 7.x and compatible maintained Node LTS at execution time;
+- inspect current advisories rather than pinning to remembered versions;
+- Dependabot and vulnerability scanning keep update pressure visible;
+- framework/security upgrades must preserve static portability and visual regression baselines.
+
+## 26. Static deployment must remain genuinely portable
+
+A static framework can still accumulate provider-specific assumptions.
+
+Product decision:
+
+- `pnpm build` emits self-contained `dist/`;
+- generic static-server smoke test is mandatory;
+- GitHub Pages is the first free deployment, not a runtime dependency;
+- no Vercel/Cloudflare-only APIs in the core;
+- custom-domain instructions are host-agnostic.
+
+## 27. Local progress can create hydration/layout bugs
+
+Continue-reading state is client-local while the page itself is static.
+
+Product decision:
+
+- render stable neutral server/static defaults;
+- hydrate only the tiny control/progress island;
+- never let local storage determine sacred-text content/version;
+- test first visit, returning visit, storage unavailable and cleared storage.
+
+## 28. Hebrew word tools can silently mismatch editions
+
+OSHB morphology/BDB are valuable but may not correspond byte-for-byte to the display edition.
+
+Product decision:
+
+- align by explicit canonical/word IDs where possible;
+- keep display edition identity intact;
+- surface lexical/morphological data as enrichment from its own source/version;
+- do not merge texts invisibly;
+- optional word inspector ships only after alignment tests pass.
+
+## 29. Content hashes and review hashes must use one canonical serialization
+
+If review status is tied to hashes, formatting/order differences can invalidate or falsely preserve review state.
+
+Product decision:
+
+- define canonical serialization for reviewable content objects;
+- hash only documented semantic fields;
+- store algorithm/version;
+- test deterministic output across clean builds.
+
+## 30. Free/open source must remain an operational property
+
+A repo can claim open source while quietly requiring paid infrastructure to function.
+
+Product decision:
+
+The release gate demonstrates:
+
+- clean build without paid credentials;
+- local/open QA commands;
+- generic static hosting;
+- no required runtime AI;
+- no proprietary fonts/UI kit;
+- no hosted database/auth/search;
+- approved source licenses;
+- provider-offline core reading.
 
 ## Implementation meta-rule
 
-When the agent faces a choice between adding another feature and strengthening the core journey
+When the agent faces a choice between another feature and strengthening this journey:
 
-**Genesis passage → Rashi → understanding → source → Noahide context → Sefaria**, 
+**passage → Rashi → understanding → source → applicability/context → Sefaria**, 
 
-strengthen the core journey.
+strengthen the journey.
+
+When the core journey is already exceptional, add only features that make authentic reading, provenance, long-form study or target-reader comprehension materially better.
