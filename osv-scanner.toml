@@ -1,3 +1,42 @@
 # License allowlist for OSV-Scanner --licenses
 # SPDX identifiers accepted for runtime/build dependencies.
 # Content licenses are enforced separately by scripts/validate-licenses.ts.
+
+# The findings below exist only under the @lhci/cli (devDependency) tree.
+# They are not reachable from production dependencies and do not ship in dist/.
+# ignoreUntil forces a revisit rather than a permanent mute.
+
+[[IgnoredVulns]]
+id = "GHSA-7pqw-9j4j-h8q3"
+reason = "Dev-only @lhci/cli → puppeteer-core extract-zip. No published fix. Not in the static reader bundle."
+ignoreUntil = 2026-12-31
+
+[[IgnoredVulns]]
+id = "GHSA-jmr9-qjv8-65gv"
+reason = "Dev-only @lhci/cli → puppeteer-core extract-zip. No published fix. Not in the static reader bundle."
+ignoreUntil = 2026-12-31
+
+[[IgnoredVulns]]
+id = "GHSA-4mjr-xmp4-gh2g"
+reason = "Dev-only @lhci/cli → express qs. Production install does not include Express."
+ignoreUntil = 2026-12-31
+
+[[IgnoredVulns]]
+id = "GHSA-x5fp-wj9c-mxmx"
+reason = "Dev-only @lhci/cli → express qs. Production install does not include Express."
+ignoreUntil = 2026-12-31
+
+[[IgnoredVulns]]
+id = "GHSA-52f5-9888-hmc6"
+reason = "Dev-only @lhci/cli tmp. Not shipped."
+ignoreUntil = 2026-12-31
+
+[[IgnoredVulns]]
+id = "GHSA-ph9p-34f9-6g65"
+reason = "Dev-only @lhci/cli tmp. Not shipped."
+ignoreUntil = 2026-12-31
+
+[[IgnoredVulns]]
+id = "GHSA-w5hq-g745-h8pq"
+reason = "Dev-only @lhci/cli uuid@8. Not shipped."
+ignoreUntil = 2026-12-31

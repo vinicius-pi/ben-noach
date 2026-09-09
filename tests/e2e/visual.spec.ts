@@ -7,10 +7,8 @@ const shots = [
 
 for (const shot of shots) {
   test(`screenshot ${shot.name}`, async ({ page }, testInfo) => {
+    await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto(shot.path);
-    await page.addStyleTag({
-      content: "*,*::before,*::after{animation:none!important;transition:none!important}",
-    });
     await expect(page).toHaveScreenshot(`${shot.name}-${testInfo.project.name}.png`, {
       fullPage: true,
     });
@@ -18,11 +16,10 @@ for (const shot of shots) {
 }
 
 test("selected verse understand", async ({ page }, testInfo) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("./en/read/genesis/1/");
   await page.locator("#v1").click();
-  await page.addStyleTag({
-    content: "*,*::before,*::after{animation:none!important;transition:none!important}",
-  });
+  await expect(page.getByRole("heading", { name: "Understanding the verse" })).toBeVisible();
   await expect(page).toHaveScreenshot(`understand-${testInfo.project.name}.png`, {
     fullPage: true,
   });

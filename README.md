@@ -25,17 +25,11 @@ pnpm dev
 Open `http://127.0.0.1:4321/ben-noach/en/`.
 
 ```bash
-pnpm check
-pnpm lint
-pnpm test
-pnpm validate:content
-pnpm validate:licenses
-pnpm validate:providers
-pnpm scan:secrets
-pnpm build
-pnpm preview
-pnpm test:e2e
+pnpm qa          # inner loop: format, lint, types, unit, validators, secrets, build
+pnpm qa:full     # release gate (includes OSV, E2E/axe, visual, Lighthouse)
 ```
+
+`pnpm qa` is not the release gate. See `docs/DEPLOYMENT.md`.
 
 ## v1 corpus
 

@@ -1,9 +1,11 @@
 import { loc } from "../lib/corpus";
+import { glossaryForMaterial } from "../lib/glossary";
 import { t } from "../lib/i18n";
 import { ADDRESS_LABELS, SCOPE_LABELS } from "../lib/scope";
 import type {
   CommentarySegment,
   Elucidation,
+  GlossaryEntry,
   Locale,
   ReaderPayload,
   SourceLink,
@@ -65,12 +67,7 @@ export function StudyContent({
       <p className="kicker">
         {verse.canonicalRef.display[locale]} · {verse.canonicalRef.display.he}
       </p>
-      <p
-        className="verse-he hebrew"
-        lang="he"
-        dir="rtl"
-        style={{ fontSize: "1.35rem", margin: "0.6rem 0 0.4rem" }}
-      >
+      <p className="verse-he hebrew study-quote-he" lang="he" dir="rtl">
         {verse.hebrew.text}
       </p>
       <p className="latin" lang="en" dir="ltr">
@@ -155,8 +152,8 @@ function UnderstandBlock({
         </p>
       </Section>
 
-      {eluc.some((item) => item.slot === "understanding-rashi" || item.slot === "why-rashi") && (
-        <Terms locale={locale} payload={payload} />
+      {eluc.length > 0 && (
+        <Terms locale={locale} entries={glossaryForMaterial(payload.glossary, eluc)} />
       )}
 
       {noahide && (
@@ -192,7 +189,7 @@ function RashiUnit({
         <p className="hebrew" lang="he" dir="rtl">
           <SourceSpans spans={segment.hebrew.spans} dir="rtl" />
         </p>
-        <p className="latin" lang="en" dir="ltr" style={{ marginTop: "0.7rem" }}>
+        <p className="latin study-quote-en" lang="en" dir="ltr">
           <SourceSpans spans={segment.english.spans} />
         </p>
         {version && (
@@ -215,16 +212,15 @@ function RashiUnit({
   );
 }
 
-function Terms({ locale, payload }: { locale: Locale; payload: ReaderPayload }) {
-  const needed = ["rashi", "dibbur-hamatchil", "peshat", "derash", "siftei-chakhamim"];
-  const entries = payload.glossary.filter((item) => needed.includes(item.id));
+function Terms({ locale, entries }: { locale: Locale; entries: GlossaryEntry[] }) {
+  if (entries.length === 0) return null;
   return (
     <Section title={t(locale, "terms")}>
       <dl>
         {entries.map((entry) => (
-          <div key={entry.id} style={{ marginBottom: "0.7rem" }}>
+          <div key={entry.id} className="glossary-item">
             <dt className="kicker">{loc(entry.term, locale)}</dt>
-            <dd style={{ margin: "0.2rem 0 0" }}>{loc(entry.short, locale)}</dd>
+            <dd>{loc(entry.short, locale)}</dd>
           </div>
         ))}
       </dl>
@@ -290,7 +286,7 @@ function SourcesBlock({
                 <SourceSpans spans={segment.hebrew.spans} dir="rtl" />
               </p>
             )}
-            <p className="latin" lang="en" dir="ltr" style={{ marginTop: "0.6rem" }}>
+            <p className="latin study-quote-en" lang="en" dir="ltr">
               <SourceSpans spans={segment.english.spans} />
             </p>
             {version && (
@@ -314,7 +310,7 @@ function SourcesBlock({
             {t(locale, "checksum")}: {verse.payloadChecksumSha256.slice(0, 16)}…
           </li>
         </ul>
-        <p style={{ marginTop: "0.9rem" }}>
+        <p className="continue-link">
           <a href={verse.sefariaUrl} rel="noopener noreferrer">
             {t(locale, "continueSefaria")}
           </a>

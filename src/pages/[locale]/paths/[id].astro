@@ -18,16 +18,12 @@ if (!path) return new Response("Not found", { status: 404 });
 <Layout locale={locale} title={locale === "pt" ? path.title.pt : path.title.en}>
   <article class="reading">
     <p class="kicker">{t(locale, "paths")}</p>
-    <h1 style="font-size:2.2rem;margin:0.4rem 0 1rem;font-weight:500">
-      {locale === "pt" ? path.title.pt : path.title.en}
-    </h1>
+    <h1 class="page-title-sm">{locale === "pt" ? path.title.pt : path.title.en}</h1>
     <p>{locale === "pt" ? path.summary.pt : path.summary.en}</p>
     {path.steps.length === 0 ? (
-      <p class="meta-line" style="margin-top:1.5rem">
-        {t(locale, "pathPlanned")}
-      </p>
+      <p class="meta-line planned-note">{t(locale, "pathPlanned")}</p>
     ) : (
-      <ol style="margin-top:2rem;padding:0;list-style:none;display:grid;gap:1rem">
+      <ol class="step-list">
         {path.steps.map((step, index) => {
           const verse = VERSES.find((item) => item.id === step.verseId);
           if (!verse) return null;

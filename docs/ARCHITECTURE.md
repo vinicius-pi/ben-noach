@@ -20,12 +20,16 @@ Ben Noach is a static Astro 7 application. Released reading is HTML. React islan
 - `/{locale}/` cover
 - `/{locale}/read/{book}/{chapter}/` reader
 - `/{locale}/library/`, `/paths/`, `/about/`, `/review/` (review is `noindex`)
-- `/design/{editorial,scholarly,immersive}/` evidence routes
+- `/design/type-proof/` typography proof (`noindex`)
+
+Losing visual-experiment routes are not shipped. Screenshots remain in `docs/evidence/`.
 
 ## Islands
 
-- `ReaderApp` — verse buttons, desktop rail, Base UI Drawer, appearance
+- `ReaderApp` — verse selection control, desktop rail, Base UI Drawer, appearance
 - `SearchBox` — local ref/alias/glossary/path index
 - `ContinueReading` — `localStorage` key `ben-noach:v1`
+
+Sacred text is document content (`<p lang>`), not a control. Understand is a separate verse-number control.
 
 Sacred text is never taken from `localStorage`.

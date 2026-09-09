@@ -1,8 +1,12 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./dist",
-      "url": ["http://localhost/ben-noach/en/", "http://localhost/ben-noach/en/read/genesis/1/"],
+      "startServerCommand": "pnpm exec astro preview --host 127.0.0.1 --port 4173 --force",
+      "startServerReadyPattern": "4173",
+      "url": [
+        "http://127.0.0.1:4173/ben-noach/en/",
+        "http://127.0.0.1:4173/ben-noach/en/read/genesis/1/"
+      ],
       "numberOfRuns": 1,
       "settings": {
         "preset": "desktop",

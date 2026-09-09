@@ -2,13 +2,7 @@
 
 ## GitHub Pages (free)
 
-Workflow files are stored in `docs/github-workflows/` because the autonomous push token cannot write `.github/workflows/`. Copy them into `.github/workflows/` on a machine with `workflow` scope:
-
-```bash
-mkdir -p .github/workflows
-cp docs/github-workflows/ci.yml .github/workflows/ci.yml
-cp docs/github-workflows/pages.yml .github/workflows/pages.yml
-```
+Active workflow files live at `.github/workflows/{ci,pages}.yml`. Reviewed copies are also kept in `docs/github-workflows/` for diffing.
 
 Configure the repository:
 
@@ -21,6 +15,7 @@ Configure the repository:
 ```bash
 pnpm install --frozen-lockfile
 pnpm build
+pnpm smoke:static
 ```
 
 Serve `dist/` with any static server. Paths are prefixed with `/ben-noach/`. For a domain root, set `base: '/'` and `site` to that origin, then rebuild.
@@ -32,3 +27,11 @@ Nginx recipe: `deploy/nginx.conf` (CSP and related headers).
 ## No paid credentials
 
 The public reader builds and runs without API keys, databases, or auth.
+
+## Release gate
+
+`pnpm qa` is the fast inner loop (format, lint, types, unit, validators, secrets, build).
+
+`pnpm qa:full` is the sequential release gate: the inner loop plus fail-closed OSV, static-host smoke, Playwright E2E/axe, visual regression, and Lighthouse CI.
+
+`pnpm scan:osv:local` may warn if the official scanner cannot be obtained; it is **not** a release gate. `pnpm scan:osv` and CI fail closed.

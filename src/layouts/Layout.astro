@@ -3,6 +3,8 @@ import Mark from "../components/Mark.astro";
 import SearchBox from "../islands/SearchBox";
 import { localePath, t } from "../lib/i18n";
 import type { Locale } from "../lib/types";
+import frankHebrew from "@fontsource-variable/frank-ruhl-libre/files/frank-ruhl-libre-hebrew-wght-normal.woff2?url";
+import literataLatin from "@fontsource-variable/literata/files/literata-latin-wght-normal.woff2?url";
 import "../styles/base.css";
 import "../styles/chrome.css";
 
@@ -11,31 +13,36 @@ interface Props {
   title: string;
   description?: string;
   noindex?: boolean;
-  direction?: "editorial" | "scholarly" | "immersive";
 }
 
-const { locale, title, description, noindex = false, direction = "editorial" } = Astro.props;
+const { locale, title, description, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const other = locale === "en" ? "pt" : "en";
 const pathWithoutLocale =
   Astro.url.pathname.replace(new RegExp(`^${import.meta.env.BASE_URL}${locale}`), "") || "/";
+const enHref = new URL(localePath("en", pathWithoutLocale), Astro.site).href;
+const ptHref = new URL(localePath("pt", pathWithoutLocale), Astro.site).href;
 ---
 
 <!doctype html>
-<html lang={locale} dir="ltr" data-direction={direction}>
+<html lang={locale} dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content={direction === "immersive" ? "dark" : "light"} />
-    <meta name="theme-color" content={direction === "immersive" ? "#0e1622" : "#fcfdfe"} />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#fcfdfe" />
     <meta name="description" content={description ?? t(locale, "tagline")} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang={other} href={localePath(other, pathWithoutLocale)} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="pt" href={ptHref} />
+    <link rel="alternate" hreflang="x-default" href={enHref} />
     <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
     <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
+    <link rel="preload" href={frankHebrew} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={literataLatin} as="font" type="font/woff2" crossorigin />
     <title>{title} · {t(locale, "siteName")}</title>
   </head>
   <body>

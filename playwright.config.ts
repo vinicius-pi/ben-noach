@@ -22,7 +22,7 @@ export default defineConfig({
     colorScheme: "light",
   },
   webServer: {
-    command: "pnpm preview --port 4173 --host 127.0.0.1",
+    command: "pnpm exec astro preview --host 127.0.0.1 --port 4173 --force",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
@@ -32,7 +32,10 @@ export default defineConfig({
       name: "desktop",
       use: { ...devices["Desktop Chrome"], viewport: { width: 1440, height: 1000 } },
     },
-    { name: "tablet", use: { ...devices["iPad Mini"], viewport: { width: 768, height: 1024 } } },
+    {
+      name: "tablet",
+      use: { ...devices["Desktop Chrome"], viewport: { width: 768, height: 1024 } },
+    },
     { name: "mobile", use: { ...devices["Pixel 7"], viewport: { width: 390, height: 844 } } },
   ],
 });

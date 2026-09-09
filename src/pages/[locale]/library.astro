@@ -19,11 +19,11 @@ const groups = [
 <Layout locale={locale} title={t(locale, "library")}>
   <article class="reading">
     <p class="kicker">{t(locale, "library")}</p>
-    <h1 style="font-size:2.4rem;margin:0.4rem 0 2rem;font-weight:500">{t(locale, "library")}</h1>
+    <h1 class="page-title">{t(locale, "library")}</h1>
     {groups.map((group) => (
-      <section id={group.id} style="margin-bottom:2.5rem">
+      <section id={group.id} class="library-group">
         <h2 class="kicker">{group.title}</h2>
-        <ul style="list-style:none;padding:0;margin:0.8rem 0 0;display:grid;gap:0.7rem">
+        <ul class="plain-list">
           {BOOKS.filter((book) => book.division === group.id).map((book) => (
             <li>
               <a

@@ -16,27 +16,22 @@ const families = [
 <Layout locale="en" title="Typography proof" noindex>
   <article class="reading">
     <p class="kicker">Design</p>
-    <h1 style="font-size:2rem;font-weight:500;margin:0.4rem 0 1rem">Type proof</h1>
+    <h1 class="page-title-xs">Type proof</h1>
     <p>
       Same verses, two Hebrew families, several sizes. Choose by diacritics, not by brand
       familiarity.
     </p>
     {families.map((family) => (
-      <section style="margin-top:2.5rem">
+      <section class="type-family">
         <h2 class="kicker">{family.name}</h2>
-        {[1, 1.25, 1.6].map((scale) => (
-          <div style={`margin-top:1.2rem;font-size:${scale}rem`}>
+        {["100", "125", "160"].map((suffix) => (
+          <div class={`type-scale type-scale-${suffix}`}>
             {samples.map((verse) => (
-              <p
-                class:list={["hebrew", family.className]}
-                lang="he"
-                dir="rtl"
-                style="margin:0.4rem 0"
-              >
+              <p class:list={["hebrew", family.className]} lang="he" dir="rtl">
                 {verse.hebrew.text}
               </p>
             ))}
-            <p class="latin" lang="en" dir="ltr" style="margin-top:0.6rem">
+            <p class="latin" lang="en" dir="ltr">
               {samples[0]?.translation.text}
             </p>
           </div>
@@ -47,7 +42,7 @@ const families = [
 </Layout>
 <style>
   .he-frank {
-    font-family: "Frank Ruhl Libre", serif;
+    font-family: "Frank Ruhl Libre Variable", serif;
   }
   .he-noto {
     font-family: "Noto Serif Hebrew", serif;

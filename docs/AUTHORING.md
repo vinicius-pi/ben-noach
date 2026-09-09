@@ -19,6 +19,7 @@ Genesis 1:6 was added this way: `verses_n = 6` plus three elucidation records. N
 - Optional Rashi segments (absence is valid)
 - Optional Siftei Chakhamim (CC BY attribution)
 - Optional elucidation answering a real textual problem
+- Optional `glossaryIds` on those elucidations — only terms that unlock the selected material
 - Optional Noahide note — omit when there is no genuine relevance
 
 ## Portuguese

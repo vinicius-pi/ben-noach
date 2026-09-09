@@ -6,6 +6,7 @@ import {
   VERSES,
   COMMENTARY_SEGMENTS,
   ELUCIDATIONS,
+  GLOSSARY,
 } from "../src/lib/corpus";
 
 function fail(message: string): never {
@@ -72,6 +73,11 @@ for (const eluc of ELUCIDATIONS) {
     !eluc.reviewNote
   ) {
     fail(`Reviewed guidance missing reviewer metadata: ${eluc.id}`);
+  }
+  for (const glossaryId of eluc.glossaryIds ?? []) {
+    if (!GLOSSARY.some((entry) => entry.id === glossaryId)) {
+      fail(`Unknown glossary id ${glossaryId} on ${eluc.id}`);
+    }
   }
 }
 

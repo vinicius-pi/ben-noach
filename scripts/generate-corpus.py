@@ -631,9 +631,29 @@ def main() -> None:
     dump("release-index.json", index)
 
 
+ELUCIDATION_GLOSSARY = {
+    "eluc-genesis-1-1-verse": ["rashi"],
+    "eluc-genesis-1-1-why-rashi-1": ["rashi", "dibbur-hamatchil", "siftei-chakhamim"],
+    "eluc-genesis-1-1-understand-rashi-1": ["rashi", "siftei-chakhamim"],
+    "eluc-genesis-1-1-why-rashi-2": ["dibbur-hamatchil", "peshat", "derash"],
+    "eluc-genesis-1-1-understand-rashi-2": ["peshat", "derash"],
+    "eluc-genesis-1-1-why-rashi-3": ["elohim", "tetragrammaton"],
+    "eluc-genesis-1-1-understand-rashi-3": ["elohim", "tetragrammaton"],
+    "eluc-genesis-1-2-why-rashi": ["rashi", "dibbur-hamatchil", "siftei-chakhamim"],
+    "eluc-genesis-1-2-understand-rashi": ["rashi", "siftei-chakhamim"],
+    "eluc-genesis-1-3-verse": ["rashi"],
+    "eluc-genesis-1-4-why-rashi": ["rashi", "dibbur-hamatchil", "peshat", "derash", "siftei-chakhamim"],
+    "eluc-genesis-1-4-understand-rashi": ["peshat", "derash", "chazal"],
+    "eluc-genesis-1-5-why-rashi": ["rashi", "dibbur-hamatchil", "siftei-chakhamim"],
+    "eluc-genesis-1-5-understand-rashi": ["rashi"],
+    "eluc-genesis-1-6-why-rashi": ["rashi", "dibbur-hamatchil", "siftei-chakhamim"],
+    "eluc-genesis-1-6-understand-rashi": ["rashi", "dibbur-hamatchil"],
+}
+
+
 def build_elucidations() -> list[dict]:
     """Project-authored beginner elucidation. Not historical source text."""
-    return [
+    items = [
         {
             "id": "eluc-genesis-1-1-verse",
             "type": "EDITORIAL_ELUCIDATION",
@@ -1106,6 +1126,11 @@ def build_elucidations() -> list[dict]:
             "reviewNote": "Contextual emunah note; not a halakhic ruling. Rabbinic review pending.",
         },
     ]
+    for item in items:
+        ids = ELUCIDATION_GLOSSARY.get(item["id"])
+        if ids:
+            item["glossaryIds"] = ids
+    return items
 
 
 def build_glossary() -> list[dict]:

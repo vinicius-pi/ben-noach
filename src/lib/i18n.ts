@@ -64,6 +64,7 @@ export const UI = {
     homeTrust: "What you are reading",
     searchNoResults: "No local match. Deep library search remains in Sefaria.",
     keyboardHint: "Use arrow keys to move verses. Enter opens Understand.",
+    studyMode: "Study mode",
   },
   pt: {
     siteName: "Ben Noach",
@@ -126,6 +127,7 @@ export const UI = {
     homeTrust: "O que você está lendo",
     searchNoResults: "Nenhuma correspondência local. A busca profunda permanece em Sefaria.",
     keyboardHint: "Use as setas para mudar de versículo. Enter abre Entender.",
+    studyMode: "Modo de estudo",
   },
 } as const;
 

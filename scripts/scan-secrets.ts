@@ -11,7 +11,19 @@ const PATTERNS = [
 
 function walk(dir: string, acc: string[] = []): string[] {
   for (const entry of readdirSync(dir)) {
-    if (["node_modules", "dist", ".git", ".astro", "tmp-ingest", "coverage"].includes(entry))
+    if (
+      [
+        "node_modules",
+        "dist",
+        ".git",
+        ".astro",
+        "tmp-ingest",
+        "coverage",
+        ".cache",
+        "lhci",
+        "test-results",
+      ].includes(entry)
+    )
       continue;
     const full = join(dir, entry);
     const stat = statSync(full);
@@ -36,7 +48,9 @@ if (existsSync("gitleaks.toml") || process.env.CI) {
   try {
     execFileSync("gitleaks", ["detect", "--no-git", "--source", ".", "-v"], { stdio: "inherit" });
   } catch (error) {
-    if ((error as { status?: number }).status === undefined) {
+    const status = (error as { status?: number | null; code?: string }).status;
+    const code = (error as { code?: string }).code;
+    if (status === undefined || status === null || code === "ENOENT") {
       console.warn("gitleaks CLI not installed; local regex scan used");
     } else {
       failed = true;

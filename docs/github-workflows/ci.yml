@@ -1,3 +1,6 @@
+# Copy of the active workflow at .github/workflows/ci.yml.
+# Kept so the reviewed YAML remains visible even if a token cannot write workflow files.
+
 name: CI
 
 on:
@@ -7,6 +10,9 @@ on:
 
 permissions:
   contents: read
+
+# Local equivalent of this workflow: `pnpm qa:full`
+# (sequential; this file splits the same gates across jobs).
 
 jobs:
   quality:
@@ -80,11 +86,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - name: Generic static server smoke
-        run: |
-          python -m http.server 8765 --directory dist &
-          sleep 2
-          curl -fsS http://127.0.0.1:8765/ben-noach/en/ | grep -q "Ben Noach"
-          curl -fsS http://127.0.0.1:8765/ben-noach/en/read/genesis/1/ | grep -q "בראשית"
+        run: pnpm smoke:static
       - uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -108,6 +110,9 @@ jobs:
       - run: pnpm test:e2e
         env:
           PLAYWRIGHT_BASE_URL: http://127.0.0.1:4173/ben-noach/
+      - run: pnpm test:visual
+        env:
+          PLAYWRIGHT_BASE_URL: http://127.0.0.1:4173/ben-noach/
 
   lighthouse:
     runs-on: ubuntu-latest
@@ -123,5 +128,6 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm lhci
         continue-on-error: false

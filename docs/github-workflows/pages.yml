@@ -1,3 +1,6 @@
+# Copy of the active workflow at .github/workflows/pages.yml.
+# Kept so the reviewed YAML remains visible even if a token cannot write workflow files.
+
 name: Deploy to GitHub Pages
 
 on:

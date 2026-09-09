@@ -152,6 +152,7 @@ export type Elucidation = {
   scope?: string;
   reviewNote?: string;
   classicalFeature?: string;
+  glossaryIds?: string[];
 };
 
 export type SourceLink = {

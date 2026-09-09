@@ -20,15 +20,19 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test tests/e2e/reader.spec.ts",
+    "test:visual": "playwright test tests/e2e/visual.spec.ts",
     "test:e2e:update": "playwright test --update-snapshots",
     "validate:content": "tsx scripts/validate-content.ts",
     "validate:licenses": "tsx scripts/validate-licenses.ts",
     "validate:providers": "tsx scripts/validate-providers.ts",
     "scan:secrets": "tsx scripts/scan-secrets.ts",
     "scan:osv": "tsx scripts/scan-osv.ts",
+    "scan:osv:local": "tsx scripts/scan-osv.ts --allow-missing",
     "corpus:generate": "python scripts/generate-corpus.py",
-    "lhci": "lhci autorun",
-    "qa": "pnpm format:check && pnpm lint && pnpm check && pnpm test && pnpm validate:content && pnpm validate:licenses && pnpm validate:providers && pnpm scan:secrets && pnpm build"
+    "smoke:static": "tsx scripts/smoke-static.ts",
+    "lhci": "tsx scripts/run-lhci.ts",
+    "qa": "pnpm format:check && pnpm lint && pnpm check && pnpm test && pnpm validate:content && pnpm validate:licenses && pnpm validate:providers && pnpm scan:secrets && pnpm build",
+    "qa:full": "tsx scripts/qa-full.ts"
   },
   "dependencies": {
     "@astrojs/react": "6.0.5",

@@ -2,15 +2,14 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Drawer } from "@base-ui/react/drawer";
 import { t, withBase } from "../lib/i18n";
 import { readLocalState, writeLocalState } from "../lib/storage";
-import type { AppearanceState, ReaderPayload, StudyMode, Verse } from "../lib/types";
+import type { AppearanceState, Locale, ReaderPayload, StudyMode, Verse } from "../lib/types";
 import { StudyContent } from "./StudyContent";
 
 type Props = {
   payload: ReaderPayload;
-  direction?: "editorial" | "scholarly" | "immersive";
 };
 
-export default function ReaderApp({ payload, direction = "editorial" }: Props) {
+export default function ReaderApp({ payload }: Props) {
   const { locale, verses, book, passage } = payload;
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [mode, setMode] = useState<StudyMode>("read");
@@ -25,19 +24,19 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
 
   const selected = verses.find((verse) => verse.id === selectedId) ?? null;
   const open = Boolean(selected) && mode !== "read";
+  const studyPanelId = "study-panel";
 
   useEffect(() => {
     const state = readLocalState();
     setAppearance(state.appearance);
     setSaved(state.saved);
     document.documentElement.dataset.text = state.appearance.textScale;
-    document.documentElement.dataset.direction = direction;
     writeLocalState({
       ...state,
       lastHref: withBase(`/${locale}/read/${book.id}/${passage.chapter}/`),
       lastLabel: `${locale === "pt" ? book.titles.pt : book.titles.en} ${passage.chapter}`,
     });
-  }, [book.id, book.titles.en, book.titles.pt, direction, locale, passage.chapter]);
+  }, [book.id, book.titles.en, book.titles.pt, locale, passage.chapter]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -68,6 +67,10 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const focusVerseControl = useCallback((verse: Verse) => {
+    document.getElementById(`verse-select-${verse.canonicalRef.verse}`)?.focus();
+  }, []);
+
   const selectVerse = useCallback((verse: Verse, nextMode: StudyMode = "understand") => {
     setSelectedId(verse.id);
     setMode(nextMode);
@@ -84,8 +87,8 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
     if (verse) setSelectedId(verse.id);
   }, [verses]);
 
-  const onKey = useCallback(
-    (event: React.KeyboardEvent<HTMLElement>, verse: Verse, index: number) => {
+  const onControlKey = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>, verse: Verse, index: number) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         selectVerse(verse, "understand");
@@ -95,7 +98,7 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
         const next = verses[index + 1];
         if (next) {
           setSelectedId(next.id);
-          document.getElementById(`v${next.canonicalRef.verse}`)?.focus();
+          focusVerseControl(next);
         }
       }
       if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
@@ -103,14 +106,25 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
         const prev = verses[index - 1];
         if (prev) {
           setSelectedId(prev.id);
-          document.getElementById(`v${prev.canonicalRef.verse}`)?.focus();
+          focusVerseControl(prev);
         }
       }
       if (event.key === "Escape") {
         setMode("read");
       }
     },
-    [selectVerse, verses],
+    [focusVerseControl, selectVerse, verses],
+  );
+
+  const onVersePointer = useCallback(
+    (event: React.MouseEvent<HTMLElement>, verse: Verse) => {
+      const target = event.target as HTMLElement;
+      if (target.closest("a, button, input, select, textarea, label")) return;
+      const selection = window.getSelection();
+      if (selection && selection.toString().length > 0) return;
+      selectVerse(verse);
+    },
+    [selectVerse],
   );
 
   const toolbar = useMemo(
@@ -119,7 +133,7 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
         <p className="kicker">
           {locale === "pt" ? book.titles.pt : book.titles.en} {passage.chapter}
         </p>
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+        <div className="toolbar-controls">
           <label>
             {t(locale, "enlarge")}
             <select
@@ -180,18 +194,39 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
               {book.titles.he}
             </h1>
           </header>
-          {verses.map((verse, index) => (
-            <div key={verse.id} className="verse-wrap">
-              <button
-                type="button"
-                id={`v${verse.canonicalRef.verse}`}
-                className="verse"
-                aria-pressed={selectedId === verse.id}
-                aria-label={`${t(locale, "verse")} ${verse.canonicalRef.verse}. ${t(locale, "understand")}`}
-                onClick={() => selectVerse(verse)}
-                onKeyDown={(event) => onKey(event, verse, index)}
+          {verses.map((verse, index) => {
+            const isSelected = selectedId === verse.id;
+            const isExpanded = isSelected && open;
+            const n = verse.canonicalRef.verse;
+            return (
+              <section
+                key={verse.id}
+                id={`v${n}`}
+                className={`verse${isSelected ? " is-selected" : ""}`}
+                aria-label={`${t(locale, "verse")} ${n}`}
+                data-verse={n}
+                onClick={(event) => onVersePointer(event, verse)}
               >
-                <span className="verse-num">{verse.canonicalRef.verse}</span>
+                <div className="verse-lead">
+                  <button
+                    type="button"
+                    id={`verse-select-${n}`}
+                    className="verse-select"
+                    aria-expanded={isExpanded}
+                    aria-controls={isExpanded ? studyPanelId : undefined}
+                    aria-label={`${t(locale, "understand")} · ${t(locale, "verse")} ${n}`}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      selectVerse(verse);
+                    }}
+                    onKeyDown={(event) => onControlKey(event, verse, index)}
+                  >
+                    <span className="verse-num" aria-hidden="true">
+                      {n}
+                    </span>
+                    <span className="verse-select-hint">{t(locale, "understand")}</span>
+                  </button>
+                </div>
                 {appearance.showHebrew && (
                   <p className="verse-he hebrew" lang="he" dir="rtl">
                     {verse.hebrew.text}
@@ -202,15 +237,19 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
                     {verse.translation.text}
                   </p>
                 )}
-              </button>
-            </div>
-          ))}
+              </section>
+            );
+          })}
         </article>
       </div>
 
       {open && selected && desktop && (
-        <aside className="rail" aria-label={t(locale, "understand")}>
-          <ModeTabs locale={locale} mode={mode} setMode={setMode} />
+        <aside
+          className="rail"
+          id={studyPanelId}
+          aria-label={t(locale, mode === "sources" ? "sources" : "understand")}
+        >
+          <StudyChrome locale={locale} mode={mode} setMode={setMode} />
           <StudyContent payload={payload} verse={selected} mode={mode} />
         </aside>
       )}
@@ -232,10 +271,10 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
                 <div className="handle" />
                 <Drawer.Title className="visually-hidden">{t(locale, "understand")}</Drawer.Title>
                 {selected && (
-                  <>
-                    <ModeTabs locale={locale} mode={mode} setMode={setMode} />
+                  <div id={!desktop ? studyPanelId : undefined}>
+                    <StudyChrome locale={locale} mode={mode} setMode={setMode} />
                     <StudyContent payload={payload} verse={selected} mode={mode} />
-                  </>
+                  </div>
                 )}
               </Drawer.Content>
             </Drawer.Popup>
@@ -246,42 +285,31 @@ export default function ReaderApp({ payload, direction = "editorial" }: Props) {
   );
 }
 
-function ModeTabs({
+function StudyChrome({
   locale,
   mode,
   setMode,
 }: {
-  locale: Props["payload"]["locale"];
+  locale: Locale;
   mode: StudyMode;
   setMode: (mode: StudyMode) => void;
 }) {
   return (
-    <div
-      role="tablist"
-      aria-label="READ UNDERSTAND SOURCES"
-      style={{ display: "flex", gap: "1rem", marginBottom: "1.1rem" }}
-    >
-      {(["understand", "sources"] as const).map((item) => (
-        <button
-          key={item}
-          role="tab"
-          aria-selected={mode === item}
-          className="kicker"
-          style={{
-            color: mode === item ? "var(--ink)" : "var(--ink-muted)",
-            borderBottom: mode === item ? "1px solid var(--navy)" : "1px solid transparent",
-            paddingBottom: "0.2rem",
-          }}
-          onClick={() => setMode(item)}
-        >
-          {t(locale, item)}
-        </button>
-      ))}
-      <button
-        className="kicker"
-        style={{ marginInlineStart: "auto" }}
-        onClick={() => setMode("read")}
-      >
+    <div className="study-chrome">
+      <div className="mode-switch" role="group" aria-label={t(locale, "studyMode")}>
+        {(["understand", "sources"] as const).map((item) => (
+          <button
+            key={item}
+            type="button"
+            className="mode-switch-btn"
+            aria-pressed={mode === item}
+            onClick={() => setMode(item)}
+          >
+            {t(locale, item)}
+          </button>
+        ))}
+      </div>
+      <button type="button" className="study-close" onClick={() => setMode("read")}>
         {t(locale, "close")}
       </button>
     </div>

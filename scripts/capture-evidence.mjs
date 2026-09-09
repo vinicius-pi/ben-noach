@@ -12,8 +12,6 @@ const viewports = [
   { name: "desktop", width: 1440, height: 1000 },
 ];
 
-const directions = ["editorial", "scholarly", "immersive"];
-
 const browser = await chromium.launch();
 
 async function shot(page, name) {
@@ -30,24 +28,25 @@ for (const vp of viewports) {
   await page.goto(`${base}/en/read/genesis/1/`, { waitUntil: "networkidle" });
   await shot(page, `reader-${vp.name}`);
 
+  await page.locator("#verse-select-1").focus();
+  await shot(page, `selected-${vp.name}`);
+
   await page.locator("#v1").click();
   await page.getByRole("heading", { name: "Understanding the verse" }).waitFor();
   await shot(page, `understand-${vp.name}`);
 
-  await page.getByRole("tab", { name: "Sources" }).click();
+  await page.getByRole("button", { name: "Sources", exact: true }).click();
   await page.getByRole("heading", { name: "Sources & provenance" }).waitFor();
   await shot(page, `sources-${vp.name}`);
 
+  await page.getByRole("button", { name: "Close" }).click();
   await page.locator('select[aria-label="Larger text"]').selectOption("xl");
   await shot(page, `enlarged-${vp.name}`);
 
-  for (const direction of directions) {
-    await page.goto(`${base}/design/${direction}/`, { waitUntil: "networkidle" });
-    await shot(page, `dir-${direction}-reader-${vp.name}`);
-    await page.locator("#v1").click();
-    await page.getByRole("heading", { name: "Understanding the verse" }).waitFor();
-    await shot(page, `dir-${direction}-understand-${vp.name}`);
-  }
+  await page.locator('select[aria-label="Larger text"]').selectOption("m");
+  await page.getByRole("checkbox", { name: "Hebrew" }).uncheck();
+  await shot(page, `ltr-${vp.name}`);
+  await page.getByRole("checkbox", { name: "Hebrew" }).check();
 
   await context.close();
 }

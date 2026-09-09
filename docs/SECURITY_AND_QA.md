@@ -402,6 +402,10 @@ Recommended jobs:
 
 - representative public routes.
 
+`pnpm qa` is the inner loop. `pnpm qa:full` is the sequential release gate and must actually run every listed step, including fail-closed OSV (`pnpm scan:osv` exits non-zero if the official scanner cannot be obtained). `pnpm scan:osv:local` may warn; it is not a release gate.
+
+Enforced Lighthouse category floors live in `lighthouserc.json` and `scripts/run-lhci.ts`. `pnpm lhci` invokes the Lighthouse CLI against the production preview (Chrome `--no-sandbox` in container CI); it does not treat a missing scanner or a crashed autorun as a pass.
+
 ### `security-extra`
 
 - CodeQL/GitHub-native analysis where available.
