@@ -9,9 +9,3 @@ export function sha256Utf8(...parts: string[]): string {
   });
   return hash.digest("hex");
 }
-
-export function assertUnchanged(actual: string, expected: string, label: string): void {
-  if (actual !== expected) {
-    throw new Error(`Checksum mismatch for ${label}: expected ${expected}, got ${actual}`);
-  }
-}
