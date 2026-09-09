@@ -67,13 +67,20 @@ for (const eluc of ELUCIDATIONS) {
       SOURCE_LINKS.some((link) => link.to === ref);
     if (!known) fail(`Broken evidence ref ${ref} on ${eluc.id}`);
   }
-  if (
-    eluc.type === "NOAHIDE_GUIDANCE" &&
-    eluc.status === "rabbinically-reviewed" &&
-    !eluc.reviewNote
-  ) {
-    fail(`Reviewed guidance missing reviewer metadata: ${eluc.id}`);
+
+  if (eluc.type === "RABBINIC_GUIDANCE") {
+    if (eluc.status !== "rabbinically-reviewed") {
+      fail(`Normative rabbinic guidance cannot ship without review: ${eluc.id}`);
+    }
+    if (!eluc.reviewNote) {
+      fail(`Reviewed guidance missing reviewer metadata: ${eluc.id}`);
+    }
   }
+
+  if (eluc.type === "APPLICABILITY_CONTEXT" && eluc.status === "draft") {
+    fail(`Public applicability context must be source-verified: ${eluc.id}`);
+  }
+
   for (const glossaryId of eluc.glossaryIds ?? []) {
     if (!GLOSSARY.some((entry) => entry.id === glossaryId)) {
       fail(`Unknown glossary id ${glossaryId} on ${eluc.id}`);
