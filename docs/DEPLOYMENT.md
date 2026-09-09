@@ -2,7 +2,13 @@
 
 ## GitHub Pages (free)
 
-Workflow: `.github/workflows/pages.yml`.
+Workflow files are stored in `docs/github-workflows/` because the autonomous push token cannot write `.github/workflows/`. Copy them into `.github/workflows/` on a machine with `workflow` scope:
+
+```bash
+mkdir -p .github/workflows
+cp docs/github-workflows/ci.yml .github/workflows/ci.yml
+cp docs/github-workflows/pages.yml .github/workflows/pages.yml
+```
 
 Configure the repository:
 
