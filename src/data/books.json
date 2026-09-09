@@ -1,0 +1,91 @@
+[
+  {
+    "id": "genesis",
+    "canonicalWork": "Genesis",
+    "sefariaSlug": "Genesis",
+    "division": "torah",
+    "order": 1,
+    "chapterCount": 50,
+    "releasedChapters": [
+      1
+    ],
+    "titles": {
+      "he": "בראשית",
+      "en": "Genesis",
+      "pt": "Gênesis",
+      "transliteration": "Bereshit"
+    },
+    "aliases": [
+      "Genesis",
+      "Bereshit",
+      "Bereshith",
+      "Gênesis",
+      "Genesis",
+      "Gn",
+      "Gen"
+    ]
+  },
+  {
+    "id": "exodus",
+    "canonicalWork": "Exodus",
+    "sefariaSlug": "Exodus",
+    "division": "torah",
+    "order": 2,
+    "chapterCount": 40,
+    "releasedChapters": [],
+    "titles": {
+      "he": "שמות",
+      "en": "Exodus",
+      "pt": "Êxodo",
+      "transliteration": "Shemot"
+    },
+    "aliases": [
+      "Exodus",
+      "Shemot",
+      "Êxodo",
+      "Ex"
+    ]
+  },
+  {
+    "id": "isaiah",
+    "canonicalWork": "Isaiah",
+    "sefariaSlug": "Isaiah",
+    "division": "neviim",
+    "order": 12,
+    "chapterCount": 66,
+    "releasedChapters": [],
+    "titles": {
+      "he": "ישעיהו",
+      "en": "Isaiah",
+      "pt": "Isaías",
+      "transliteration": "Yeshayahu"
+    },
+    "aliases": [
+      "Isaiah",
+      "Yeshayahu",
+      "Isaías",
+      "Isa"
+    ]
+  },
+  {
+    "id": "psalms",
+    "canonicalWork": "Psalms",
+    "sefariaSlug": "Psalms",
+    "division": "ketuvim",
+    "order": 27,
+    "chapterCount": 150,
+    "releasedChapters": [],
+    "titles": {
+      "he": "תהלים",
+      "en": "Psalms",
+      "pt": "Salmos",
+      "transliteration": "Tehillim"
+    },
+    "aliases": [
+      "Psalms",
+      "Tehillim",
+      "Salmos",
+      "Ps"
+    ]
+  }
+]

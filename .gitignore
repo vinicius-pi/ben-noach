@@ -5,10 +5,16 @@ node_modules/
 .next/
 out/
 
+# Astro
+dist/
+.astro/
+
 # build/test output
 coverage/
 playwright-report/
 test-results/
+blob-report/
+lhci/
 *.log
 
 # local environment
@@ -29,3 +35,6 @@ Thumbs.db
 # local review/generated artifacts
 artifacts/
 reports/
+tmp-ingest/
+__pycache__/
+*.pyc

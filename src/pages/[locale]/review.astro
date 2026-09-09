@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { REVIEW_RECORDS, VERSES } from "../../lib/corpus";
+import { t } from "../../lib/i18n";
+import type { Locale } from "../../lib/types";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "en" } }, { params: { locale: "pt" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+---
+
+<Layout locale={locale} title={t(locale, "review")} noindex>
+  <article class="reading">
+    <p class="kicker">{t(locale, "review")}</p>
+    <h1 style="font-size: 2rem; margin: 0.4rem 0 1rem; font-weight: 500">Genesis 1:1–6</h1>
+    <p class="meta-line">
+      Repository-backed review visualization. This page cannot mutate review status.
+    </p>
+    <table style="width:100%;border-collapse:collapse;margin-top:1.5rem;font-size:0.92rem">
+      <thead>
+        <tr>
+          <th align="left">Target</th>
+          <th>Source</th>
+          <th>Rights</th>
+          <th>Citations</th>
+          <th>Rabbinic</th>
+        </tr>
+      </thead>
+      <tbody>
+        {REVIEW_RECORDS.map((record) => (
+          <tr>
+            <td>{record.targetId}</td>
+            <td>{record.sourceVerified ? "yes" : "no"}</td>
+            <td>{record.rightsVerified ? "yes" : "no"}</td>
+            <td>{record.citationsResolve ? "yes" : "no"}</td>
+            <td>{record.rabbinicReview}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="meta-line" style="margin-top:1rem">
+      {VERSES.length} released verses in this view.
+    </p>
+  </article>
+</Layout>

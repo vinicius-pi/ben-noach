@@ -1,0 +1,3 @@
+# License allowlist for OSV-Scanner --licenses
+# SPDX identifiers accepted for runtime/build dependencies.
+# Content licenses are enforced separately by scripts/validate-licenses.ts.

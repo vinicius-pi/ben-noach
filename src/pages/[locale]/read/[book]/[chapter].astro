@@ -1,0 +1,34 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import ReaderApp from "../../../../islands/ReaderApp";
+import { BOOKS, PASSAGES, buildReaderPayload } from "../../../../lib/corpus";
+import type { Locale } from "../../../../lib/types";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "pt"];
+  return locales.flatMap((locale) =>
+    PASSAGES.filter((passage) => passage.released).flatMap((passage) => {
+      const book = BOOKS.find((item) => item.id === passage.bookId);
+      if (!book) return [];
+      return [
+        {
+          params: { locale, book: book.id, chapter: String(passage.chapter) },
+        },
+      ];
+    }),
+  );
+}
+
+const locale = Astro.params.locale as Locale;
+const bookId = Astro.params.book as string;
+const chapter = Number(Astro.params.chapter);
+const payload = buildReaderPayload(locale, bookId, chapter);
+if (!payload) {
+  return new Response("Not found", { status: 404 });
+}
+const title = `${payload.book.titles[locale === "pt" ? "pt" : "en"]} ${chapter}`;
+---
+
+<Layout locale={locale} title={title}>
+  <ReaderApp client:load payload={payload} />
+</Layout>

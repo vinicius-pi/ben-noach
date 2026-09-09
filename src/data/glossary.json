@@ -1,0 +1,134 @@
+[
+  {
+    "id": "rashi",
+    "term": {
+      "en": "Rashi",
+      "he": "רש\"י",
+      "pt": "Rashi"
+    },
+    "short": {
+      "en": "R. Shlomo Yitzchaki (1040–1105), the foundational medieval commentator on Tanakh and Talmud.",
+      "pt": "R. Shlomo Yitzchaki (1040–1105), o comentarista medieval fundamental de Tanakh e Talmude."
+    }
+  },
+  {
+    "id": "dibbur-hamatchil",
+    "term": {
+      "en": "dibbur hamatchil",
+      "he": "דיבור המתחיל",
+      "pt": "dibbur hamatchil"
+    },
+    "short": {
+      "en": "The lemma — the quoted word or phrase Rashi is explaining. Each Rashi segment starts from a specific lemma, not from the whole verse.",
+      "pt": "O lema — a palavra ou frase citada que Rashi explica. Cada segmento de Rashi parte de um lema específico, não do versículo inteiro."
+    }
+  },
+  {
+    "id": "peshat",
+    "term": {
+      "en": "peshat",
+      "he": "פשט",
+      "pt": "peshat"
+    },
+    "short": {
+      "en": "The contextual/plain sense of the verse, as the commentators understand it — not “literalism.”",
+      "pt": "O sentido contextual/simples do versículo, como os comentaristas o entendem — não “literalismo.”"
+    }
+  },
+  {
+    "id": "derash",
+    "term": {
+      "en": "derash / midrash",
+      "he": "דרש / מדרש",
+      "pt": "derash / midrash"
+    },
+    "short": {
+      "en": "An interpretive reading that draws out additional meaning, often from a linguistic or narrative gap, preserved in classical rabbinic collections.",
+      "pt": "Uma leitura interpretativa que extrai sentido adicional, muitas vezes de uma lacuna linguística ou narrativa, preservada nas coleções rabínicas clássicas."
+    }
+  },
+  {
+    "id": "siftei-chakhamim",
+    "term": {
+      "en": "Siftei Chakhamim",
+      "he": "שפתי חכמים",
+      "pt": "Siftei Chakhamim"
+    },
+    "short": {
+      "en": "An early-modern supercommentary on Rashi that often states the question Rashi is answering.",
+      "pt": "Um supercomentário da era moderna inicial sobre Rashi, que muitas vezes formula a pergunta que Rashi está respondendo."
+    }
+  },
+  {
+    "id": "chazal",
+    "term": {
+      "en": "Chazal",
+      "he": "חז\"ל",
+      "pt": "Chazal"
+    },
+    "short": {
+      "en": "“Our Sages, of blessed memory” — the rabbis of the Mishnah and Talmud, and the classical midrash.",
+      "pt": "“Nossos Sábios, de abençoada memória” — os rabinos da Mishná e do Talmude, e o midrash clássico."
+    }
+  },
+  {
+    "id": "bnei-noach",
+    "term": {
+      "en": "Bnei Noach",
+      "he": "בני נח",
+      "pt": "Bnei Noach"
+    },
+    "short": {
+      "en": "Children of Noah: non-Jews who live in covenant with the God of Israel through the Noahide laws, without becoming Jews.",
+      "pt": "Filhos de Noé: não-judeus que vivem em aliança com o Deus de Israel por meio das leis noahides, sem se tornarem judeus."
+    }
+  },
+  {
+    "id": "elohim",
+    "term": {
+      "en": "Elohim",
+      "he": "אֱלֹהִים",
+      "pt": "Elohim"
+    },
+    "short": {
+      "en": "A Divine Name. In Rashi’s reading of Genesis 1:1 it is associated with the attribute of justice.",
+      "pt": "Um Nome Divino. Na leitura de Rashi de Gênesis 1:1, associa-se ao atributo da justiça."
+    }
+  },
+  {
+    "id": "tetragrammaton",
+    "term": {
+      "en": "Tetragrammaton / Hashem",
+      "he": "ה׳",
+      "pt": "Tetragrama / Hashem"
+    },
+    "short": {
+      "en": "The four-letter Divine Name, associated in classical commentary with mercy. Project prose uses “God” or “Hashem”; quoted sources keep their own rendering.",
+      "pt": "O Nome Divino de quatro letras, associado no comentário clássico à misericórdia. A prosa do projeto usa “Deus” ou “Hashem”; as fontes citadas conservam sua própria grafia."
+    }
+  },
+  {
+    "id": "niqqud",
+    "term": {
+      "en": "niqqud",
+      "he": "ניקוד",
+      "pt": "niqqud"
+    },
+    "short": {
+      "en": "The vowel points of the Masoretic Hebrew text.",
+      "pt": "Os sinais vocálicos do texto hebraico massorético."
+    }
+  },
+  {
+    "id": "teamim",
+    "term": {
+      "en": "te'amim",
+      "he": "טעמים",
+      "pt": "te'amim"
+    },
+    "short": {
+      "en": "Cantillation marks that encode phrasing and traditional chant.",
+      "pt": "Sinais de cantilação que codificam a frase e o canto tradicional."
+    }
+  }
+]

@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Mark from "../../components/Mark.astro";
+import ContinueReading from "../../islands/ContinueReading";
+import { BOOKS, GUIDED_PATHS } from "../../lib/corpus";
+import { localePath, t } from "../../lib/i18n";
+import type { Locale } from "../../lib/types";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "en" } }, { params: { locale: "pt" } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const divisions = [
+  { id: "torah", title: t(locale, "torah") },
+  { id: "neviim", title: t(locale, "neviim") },
+  { id: "ketuvim", title: t(locale, "ketuvim") },
+] as const;
+---
+
+<Layout
+  locale={locale}
+  title={locale === "pt" ? "Leitor guiado do Tanakh" : "Guided Tanakh reader"}
+  description={t(locale, "tagline")}
+>
+  <section class="cover">
+    <div class="cover-inner">
+      <Mark size={28} />
+      <p class="kicker" style="margin-top:1.2rem">
+        Tanakh
+      </p>
+      <h1>Ben Noach</h1>
+      <p>{t(locale, "tagline")}</p>
+      <div class="actions">
+        <ContinueReading client:load locale={locale} />
+      </div>
+    </div>
+  </section>
+  <section class="below">
+    <div class="below-grid">
+      {divisions.map((division) => (
+        <div class="stack">
+          <p class="kicker">{division.title}</p>
+          {BOOKS.filter((book) => book.division === division.id).map((book) => (
+            <a
+              class="book-link"
+              href={
+                book.releasedChapters.length
+                  ? localePath(locale, `read/${book.id}/${book.releasedChapters[0]}`)
+                  : localePath(locale, "library")
+              }
+            >
+              <span class="hebrew" lang="he" dir="rtl">
+                {book.titles.he}
+              </span>
+              <span dir="ltr">
+                {" · "}
+                {locale === "pt" ? book.titles.pt : book.titles.en}
+              </span>
+            </a>
+          ))}
+        </div>
+      ))}
+      <div class="stack">
+        <p class="kicker">{t(locale, "homePaths")}</p>
+        {GUIDED_PATHS.map((path) => (
+          <a href={localePath(locale, `paths/${path.id}`)}>
+            {locale === "pt" ? path.title.pt : path.title.en}
+          </a>
+        ))}
+      </div>
+      <div class="stack">
+        <p class="kicker">{t(locale, "homeTrust")}</p>
+        <p>{t(locale, "independent")}</p>
+        <a href={localePath(locale, "about")}>{t(locale, "about")}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rashi-on-genesis",
+    "title": {
+      "en": "Rashi on Genesis",
+      "he": "רש\"י על בראשית",
+      "pt": "Rashi sobre Gênesis"
+    },
+    "author": "Rashi (R. Shlomo Yitzchaki)",
+    "era": "classical",
+    "kind": "CLASSICAL_COMMENTARY",
+    "englishVersionId": "rashi-rosenbaum-silbermann",
+    "hebrewVersionId": "rashi-rosenbaum-silbermann-he"
+  },
+  {
+    "id": "siftei-chakhamim-on-genesis",
+    "title": {
+      "en": "Siftei Chakhamim",
+      "he": "שפתי חכמים",
+      "pt": "Siftei Chakhamim"
+    },
+    "author": "R. Shabbetai Bass",
+    "era": "early-modern",
+    "kind": "CLASSICAL_COMMENTARY",
+    "englishVersionId": "siftei-metsudah-2009",
+    "hebrewVersionId": "siftei-metsudah-2009-he",
+    "attributionRequired": true
+  }
+]

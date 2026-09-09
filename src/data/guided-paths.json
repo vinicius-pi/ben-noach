@@ -1,0 +1,137 @@
+[
+  {
+    "id": "creation-and-humanity",
+    "title": {
+      "en": "Creation and Humanity",
+      "pt": "Criação e humanidade",
+      "he": "בריאה ואנושות"
+    },
+    "status": "partial",
+    "summary": {
+      "en": "Genesis 1–11: the world before Israel, the image of God, human responsibility, the Flood, and the covenant with Noah.",
+      "pt": "Gênesis 1–11: o mundo antes de Israel, a imagem de Deus, a responsabilidade humana, o Dilúvio e a aliança com Noé."
+    },
+    "steps": [
+      {
+        "verseId": "genesis-1-1",
+        "label": {
+          "en": "The beginning",
+          "pt": "O princípio"
+        }
+      },
+      {
+        "verseId": "genesis-1-2",
+        "label": {
+          "en": "Unformed and void",
+          "pt": "Informe e vazio"
+        }
+      },
+      {
+        "verseId": "genesis-1-3",
+        "label": {
+          "en": "Let there be light",
+          "pt": "Haja luz"
+        }
+      },
+      {
+        "verseId": "genesis-1-4",
+        "label": {
+          "en": "Light divided",
+          "pt": "A luz dividida"
+        }
+      },
+      {
+        "verseId": "genesis-1-5",
+        "label": {
+          "en": "One day",
+          "pt": "Um dia"
+        }
+      },
+      {
+        "verseId": "genesis-1-6",
+        "label": {
+          "en": "The firmament",
+          "pt": "O firmamento"
+        }
+      }
+    ]
+  },
+  {
+    "id": "reading-rashi",
+    "title": {
+      "en": "Reading Rashi for the first time",
+      "pt": "Ler Rashi pela primeira vez",
+      "he": "קריאת רש״י בפעם הראשונה"
+    },
+    "status": "partial",
+    "summary": {
+      "en": "Learn dibbur hamatchil, peshat, midrash and supercommentary from Genesis 1:1–5 rather than from abstract definitions.",
+      "pt": "Aprenda dibbur hamatchil, peshat, midrash e supercomentário a partir de Gênesis 1:1–5, não de definições abstratas."
+    },
+    "steps": [
+      {
+        "verseId": "genesis-1-1",
+        "label": {
+          "en": "Three lemmas on one verse",
+          "pt": "Três lemas em um versículo"
+        }
+      },
+      {
+        "verseId": "genesis-1-3",
+        "label": {
+          "en": "When Rashi is silent",
+          "pt": "Quando Rashi silencia"
+        }
+      },
+      {
+        "verseId": "genesis-1-5",
+        "label": {
+          "en": "A grammatical snag",
+          "pt": "Um descompasso gramatical"
+        }
+      }
+    ]
+  },
+  {
+    "id": "the-one-god",
+    "title": {
+      "en": "The One God",
+      "pt": "O Deus Uno",
+      "he": "האל האחד"
+    },
+    "status": "planned",
+    "summary": {
+      "en": "Selected Torah, Prophets and Writings on divine unity, sovereignty, creation and idolatry.",
+      "pt": "Seleções da Torá, Profetas e Escritos sobre unidade divina, soberania, criação e idolatria."
+    },
+    "steps": []
+  },
+  {
+    "id": "nations-in-the-prophets",
+    "title": {
+      "en": "The nations in the Prophets",
+      "pt": "As nações nos Profetas",
+      "he": "הגויים בנביאים"
+    },
+    "status": "planned",
+    "summary": {
+      "en": "Isaiah 2 and 11, Micah 4, Zephaniah 3, Zechariah 8 and 14 — the nations knowing Hashem.",
+      "pt": "Isaías 2 e 11, Miqueias 4, Sofonias 3, Zacarias 8 e 14 — as nações conhecendo Hashem."
+    },
+    "steps": []
+  },
+  {
+    "id": "coming-from-a-christian-bible",
+    "title": {
+      "en": "Coming from a Christian Bible",
+      "pt": "Vindo de uma Bíblia cristã",
+      "he": "מביאה נוצרית"
+    },
+    "status": "planned",
+    "summary": {
+      "en": "Jewish book order, Hebrew names, translation differences, and context — beginning with Tanakh, not with polemic.",
+      "pt": "Ordem judaica dos livros, nomes hebraicos, diferenças de tradução e contexto — começando pelo Tanakh, não pela polêmica."
+    },
+    "steps": []
+  }
+]

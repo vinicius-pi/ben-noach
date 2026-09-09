@@ -6,102 +6,65 @@
 
 A generic Bible can give a reader the text without the interpretive architecture that produced the Jewish reading of that text.
 
-Sefaria gives extraordinary access to Tanakh, Rashi, Chazal and thousands of connected sources, but a new reader may not yet know:
+Sefaria gives extraordinary access to Tanakh, Rashi, Chazal and thousands of connected sources, but a new reader may not yet know which source to open, who Rashi is, why he comments, or which material is universal, Noahide, or Israel-covenant context.
 
-- which source to open;
-- who Rashi is;
-- why Rashi comments on a particular word;
-- how Midrash, Gemara and supercommentaries relate to the verse;
-- which material is universal/Noahide;
-- which material is necessary Israel-covenant context;
-- which legal/practice detail is specifically Jewish;
-- when to stop reading commentary and return to the passage.
+Ben Noach supplies that missing guided layer:
 
-Ben Noach supplies that missing guided layer.
+**READ → UNDERSTAND → SOURCES**
 
-## Product thesis
+## Run
 
-> **READ → UNDERSTAND → SOURCES**
+Requires Node 22+ and pnpm 10.15 (Corepack).
 
-The application should feel like a beautifully typeset contemporary book before it feels like software.
+```bash
+corepack enable
+pnpm install --frozen-lockfile
+pnpm dev
+```
 
-A reader should be able to move naturally through:
+Open `http://127.0.0.1:4321/ben-noach/en/`.
 
-`Tanakh → Rashi → why Rashi comments → classical source chain → applicability/context → deeper sources → Sefaria`.
+```bash
+pnpm check
+pnpm lint
+pnpm test
+pnpm validate:content
+pnpm validate:licenses
+pnpm validate:providers
+pnpm scan:secrets
+pnpm build
+pnpm preview
+pnpm test:e2e
+```
 
-The goal is not to own the largest Jewish-text corpus. The goal is to give the target reader the **right first path through it** and gradually make direct primary-source study easier.
+## v1 corpus
 
-## Editorial model
+Genesis 1:1–6, from:
 
-The product keeps three classes visibly and structurally distinct:
+- Public Domain pointed/cantillated Hebrew (Tanach with Ta'amei Hamikra / tanach.us)
+- Public Domain JPS 1917
+- Public Domain Rosenbaum/Silbermann Rashi
+- CC BY Metsudah Siftei Chakhamim, with attribution
 
-1. **Source** — canonical/historical text with exact ref, version, provenance and rights metadata.
-2. **Project elucidation** — clear modern explanation for the reader, with evidence refs.
-3. **Reviewed guidance/applicability** — Noahide-specific normative/scope material carrying explicit review metadata where relevant.
-
-Source text is never rewritten to fit the audience. Applicability is handled through curation/context, not source redaction.
-
-## v1
-
-The first production demonstrator covers **Genesis 1:1–5**, followed by Genesis 1:6 as an architecture scalability test.
-
-The design and content model must then expand cleanly through Genesis 1–11 and eventually the Tanakh.
-
-## Architecture
-
-The final v1 specification uses:
-
-- Astro 7.x static-first architecture;
-- strict TypeScript;
-- React islands only where interaction materially needs them;
-- an audited local release corpus;
-- typed Sefaria enrichment/deep-link adapters;
-- open/self-hosted fonts;
-- open-source testing/security tooling;
-- GitHub Pages as the first free deployment path;
-- host-portable static `dist/` output;
-- no required paid SaaS, hosted database, runtime AI or proprietary search service.
-
-## Open corpus starting point
-
-The audited pilot stack begins with open-rights versions such as:
-
-- Public Domain pointed/cantillated Hebrew Tanakh;
-- Public Domain JPS 1917 English Tanakh;
-- Public Domain Rosenbaum/Silbermann Rashi;
-- approved Siftei Chakhamim versions with exact attribution;
-- optional open OSHB/BDB data for later word-level study.
-
-See `docs/CORPUS_V1.md` for exact release policy.
+The reader works with Sefaria unavailable. See `docs/CORPUS_V1.md` and `src/data/source-manifest.json`.
 
 ## Design
 
-The product is white/off-white and deep blue, typography-led, editorial and quiet.
+Production uses **Editorial Modernism**, chosen from rendered evidence of three directions. Comparison: `docs/DESIGN_DECISION.md`. Screenshots: `docs/evidence/`.
 
-The Tanakh itself is the hero visual.
+## Docs
 
-The build process compares three real visual directions — **Editorial Modernism, Quiet Scholarly, Immersive Reader** — using identical Genesis data before converging on a final system.
-
-Generic component-library appearance is not an acceptable final state.
-
-## Repository execution
-
-`main` remains canonical.
-
-The full research/build specification lives on:
-
-`build/grok-production-v1`
-
-The controlling execution task is GitHub **Issue #1 — Build v1: production guided Tanakh reader**.
-
-Start with `AGENTS.md`, then follow its document precedence and execute `docs/GROK_BUILD_MASTERPROMPT.md` end-to-end.
-
-The final build must arrive as a reviewable PR into `main` and must not self-merge.
+- `docs/ARCHITECTURE.md`
+- `docs/AUTHORING.md` — how Genesis 1:6 was added without UI surgery
+- `docs/DEPLOYMENT.md`
+- `docs/PATH_TO_GENESIS_1_11.md`
+- `docs/KNOWN_LIMITATIONS.md`
+- `docs/FONTS_AND_LICENSES.md`
 
 ## Licensing
 
-- Original software: Apache-2.0.
-- Original project editorial/documentation content: CC BY 4.0 unless otherwise marked.
-- Third-party sacred/classical texts, translations, fonts and datasets retain their own concrete licenses/rights records.
+- Original software: Apache-2.0
+- Original editorial/docs: CC BY 4.0
+- Third-party texts and fonts retain their own records
 
-See `LICENSES.md`, `CONTENT_LICENSE.md` and `GOVERNANCE.md`.
+The final production PR targets `main` and is not self-merged.

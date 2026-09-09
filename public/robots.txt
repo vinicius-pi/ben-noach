@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /ben-noach/en/
+Allow: /ben-noach/pt/
+Disallow: /ben-noach/design/
+Disallow: /ben-noach/en/review/
+Disallow: /ben-noach/pt/review/

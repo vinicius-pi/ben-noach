@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { localePath } from "../lib/i18n";
+---
+
+<Layout locale="en" title="Not found">
+  <article class="reading">
+    <h1>Not found</h1>
+    <p>
+      <a href={localePath("en")}>Return home</a>
+    </p>
+  </article>
+</Layout>

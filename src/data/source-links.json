@@ -1,0 +1,278 @@
+[
+  {
+    "id": "link-rashi-genesis-1-1-1-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-1-1",
+    "to": "genesis-1-1",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-1-2-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-1-2",
+    "to": "genesis-1-1",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-1-3-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-1-3",
+    "to": "genesis-1-1",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-siftei-genesis-1-1-1-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-1-1",
+    "to": "rashi-genesis-1-1-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-1-2-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-1-2",
+    "to": "rashi-genesis-1-1-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-1-3-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-1-3",
+    "to": "rashi-genesis-1-1-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-1-4-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-1-4",
+    "to": "rashi-genesis-1-1-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-rashi-genesis-1-2-1-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-2-1",
+    "to": "genesis-1-2",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-2-2-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-2-2",
+    "to": "genesis-1-2",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-2-3-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-2-3",
+    "to": "genesis-1-2",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-2-4-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-2-4",
+    "to": "genesis-1-2",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-2-5-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-2-5",
+    "to": "genesis-1-2",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-siftei-genesis-1-2-1-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-2-1",
+    "to": "rashi-genesis-1-2-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-2-2-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-2-2",
+    "to": "rashi-genesis-1-2-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-2-3-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-2-3",
+    "to": "rashi-genesis-1-2-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-2-4-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-2-4",
+    "to": "rashi-genesis-1-2-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-rashi-genesis-1-4-1-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-4-1",
+    "to": "genesis-1-4",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-siftei-genesis-1-4-1-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-4-1",
+    "to": "rashi-genesis-1-4-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-4-2-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-4-2",
+    "to": "rashi-genesis-1-4-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-4-3-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-4-3",
+    "to": "rashi-genesis-1-4-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-4-4-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-4-4",
+    "to": "rashi-genesis-1-4-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-rashi-genesis-1-5-1-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-5-1",
+    "to": "genesis-1-5",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-siftei-genesis-1-5-1-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-5-1",
+    "to": "rashi-genesis-1-5-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-5-2-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-5-2",
+    "to": "rashi-genesis-1-5-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-rashi-genesis-1-6-1-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-6-1",
+    "to": "genesis-1-6",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-rashi-genesis-1-6-2-verse",
+    "relationship": "COMMENTS_ON",
+    "from": "rashi-genesis-1-6-2",
+    "to": "genesis-1-6",
+    "localTextAvailable": true
+  },
+  {
+    "id": "link-siftei-genesis-1-6-1-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-6-1",
+    "to": "rashi-genesis-1-6-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-6-2-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-6-2",
+    "to": "rashi-genesis-1-6-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-6-3-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-6-3",
+    "to": "rashi-genesis-1-6-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-siftei-genesis-1-6-4-rashi",
+    "relationship": "EXPLAINS_COMMENTARY",
+    "from": "siftei-genesis-1-6-4",
+    "to": "rashi-genesis-1-6-1",
+    "localTextAvailable": true,
+    "note": "Siftei Chakhamim is a supercommentary on Rashi; alignment is verse-level in this release, with lemma identity preserved per segment."
+  },
+  {
+    "id": "link-rashi-gen-1-1-1-yalkut",
+    "relationship": "RASHI_SOURCE",
+    "from": "rashi-genesis-1-1-1",
+    "to": "Yalkut Shimoni on Torah 187",
+    "localTextAvailable": false,
+    "externalUrl": "https://www.sefaria.org/Yalkut_Shimoni_on_Torah.187"
+  },
+  {
+    "id": "link-rashi-gen-1-4-1-chagigah",
+    "relationship": "RASHI_SOURCE",
+    "from": "rashi-genesis-1-4-1",
+    "to": "Chagigah 12a",
+    "localTextAvailable": false,
+    "externalUrl": "https://www.sefaria.org/Chagigah.12a"
+  },
+  {
+    "id": "link-rashi-gen-1-4-1-br",
+    "relationship": "RASHI_SOURCE",
+    "from": "rashi-genesis-1-4-1",
+    "to": "Bereshit Rabbah 3:6",
+    "localTextAvailable": false,
+    "externalUrl": "https://www.sefaria.org/Bereshit_Rabbah.3.6"
+  },
+  {
+    "id": "link-rashi-gen-1-5-1-br",
+    "relationship": "RASHI_SOURCE",
+    "from": "rashi-genesis-1-5-1",
+    "to": "Bereshit Rabbah 3:8",
+    "localTextAvailable": false,
+    "externalUrl": "https://www.sefaria.org/Bereshit_Rabbah.3.8"
+  },
+  {
+    "id": "link-rashi-gen-1-6-1-br",
+    "relationship": "RASHI_SOURCE",
+    "from": "rashi-genesis-1-6-1",
+    "to": "Bereshit Rabbah 4:2",
+    "localTextAvailable": false,
+    "externalUrl": "https://www.sefaria.org/Bereshit_Rabbah.4.2"
+  },
+  {
+    "id": "link-rashi-gen-1-6-2-br",
+    "relationship": "RASHI_SOURCE",
+    "from": "rashi-genesis-1-6-2",
+    "to": "Bereshit Rabbah 4:3",
+    "localTextAvailable": false,
+    "externalUrl": "https://www.sefaria.org/Bereshit_Rabbah.4.3"
+  }
+]

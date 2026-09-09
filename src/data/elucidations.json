@@ -1,0 +1,533 @@
+[
+  {
+    "id": "eluc-genesis-1-1-verse",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "understanding-the-verse",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "The Torah opens with the creation of heaven and earth. The Hebrew does not begin with a commandment. It begins with a world that already belongs to God. JPS 1917 renders the verse as a complete act: “In the beginning God created the heaven and the earth.” Rashi will immediately show that the Hebrew word בְּרֵאשִׁית is grammatically more complicated than that English sentence, and that the Torah’s decision to start here is itself a question.",
+      "pt": "A Torá se abre com a criação dos céus e da terra. O hebraico não começa com um mandamento. Começa com um mundo que já pertence a Deus. A tradução JPS 1917 apresenta o versículo como um ato completo: “In the beginning God created the heaven and the earth.” Rashi mostrará em seguida que a palavra hebraica בְּרֵאשִׁית é gramaticalmente mais complexa do que essa frase inglesa, e que a decisão da Torá de começar aqui é, ela mesma, uma pergunta."
+    },
+    "claims": [
+      {
+        "text": "The verse is a creation narrative, not a commandment.",
+        "evidenceRefs": [
+          "genesis-1-1",
+          "rashi-genesis-1-1-1"
+        ],
+        "status": "sources-verified"
+      }
+    ],
+    "classicalFeature": "The Torah begins with narrative rather than with Israel’s first national commandment."
+  },
+  {
+    "id": "eluc-genesis-1-1-why-rashi-1",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-1-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Rashi’s first lemma is simply בְּרֵאשִׁית — “In the beginning.” The difficulty is not a rare word. It is a structural question: if the Torah is Israel’s book of commandments, why does it not open with the first mitzvah given to the nation (Exodus 12:2)? Siftei Chakhamim makes the question sharper: the Torah is called Torah, “instruction,” because of the mitzvot. Why, then, begin with these narratives at all?",
+      "pt": "O primeiro lema de Rashi é simplesmente בְּרֵאשִׁית — “No princípio.” A dificuldade não é uma palavra rara. É uma pergunta estrutural: se a Torá é o livro de mandamentos de Israel, por que não se abre com a primeira mitzvá dada à nação (Êxodo 12:2)? Siftei Chakhamim torna a pergunta mais nítida: a Torá se chama Torá, “instrução”, por causa das mitzvot. Por que, então, começar com estas narrativas?"
+    },
+    "claims": [
+      {
+        "text": "Rashi is answering why the Torah begins with creation rather than with Israel’s first commandment.",
+        "evidenceRefs": [
+          "rashi-genesis-1-1-1",
+          "siftei-genesis-1-1-2"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-1-understand-rashi-1",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-1-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Rashi answers in the name of Rabbi Isaac. The Torah begins with creation so that Israel can answer the nations: the earth is God’s; He gives it to whom He wills. Siftei Chakhamim notes that “What is the reason…?” is already the start of the answer — Psalms 111:6 supplies the reason. This comment is about Israel’s title to the land. It is necessary context for understanding Rashi. It is not a Noahide obligation, and it is not a reason to skip the verse. A Ben Noach reads it as Israel-covenant context inside a universal creation account.",
+      "pt": "Rashi responde em nome do Rabi Isaac. A Torá começa com a criação para que Israel possa responder às nações: a terra é de Deus; Ele a dá a quem quer. Siftei Chakhamim observa que “Qual é a razão…?” já é o início da resposta — o Salmo 111:6 fornece o motivo. Este comentário trata do título de Israel à terra. É contexto necessário para entender Rashi. Não é uma obrigação noahide, e não é motivo para pular o versículo. Um Ben Noach o lê como contexto da aliança de Israel dentro de um relato universal da criação."
+    },
+    "claims": [
+      {
+        "text": "The first Rashi on Genesis 1:1 is Israel-covenant context, not a Noahide commandment.",
+        "evidenceRefs": [
+          "rashi-genesis-1-1-1",
+          "siftei-genesis-1-1-4"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-1-why-rashi-2",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-1-2",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "The second lemma is בְּרֵאשִׁית בָּרָא. Rashi says the verse “calls aloud for explanation.” Two issues are in play: the midrashic reading of רֵאשִׁית as “for the sake of Torah / Israel,” and the peshat problem that בְּרֵאשִׁית is a construct form — “beginning of…” — not a free-standing adverb “in the beginning.”",
+      "pt": "O segundo lema é בְּרֵאשִׁית בָּרָא. Rashi diz que o versículo “clama por explicação.” Há duas questões: a leitura midráshica de רֵאשִׁית como “por causa da Torá / de Israel”, e o problema de peshat de que בְּרֵאשִׁית é uma forma construta — “princípio de…” — e não um advérbio independente “no princípio.”"
+    },
+    "claims": [
+      {
+        "text": "Rashi treats בראשית as grammatically construct, not as a simple adverb of time.",
+        "evidenceRefs": [
+          "rashi-genesis-1-1-2"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-1-understand-rashi-2",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-1-2",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Rashi first reports the derash: God created the world for the sake of Torah and for the sake of Israel, both called רֵאשִׁית. Then he gives peshat: read “at the beginning of God’s creating heaven and earth…” The verse is not a chronological inventory proving that heaven and earth were the first created things — the waters are already present in verse 2. This is how Jewish reading works: midrash and peshat can sit on the same lemma without one erasing the other.",
+      "pt": "Rashi primeiro relata o derash: Deus criou o mundo por causa da Torá e por causa de Israel, ambos chamados רֵאשִׁית. Depois dá o peshat: leia-se “no princípio de Deus criar céus e terra…”. O versículo não é um inventário cronológico provando que céus e terra foram as primeiras coisas criadas — as águas já estão presentes no versículo 2. É assim que a leitura judaica funciona: midrash e peshat podem ocupar o mesmo lema sem que um apague o outro."
+    },
+    "claims": [
+      {
+        "text": "Rashi distinguishes derash (for the sake of Torah/Israel) from peshat (construct “beginning of creating”).",
+        "evidenceRefs": [
+          "rashi-genesis-1-1-2"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-1-why-rashi-3",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-1-3",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "The third lemma is בָּרָא אֱלֹהִים. Why this Divine Name, and not the Tetragrammaton? Rashi hears a theological choice in the Name itself.",
+      "pt": "O terceiro lema é בָּרָא אֱלֹהִים. Por que este Nome Divino, e não o Tetragrama? Rashi ouve uma escolha teológica no próprio Nome."
+    },
+    "claims": [
+      {
+        "text": "Rashi comments because the verse uses Elohim rather than the Tetragrammaton.",
+        "evidenceRefs": [
+          "rashi-genesis-1-1-3"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-1-understand-rashi-3",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-1",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-1-3",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "In classical Jewish usage, Elohim is associated with judgment (din) and the Tetragrammaton with mercy (rachamim). Rashi says God first intended to create the world under strict justice, saw that it could not endure, and allied mercy with justice — which is why Genesis 2:4 says “the LORD God.” This is emunah: the world exists because justice is joined to mercy. It is not a ritual instruction.",
+      "pt": "No uso judaico clássico, Elohim se associa ao juízo (din) e o Tetragrama à misericórdia (rachamim). Rashi diz que Deus primeiro pretendeu criar o mundo sob estrita justiça, viu que ele não poderia subsistir, e aliou a misericórdia à justiça — por isso Gênesis 2:4 diz “the LORD God.” Isto é emunah: o mundo existe porque a justiça está unida à misericórdia. Não é uma instrução ritual."
+    },
+    "claims": [
+      {
+        "text": "Elohim signals the attribute of justice; Genesis 2:4’s double Name shows mercy joined to justice.",
+        "evidenceRefs": [
+          "rashi-genesis-1-1-3",
+          "genesis-1-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-1-bnei-noach",
+    "type": "NOAHIDE_GUIDANCE",
+    "verseId": "genesis-1-1",
+    "slot": "for-bnei-noach",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "scope": "NOAHIDE_RELEVANT",
+    "text": {
+      "en": "A Ben Noach is addressed by the fact of creation: the world is God’s, and humanity stands inside it. The first Rashi about Israel’s land is not a Noahide law. It is context for why Israel’s Torah begins here. Do not convert that comment into a commandment for the nations, and do not delete it. Read it as Israel-covenant context beside a universal opening.",
+      "pt": "Um Ben Noach é interpelado pelo fato da criação: o mundo é de Deus, e a humanidade está dentro dele. O primeiro Rashi sobre a terra de Israel não é uma lei noahide. É contexto para entender por que a Torá de Israel começa aqui. Não transforme esse comentário em mandamento para as nações, e não o apague. Leia-o como contexto da aliança de Israel ao lado de uma abertura universal."
+    },
+    "sourceRefs": [
+      "rashi-genesis-1-1-1",
+      "rashi-genesis-1-1-3",
+      "genesis-1-1"
+    ],
+    "reviewNote": "Normative Noahide application remains pending named rabbinic review. This block is contextual, not a ruling."
+  },
+  {
+    "id": "eluc-genesis-1-2-verse",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-2",
+    "slot": "understanding-the-verse",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Before light, the earth is תֹהוּ וָבֹהוּ — unformed and void — with darkness over the deep, and the spirit of God hovering over the waters. The verse is atmosphere and grammar, not ethics. Rashi will gloss the rare words and the hovering.",
+      "pt": "Antes da luz, a terra é תֹהוּ וָבֹהוּ — informe e vazia — com trevas sobre o abismo, e o espírito de Deus pairando sobre as águas. O versículo é atmosfera e gramática, não ética. Rashi glosará as palavras raras e o pairar."
+    },
+    "claims": [
+      {
+        "text": "Verse 2 describes pre-formed earth, darkness, waters, and the hovering spirit of God.",
+        "evidenceRefs": [
+          "genesis-1-2"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-2-why-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-2",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-2-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Rashi stops on תֹהוּ וָבֹהוּ because the words are uncommon and easily flattened. He also explains פְּנֵי תְהוֹם and the hovering of רוּחַ אֱלֹהִים. Siftei Chakhamim on “upon the waters” asks why the verse says “on the face of the deep” rather than simply “on the deep.”",
+      "pt": "Rashi se detém em תֹהוּ וָבֹהוּ porque as palavras são incomuns e facilmente achatadas. Explica também פְּנֵי תְהוֹם e o pairar de רוּחַ אֱלֹהִים. Siftei Chakhamim, em “sobre as águas”, pergunta por que o versículo diz “sobre a face do abismo” e não simplesmente “sobre o abismo.”"
+    },
+    "claims": [
+      {
+        "text": "Rashi comments here to define rare diction and the image of hovering.",
+        "evidenceRefs": [
+          "rashi-genesis-1-2-1",
+          "rashi-genesis-1-2-5",
+          "siftei-genesis-1-2-2"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-2-understand-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-2",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-2-5",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "For Rashi, תֹהוּ is astonishment at emptiness; בֹהוּ is empty space. The deep is the waters already upon the earth. “The spirit of God hovering” is the throne of Glory standing in space, hovering over the waters by God’s breath and command, as a dove hovers over its nest. Siftei Chakhamim asks why the verse needed “hovering” if the subject is the Throne — a typical supercommentary move: isolate the extra word that generated Rashi’s image.",
+      "pt": "Para Rashi, תֹהוּ é o espanto diante do vazio; בֹהוּ é o espaço vazio. O abismo são as águas já sobre a terra. “O espírito de Deus pairava” é o trono da Glória no espaço, pairando sobre as águas pelo sopro e comando de Deus, como uma pomba sobre o ninho. Siftei Chakhamim pergunta por que o versículo precisava de “pairar” se o sujeito é o Trono — um gesto típico de supercomentário: isolar a palavra extra que gerou a imagem de Rashi."
+    },
+    "claims": [
+      {
+        "text": "Rashi identifies the hovering spirit with the Throne of Glory, compared to a dove.",
+        "evidenceRefs": [
+          "rashi-genesis-1-2-5",
+          "siftei-genesis-1-2-3"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-3-verse",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-3",
+    "slot": "understanding-the-verse",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Creation by speech: God said “Let there be light,” and there was light. The Rosenbaum–Silbermann Rashi has no comment on this verse. That absence is information. Not every verse is a problem for Rashi. The reader can stay with the verse.",
+      "pt": "Criação pela fala: Deus disse “Haja luz”, e houve luz. O Rashi de Rosenbaum–Silbermann não comenta este versículo. A ausência é informação. Nem todo versículo é um problema para Rashi. O leitor pode permanecer com o versículo."
+    },
+    "claims": [
+      {
+        "text": "Rashi has no comment on Genesis 1:3 in the selected edition.",
+        "evidenceRefs": [
+          "genesis-1-3"
+        ],
+        "status": "sources-verified"
+      }
+    ],
+    "classicalFeature": "Rashi’s silence is itself part of the reading."
+  },
+  {
+    "id": "eluc-genesis-1-4-verse",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-4",
+    "slot": "understanding-the-verse",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "God sees the light, that it is good, and divides light from darkness. The verb of seeing and the verb of dividing sit in one sentence. That compression is what Rashi hears.",
+      "pt": "Deus vê a luz, que é boa, e divide a luz das trevas. O verbo de ver e o verbo de dividir estão na mesma frase. Essa compressão é o que Rashi ouve."
+    },
+    "claims": [
+      {
+        "text": "The verse joins evaluation (“good”) to separation of light and darkness.",
+        "evidenceRefs": [
+          "genesis-1-4"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-4-why-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-4",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-4-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Why comment? Because “He saw… that it was good, and He divided” can sound as if light and darkness had been mixed, or as if God reconsidered. Siftei Chakhamim says the aggadic explanation is needed because “to divide” is said of things that were mingled. Rashi therefore gives both aggadah and peshat.",
+      "pt": "Por que comentar? Porque “Ele viu… que era boa, e Ele dividiu” pode soar como se luz e trevas tivessem estado misturadas, ou como se Deus tivesse reconsiderado. Siftei Chakhamim diz que a explicação agádica é necessária porque “dividir” se diz de coisas que estavam misturadas. Rashi, então, dá agadah e peshat."
+    },
+    "claims": [
+      {
+        "text": "Rashi comments because seeing-and-dividing in one verse raises a mixing/order problem.",
+        "evidenceRefs": [
+          "rashi-genesis-1-4-1",
+          "siftei-genesis-1-4-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-4-understand-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-4",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-4-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Aggadah (Chagigah 12a): God saw that the wicked were unworthy of this light and reserved it for the righteous in the world to come. Peshat (Genesis Rabbah 3:6): it was not seemly that light and darkness function in confusion, so each received a domain — day and night. Again Rashi refuses to collapse midrash into peshat.",
+      "pt": "Agadah (Chagigah 12a): Deus viu que os ímpios não eram dignos desta luz e a reservou para os justos no mundo vindouro. Peshat (Gênesis Rabbá 3:6): não era conveniente que luz e trevas funcionassem em confusão, então cada uma recebeu um domínio — dia e noite. Outra vez Rashi recusa colapsar midrash em peshat."
+    },
+    "claims": [
+      {
+        "text": "Rashi gives an aggadic reservation of the light and a peshat division of domains.",
+        "evidenceRefs": [
+          "rashi-genesis-1-4-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-5-verse",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-5",
+    "slot": "understanding-the-verse",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "God names the light Day and the darkness Night. Evening and morning make יוֹם אֶחָד — “one day,” not “the first day.” JPS 1917 preserves that wording. The naming is an act of order. The odd cardinal number is the textual snag.",
+      "pt": "Deus nomeia a luz Dia e as trevas Noite. Tarde e manhã fazem יוֹם אֶחָד — “um dia”, não “o primeiro dia.” A JPS 1917 preserva essa redação. A nomeação é um ato de ordem. O numeral cardinal inesperado é o ponto textual."
+    },
+    "claims": [
+      {
+        "text": "The verse says “one day” (יום אחד) rather than “first day.”",
+        "evidenceRefs": [
+          "genesis-1-5",
+          "rashi-genesis-1-5-1"
+        ],
+        "status": "sources-verified"
+      }
+    ],
+    "classicalFeature": "יום אחד instead of יום ראשון."
+  },
+  {
+    "id": "eluc-genesis-1-5-why-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-5",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-5-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "The rest of the chapter uses ordinals: second, third, fourth. Why “one”? Siftei Chakhamim restates the expectation: it should have said “the first day.” That mismatch is the whole reason Rashi is here.",
+      "pt": "O restante do capítulo usa ordinais: segundo, terceiro, quarto. Por que “um”? Siftei Chakhamim reitera a expectativa: deveria ter dito “o primeiro dia.” Esse descompasso é toda a razão de Rashi estar aqui."
+    },
+    "claims": [
+      {
+        "text": "Rashi comments because אחד breaks the ordinal pattern of the chapter.",
+        "evidenceRefs": [
+          "rashi-genesis-1-5-1",
+          "siftei-genesis-1-5-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-5-understand-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-5",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-5-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Rashi, following Genesis Rabbah 3:8, reads “one day” as a statement about God: the Holy One was then the Only One in His universe, because the angels were not created until the second day. The verse’s grammar becomes emunah — divine uniqueness — without turning the day-count into a human commandment.",
+      "pt": "Rashi, seguindo Gênesis Rabbá 3:8, lê “um dia” como afirmação sobre Deus: o Santo, bendito seja, era então o Único em Seu universo, porque os anjos não foram criados senão no segundo dia. A gramática do versículo se torna emunah — unicidade divina — sem transformar a contagem dos dias em mandamento humano."
+    },
+    "claims": [
+      {
+        "text": "“One day” alludes to God as the Only One before the angels’ creation on day two.",
+        "evidenceRefs": [
+          "rashi-genesis-1-5-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-6-verse",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-6",
+    "slot": "understanding-the-verse",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "God says: let there be a רָקִיעַ — a firmament — in the midst of the waters, dividing waters from waters. The verse is a command of cosmic order, not a human statute. Rashi will ask why “let there be” if the heavens already appeared in verse 1.",
+      "pt": "Deus diz: haja um רָקִיעַ — um firmamento — no meio das águas, separando águas de águas. O versículo é um comando de ordem cósmica, não um estatuto humano. Rashi perguntará por que “haja” se os céus já apareceram no versículo 1."
+    },
+    "claims": [
+      {
+        "text": "Verse 6 commands the establishment of the firmament amid the waters.",
+        "evidenceRefs": [
+          "genesis-1-6",
+          "rashi-genesis-1-6-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-6-why-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-6",
+    "slot": "why-rashi",
+    "targetSegmentId": "rashi-genesis-1-6-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "Siftei Chakhamim states the question: “Let there be a רקיע” sounds as if it is created now, but verse 1 already said heaven was created. Rashi answers that the heavens of day one were still fluid and only solidified on day two.",
+      "pt": "Siftei Chakhamim formula a pergunta: “Haja um רקיע” soa como se fosse criado agora, mas o versículo 1 já dissera que o céu foi criado. Rashi responde que os céus do primeiro dia ainda estavam fluidos e só se solidificaram no segundo."
+    },
+    "claims": [
+      {
+        "text": "Rashi comments because “let there be a firmament” seems to recast a heaven already created.",
+        "evidenceRefs": [
+          "rashi-genesis-1-6-1",
+          "siftei-genesis-1-6-1"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-6-understand-rashi",
+    "type": "EDITORIAL_ELUCIDATION",
+    "verseId": "genesis-1-6",
+    "slot": "understanding-rashi",
+    "targetSegmentId": "rashi-genesis-1-6-1",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "text": {
+      "en": "For Rashi, יהי רקיע means “let the expanse become fixed.” Job 26:11 is the proof-text: the pillars of heaven trembled all of day one and stood astonished at His rebuke on day two. The second lemma, בתוך המים, places the firmament in the exact middle, with equal distance above and below, the upper waters suspended by the King’s command.",
+      "pt": "Para Rashi, יהי רקיע significa “que a expansão se firme.” Jó 26:11 é o texto-prova: as colunas do céu tremeram todo o primeiro dia e se assombraram com a repreensão no segundo. O segundo lema, בתוך המים, coloca o firmamento exatamente no meio, com igual distância acima e abaixo, as águas superiores suspensas pela ordem do Rei."
+    },
+    "claims": [
+      {
+        "text": "Rashi reads the firmament as a solidification of day-one heavens, centered in the waters.",
+        "evidenceRefs": [
+          "rashi-genesis-1-6-1",
+          "rashi-genesis-1-6-2"
+        ],
+        "status": "sources-verified"
+      }
+    ]
+  },
+  {
+    "id": "eluc-genesis-1-5-bnei-noach",
+    "type": "NOAHIDE_GUIDANCE",
+    "verseId": "genesis-1-5",
+    "slot": "for-bnei-noach",
+    "status": "sources-verified",
+    "author": "Ben Noach editorial layer",
+    "revision": 1,
+    "updatedAt": "2026-09-09T07:20:00Z",
+    "scope": "EMUNAH",
+    "text": {
+      "en": "The naming of Day and Night, and the insistence that God was then unique in His world, belong to emunah — knowledge of the One God — not to a Jewish-practice rule about how to count days. A Ben Noach may receive this as theology of creation.",
+      "pt": "A nomeação de Dia e Noite, e a afirmação de que Deus era então único em Seu mundo, pertencem à emunah — conhecimento do Deus Uno — e não a uma regra de prática judaica sobre como contar os dias. Um Ben Noach pode receber isto como teologia da criação."
+    },
+    "sourceRefs": [
+      "rashi-genesis-1-5-1",
+      "genesis-1-5"
+    ],
+    "reviewNote": "Contextual emunah note; not a halakhic ruling. Rabbinic review pending."
+  }
+]
