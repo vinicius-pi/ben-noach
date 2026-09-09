@@ -14,14 +14,6 @@ export default defineConfig({
     syntaxHighlight: false,
   },
   integrations: [react()],
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "pt"],
-    routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: true,
-    },
-  },
   build: {
     format: "directory",
     inlineStylesheets: "auto",
