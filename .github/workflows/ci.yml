@@ -46,7 +46,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Dead code and dependency graph
-        run: pnpm dlx knip@6.15.1
+        run: pnpm dlx knip@6.35.1
       - name: GitHub Actions correctness and security
         run: bash scripts/audit-actions.sh
 
